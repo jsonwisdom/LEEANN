@@ -19,11 +19,11 @@ Authority never.
 - [LEEANN](LEEANN.md)
 - [HEIDEE](HEIDEE.md)
 - [JAYCEE](JAYCEE.md)
-- [BREANN](BREANN.md)
+- [BREANN](B-ANCHOR.md)
 - [BRELEE](BRELEE.md)
 - [BRIANNA](BRIANNA.md)
 - [GAGA](GAGA.md)
-- [GRAMMY](GRAMMY.md)
+- [GRAMMY](G-ANCHOR.md)
 
 ## Shared Syntax
 
