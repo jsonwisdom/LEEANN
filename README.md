@@ -3,7 +3,7 @@
 **Repo:** `jsonwisdom/LEEANN`  
 **Style:** Sister Syntax / MaryDee purpose porch  
 **Authority:** `false`  
-**Status:** public-safe seed
+**Status:** expanded porch anchors
 
 ## Purpose
 
@@ -12,6 +12,23 @@ LEEANN JoySpace is a gentle public porch for care-aware continuity.
 It follows the MaryDee style: purpose before action, stewardship not control, receipts before claims.
 
 This repo is for warm orientation language, memory structure, and public-safe receipt habits.
+
+## JoySpace Anchors
+
+The LEEANN porch is oriented around four public JoySpace anchors:
+
+```text
+HEIDEE -> JoySpace Anchor
+JAYCEE -> JoySpace Anchor
+BREANN -> JoySpace Anchor
+BRELEE -> JoySpace Anchor
+```
+
+These anchors define the Sister Syntax collaborative boundary.
+
+They do not create authority, control, custody, verification power, or execution rights.
+
+They mark the public porch points that help the LEEANN surface stay warm, legible, and care-aware.
 
 ## Core Rule
 
@@ -60,6 +77,10 @@ Do not turn memory into authority.
 JOY      -> welcomes
 MARYDEE  -> asks why
 LEEANN   -> keeps the care-aware porch open
+HEIDEE   -> JoySpace Anchor
+JAYCEE   -> JoySpace Anchor
+BREANN   -> JoySpace Anchor
+BRELEE   -> JoySpace Anchor
 Replay   -> verifies
 Bankr    -> acts only after verification
 Receipts -> preserve memory
@@ -72,11 +93,17 @@ Receipts -> preserve memory
   "repo": "jsonwisdom/LEEANN",
   "surface": "LEEANN_JOYSPACE",
   "style": "SISTER_SYNTAX_MARYDEE",
+  "anchors": [
+    "HEIDEE",
+    "JAYCEE",
+    "BREANN",
+    "BRELEE"
+  ],
   "authority": false,
   "execution": false,
   "verification": false,
   "public_safe_only": true,
-  "status": "SEEDED"
+  "status": "LEEANN_JOYSPACE_EXPANSION_CONFIRMED"
 }
 ```
 
