@@ -13,17 +13,17 @@ Receipts underneath.
 Authority never.
 ```
 
-## Nine Porches
+## Nine Alabama Porches
 
-- [MARYDEE](MARYDEE.md)
-- [LEEANN](LEEANN.md)
-- [HEIDEE](HEIDEE.md)
-- [JAYCEE](JAYCEE.md)
-- [BREANN](B-ANCHOR.md)
-- [BRELEE](BRELEE.md)
-- [BRIANNA](BRIANNA.md)
-- [GAGA](GAGA.md)
-- [GRAMMY](G-ANCHOR.md)
+- [MARYDEE](MARYDEE.md) -> Alabama Porch
+- [LEEANN](LEEANN.md) -> Alabama Porch
+- [HEIDEE](HEIDEE.md) -> Alabama Porch
+- [JAYCEE](JAYCEE.md) -> Alabama Porch
+- [BREANN](B-ANCHOR.md) -> Alabama Porch
+- [BRELEE](BRELEE.md) -> Alabama Porch
+- [BRIANNA](BRIANNA.md) -> Alabama Porch
+- [GAGA](GAGA.md) -> Alabama Porch
+- [GRAMMY](G-ANCHOR.md) -> Alabama Porch
 
 ## Shared Syntax
 
@@ -41,7 +41,8 @@ Share   -> only when safe
 {
   "surface": "ALABAMA_PORCHES",
   "count": 9,
+  "designation": "ALABAMA_PORCH_ALL",
   "authority": false,
-  "status": "SEEDED"
+  "status": "ALL_ALABAMA_PORCHES"
 }
 ```
