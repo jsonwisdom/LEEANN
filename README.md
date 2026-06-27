@@ -3,7 +3,11 @@
 **Repo:** `jsonwisdom/LEEANN`  
 **Style:** Sister Syntax / MaryDee purpose porch  
 **Authority:** `false`  
-**Status:** expanded porch anchors
+**Status:** Alabama Porches seeded
+
+## Start Here
+
+- [`docs/alabama_porches/INDEX.md`](docs/alabama_porches/INDEX.md) — Alabama Porches index for the nine girls
 
 ## Purpose
 
@@ -15,13 +19,18 @@ This repo is for warm orientation language, memory structure, and public-safe re
 
 ## JoySpace Anchors
 
-The LEEANN porch is oriented around four public JoySpace anchors:
+The LEEANN porch is oriented around nine public JoySpace porch points:
 
 ```text
-HEIDEE -> JoySpace Anchor
-JAYCEE -> JoySpace Anchor
-BREANN -> JoySpace Anchor
-BRELEE -> JoySpace Anchor
+MARYDEE -> Alabama Porch
+LEEANN  -> Alabama Porch
+HEIDEE  -> Alabama Porch
+JAYCEE  -> Alabama Porch
+BREANN  -> Alabama Porch
+BRELEE  -> Alabama Porch
+BRIANNA -> Alabama Porch
+GAGA    -> Alabama Porch
+GRAMMY  -> Alabama Porch
 ```
 
 These anchors define the Sister Syntax collaborative boundary.
@@ -77,10 +86,13 @@ Do not turn memory into authority.
 JOY      -> welcomes
 MARYDEE  -> asks why
 LEEANN   -> keeps the care-aware porch open
-HEIDEE   -> JoySpace Anchor
-JAYCEE   -> JoySpace Anchor
-BREANN   -> JoySpace Anchor
-BRELEE   -> JoySpace Anchor
+HEIDEE   -> Alabama Porch
+JAYCEE   -> Alabama Porch
+BREANN   -> Alabama Porch
+BRELEE   -> Alabama Porch
+BRIANNA  -> Alabama Porch
+GAGA     -> Alabama Porch
+GRAMMY   -> Alabama Porch
 Replay   -> verifies
 Bankr    -> acts only after verification
 Receipts -> preserve memory
@@ -91,19 +103,14 @@ Receipts -> preserve memory
 ```json
 {
   "repo": "jsonwisdom/LEEANN",
-  "surface": "LEEANN_JOYSPACE",
+  "surface": "ALABAMA_PORCHES",
   "style": "SISTER_SYNTAX_MARYDEE",
-  "anchors": [
-    "HEIDEE",
-    "JAYCEE",
-    "BREANN",
-    "BRELEE"
-  ],
+  "count": 9,
   "authority": false,
   "execution": false,
   "verification": false,
   "public_safe_only": true,
-  "status": "LEEANN_JOYSPACE_EXPANSION_CONFIRMED"
+  "status": "ALABAMA_PORCHES_SEEDED"
 }
 ```
 
