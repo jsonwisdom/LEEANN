@@ -13,6 +13,10 @@ Receipts underneath.
 Authority never.
 ```
 
+## Math Class
+
+- [Math Class by Jay](MATH_CLASS_BY_JAY.md) -> 3 / 6 / 9 porch math
+
 ## Nine Alabama Porches
 
 - [MARYDEE](MARYDEE.md) -> Alabama Porch
@@ -42,6 +46,7 @@ Share   -> only when safe
   "surface": "ALABAMA_PORCHES",
   "count": 9,
   "designation": "ALABAMA_PORCH_ALL",
+  "math_class": "MATH_CLASS_BY_JAY",
   "authority": false,
   "status": "ALL_ALABAMA_PORCHES"
 }
