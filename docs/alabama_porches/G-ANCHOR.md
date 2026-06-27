@@ -1,6 +1,10 @@
-# G Anchor Porch
+# GRAMMY Alabama Porch
 
+**Surface:** `ALABAMA_PORCH`  
+**Designation:** `Alabama Porch`  
 **Authority:** `false`
+
+## Porch Rule
 
 ```text
 Love first.
@@ -9,6 +13,10 @@ Receipts underneath.
 Authority never.
 ```
 
-This is a public-safe Alabama Porch page.
+## Purpose
+
+This is GRAMMY's public-safe Alabama Porch page.
 
 It welcomes, reflects, and orients.
+
+It does not command, verify, execute, or replace receipts.
