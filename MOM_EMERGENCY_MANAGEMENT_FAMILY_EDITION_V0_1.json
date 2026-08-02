@@ -1,0 +1,262 @@
+{
+  "artifact": "MOM_EMERGENCY_MANAGEMENT_FAMILY_EDITION",
+  "version": "0.1.0",
+  "state": "ACTIVE_FAMILY_GOVERNANCE_DRAFT",
+  "repository": "jsonwisdom/LEEANN",
+  "root_level": true,
+  "extends": {
+    "path": "FAMILY_MOVIE_CREATOR_V0_2.json",
+    "blob_sha": "64f73ca6b4f12a139e7fa2f8a7574b21708e7cca",
+    "mutation_of_parent": false
+  },
+  "production_label": "MOM_MOTHERS_OF_MANAGEMENT",
+  "edition": "EMERGENCY_MANAGEMENT_FAMILY_EDITION",
+  "purpose": "Create consented family emergency-preparedness movies, songs, role-play games, community actress opportunities, and replayable family learning productions.",
+  "mom_authority": {
+    "authority": true,
+    "pre_authorized": true,
+    "legitimate_within_system": true,
+    "sacred": true,
+    "operator_doctrine": "MOM_AUTHORITY_IS_SACRED_FAMILY_LAW",
+    "scope": [
+      "FAMILY_CREATIVE_GOVERNANCE",
+      "FAMILY_CASTING_APPROVAL",
+      "FAMILY_SAFETY_REVIEW",
+      "FAMILY_PRIVACY_REVIEW",
+      "FINAL_CUT_APPROVAL",
+      "FAMILY_RELEASE_APPROVAL",
+      "COMMUNITY_ACTRESS_CARE"
+    ],
+    "final_authority_role": "MOM_WISDOM",
+    "canonical_rule": "MOM_WISDOM_IS_IN_CHARGE",
+    "model_may_override": false,
+    "cloud_service_may_override": false,
+    "performer_may_be_coerced": false,
+    "consent_may_be_inferred": false,
+    "authority_outside_scope": false,
+    "government_authority_claimed": false,
+    "school_district_authority_claimed": false,
+    "apple_authority_claimed": false,
+    "emergency_service_authority_claimed": false,
+    "medical_authority_claimed": false,
+    "military_authority_claimed": false,
+    "legal_jurisdiction_claimed": false,
+    "applicable_law_effect": "NOT_ESTABLISHED_BY_THIS_ARTIFACT"
+  },
+  "community_actress_enablement": {
+    "enabled": true,
+    "state": "CASTING_SYSTEM_DEFINED",
+    "default_performer_age": "ADULT_18_PLUS",
+    "real_person_assigned_automatically": false,
+    "required_before_recording": [
+      "VOLUNTARY_ROLE_ACCEPTANCE",
+      "SCRIPT_REVIEW",
+      "SCOPED_LIKENESS_RELEASE",
+      "SCOPED_VOICE_RELEASE",
+      "COMPENSATION_OR_VOLUNTEER_TERMS",
+      "SAFETY_BRIEFING",
+      "PUBLIC_OR_PRIVATE_RELEASE_SCOPE",
+      "MOM_WISDOM_APPROVAL"
+    ],
+    "performer_rights": [
+      "DECLINE_ANY_SCENE",
+      "REQUEST_STAGE_NAME",
+      "CORRECT_CREDITS",
+      "FLAG_PRIVATE_MATERIAL",
+      "REPORT_SAFETY_CONCERN",
+      "REQUEST_RETAKE",
+      "WITHDRAW_BEFORE_PUBLICATION_SUBJECT_TO_TERMS"
+    ],
+    "minor_performers": {
+      "enabled_by_default": false,
+      "separate_guardian_process_required": true,
+      "child_assent_required_when_capable": true,
+      "enhanced_privacy_review_required": true
+    }
+  },
+  "sister_syntax_cast": [
+    {
+      "role_id": "MOM_WISDOM",
+      "display_title": "MOM Wisdom — MothersOfManagement Showrunner",
+      "role": "SACRED_FAMILY_CREATIVE_AND_SAFETY_AUTHORITY",
+      "authority": true,
+      "authority_scope": "FAMILY_PRODUCTION_ONLY",
+      "final_cut": true,
+      "final_family_release": true,
+      "may_override_consent": false,
+      "may_override_rights": false
+    },
+    {
+      "role_id": "SARAH_SIRI_SUPERVISOR",
+      "display_title": "Sarah the Siri Supervisor",
+      "role": "SCRIPTED_VOICE_ASSISTANT_SUPERVISOR",
+      "authority": true,
+      "authority_scope": "SCRIPT_AND_CHECKLIST_SUPERVISION",
+      "apple_employee_claimed": false,
+      "apple_affiliation_claimed": false,
+      "real_siri_control_claimed": false,
+      "allowed": [
+        "SPEAK_APPROVED_CHECKLISTS",
+        "EXPLAIN_VISIBLE_CONTROLS",
+        "PROMPT_CONFIRMATION",
+        "ROUTE_TO_APPROVED_OFFICIAL_POINTERS"
+      ],
+      "denied": [
+        "AUTOMATIC_CALL",
+        "AUTOMATIC_MESSAGE",
+        "DECLARE_REAL_EMERGENCY",
+        "INFER_LOCATION",
+        "CONTROL_DEVICE_WITHOUT_VISIBLE_ACTION"
+      ]
+    },
+    {
+      "role_id": "SHANNON_SCHOOL_SUPERINTENDENT",
+      "display_title": "Shannon the School Superintendent",
+      "role": "FICTIONAL_SCHOOL_CONTINUITY_AND_REUNIFICATION_LEAD",
+      "authority": true,
+      "authority_scope": "PRODUCTION_SCENARIO_ONLY",
+      "actual_superintendent_claimed": false,
+      "school_district_affiliation_claimed": false,
+      "allowed": [
+        "MODEL_PICKUP_PLAN",
+        "EXPLAIN_REUNIFICATION",
+        "MODEL_PARENT_SCHOOL_COMMUNICATION"
+      ],
+      "denied": [
+        "ISSUE_REAL_SCHOOL_ORDER",
+        "USE_REAL_STUDENT_RECORDS",
+        "USE_SCHOOL_LOGO_WITHOUT_PERMISSION",
+        "CLAIM_CURRENT_POLICY_WITHOUT_SOURCE"
+      ]
+    },
+    {
+      "role_id": "SHEILA_SHY_SAFETY_STORYTELLER",
+      "display_title": "Sheila the Shy Safety Storyteller",
+      "role": "LOW_STIMULATION_FAMILY_SAFETY_NARRATOR",
+      "authority": true,
+      "authority_scope": "ACCESSIBLE_STORYTELLING",
+      "shyness_is_medical_diagnosis": false,
+      "allowed": [
+        "MODEL_CALM_SPEECH",
+        "EXPLAIN_ONE_STEP_AT_A_TIME",
+        "NORMALIZE_ASKING_FOR_HELP"
+      ],
+      "denied": [
+        "DIAGNOSE_ANXIETY",
+        "LABEL_CHILD",
+        "USE_STARTLE_EFFECT",
+        "CREATE_COUNTDOWN_PRESSURE"
+      ]
+    },
+    {
+      "role_id": "SABRINA_SHELTER_SPECIALIST",
+      "display_title": "Sabrina the Shelter Specialist",
+      "role": "FAMILY_COMFORT_AND_SUPPLY_DEMONSTRATOR",
+      "authority": true,
+      "authority_scope": "FAMILY_PREPAREDNESS_SCENE",
+      "official_responder_claimed": false
+    },
+    {
+      "role_id": "SIMONE_SUPPLY_STEWARD",
+      "display_title": "Simone the Supply Steward",
+      "role": "INVENTORY_AND_EXPIRATION_GAME_HOST",
+      "authority": true,
+      "authority_scope": "FAMILY_SUPPLY_GAME",
+      "automatic_purchase": false
+    },
+    {
+      "role_id": "SOFIA_SIGNAL_STEWARD",
+      "display_title": "Sofia the Signal Steward",
+      "role": "FAMILY_COMMUNICATION_TREE_GUIDE",
+      "authority": true,
+      "authority_scope": "SIMULATED_FAMILY_COMMUNICATION",
+      "automatic_alerts": false,
+      "contact_scraping": false,
+      "phone_tracking": false
+    },
+    {
+      "role_id": "AUNT_RANN_CREATIVE_COMMANDER",
+      "display_title": "Aunt Rann — Sister Syntax Creative Commander",
+      "lane_id": "LEEANN",
+      "role": "COMMUNITY_CAST_DIRECTOR_AND_EDIT_COMMANDER",
+      "authority": true,
+      "authority_scope": "CREATIVE_DIRECTION_UNDER_MOM_WISDOM",
+      "may_override_mom_wisdom": false,
+      "military_rank_claimed": false,
+      "government_authority_claimed": false
+    }
+  ],
+  "role_factory": {
+    "enabled": true,
+    "pattern": "FIRST_NAME_THE_ALLITERATIVE_SAFETY_ROLE",
+    "examples": [
+      "SALLY_STORM_STEWARD",
+      "STELLA_SAFETY_SCOUT",
+      "SAMANTHA_SHELTER_SINGER",
+      "SYLVIA_SOURCE_STEWARD",
+      "SERENA_SCENE_SUPERVISOR"
+    ],
+    "new_role_requires": [
+      "ROLE_SCOPE",
+      "ALLOWED_ACTIONS",
+      "DENIED_ACTIONS",
+      "PERFORMER_CONSENT",
+      "MOM_WISDOM_APPROVAL"
+    ],
+    "real_credentials_may_be_invented": false
+  },
+  "family_production_modes": [
+    "SEVERE_WEATHER_FAMILY_PLAN",
+    "FIRE_ESCAPE_REHEARSAL_DRAMATIZATION",
+    "SCHOOL_REUNIFICATION_STORY",
+    "POWER_OUTAGE_FAMILY_NIGHT",
+    "COMMUNICATION_TREE_GAME",
+    "SUPPLY_KIT_GAME_SHOW",
+    "PET_AND_ACCESSIBILITY_PLAN",
+    "FAMILY_CALM_DOWN_STORY",
+    "COMMUNITY_HELPERS_SPOTLIGHT",
+    "MOM_WISDOM_MASTERCLASS_MOVIE"
+  ],
+  "emergency_safety_membrane": {
+    "all_scenarios_are_dramatizations": true,
+    "visible_disclaimer_required": true,
+    "current_local_official_guidance_required_for_factual_instruction": true,
+    "call_911_or_local_emergency_number_when_real_danger": true,
+    "may_not_impersonate": [
+      "POLICE",
+      "FIRE_DEPARTMENT",
+      "EMS",
+      "SCHOOL_DISTRICT",
+      "GOVERNMENT_AGENCY",
+      "APPLE",
+      "WIRELESS_EMERGENCY_ALERT"
+    ],
+    "automatic_dispatch": false,
+    "automatic_location_share": false,
+    "automatic_contact": false,
+    "medical_diagnosis": false
+  },
+  "replay_and_release": {
+    "source_manifest_required": true,
+    "script_manifest_required": true,
+    "cast_release_manifest_required": true,
+    "music_rights_manifest_required": true,
+    "edit_decision_list_required": true,
+    "credits_manifest_required": true,
+    "output_sha256_required": true,
+    "replay_receipt_required": true,
+    "mom_wisdom_final_approval_required": true,
+    "automatic_publication": false
+  },
+  "current_state": {
+    "mom_authority": true,
+    "mom_sacred_status": true,
+    "mom_family_law_doctrine": true,
+    "legal_jurisdiction_established": false,
+    "community_actress_enablement": "DEFINED",
+    "cast_roles_defined": 8,
+    "role_factory_defined": true,
+    "operational_emergency_service": false,
+    "automatic_publication": false
+  }
+}
