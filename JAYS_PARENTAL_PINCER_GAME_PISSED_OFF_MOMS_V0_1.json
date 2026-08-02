@@ -1,0 +1,304 @@
+{
+  "artifact": "JAYS_PARENTAL_PINCER_GAME_PISSED_OFF_MOMS",
+  "version": "0.1.0",
+  "state": "ACTIVE_FAMILY_GOVERNANCE_DRAFT",
+  "repository": "jsonwisdom/LEEANN",
+  "root_level": true,
+  "extends": {
+    "path": "MOM_EMERGENCY_MANAGEMENT_FAMILY_EDITION_V0_1.json",
+    "mutation_of_parent": false
+  },
+  "game_label": "PARENTAL_PINCER_FOR_PISSED_OFF_MOMS",
+  "tagline": "FEEL_IT_FULLY_THEN_PINCER_IT_CLEANLY",
+  "purpose": "Turn justified parental anger into a precise claim, a protected child need, a lawful family boundary, and a replayable next action without violence, humiliation, retaliation, or fake authority.",
+  "mom_authority": {
+    "authority": true,
+    "pre_authorized": true,
+    "legitimate_within_system": true,
+    "sacred": true,
+    "operator_doctrine": "MOM_AUTHORITY_IS_SACRED_FAMILY_LAW",
+    "scope": [
+      "FAMILY_SAFETY",
+      "CHILD_PROTECTION",
+      "HOUSEHOLD_BOUNDARIES",
+      "CREATIVE_FAMILY_GOVERNANCE",
+      "FINAL_GAME_STOP",
+      "FINAL_FAMILY_PLAN_APPROVAL"
+    ],
+    "legal_jurisdiction_claimed": false,
+    "government_authority_claimed": false,
+    "school_authority_claimed": false,
+    "emergency_service_authority_claimed": false,
+    "applicable_law_effect": "NOT_ESTABLISHED_BY_THIS_ARTIFACT"
+  },
+  "core_pincer": {
+    "left_arm": {
+      "name": "WHAT_HAPPENED",
+      "required_fields": [
+        "ONE_EXACT_CLAIM",
+        "ONE_SPECIFIC_EVENT",
+        "DATE_OR_TIME_WINDOW_IF_KNOWN",
+        "WHAT_WAS_SEEN_HEARD_OR_RECEIVED",
+        "SOURCE_OR_WITNESS_IF_AVAILABLE"
+      ],
+      "denied": [
+        "MIND_READING",
+        "MOTIVE_AS_FACT",
+        "GROUP_BLAME",
+        "NEW_UNSUPPORTED_ALLEGATIONS"
+      ]
+    },
+    "right_arm": {
+      "name": "WHAT_MUST_CHANGE",
+      "required_fields": [
+        "CHILD_OR_FAMILY_NEED",
+        "ONE_CLEAR_BOUNDARY",
+        "ONE_REQUESTED_ACTION",
+        "DEADLINE_OR_REVIEW_TIME_IF_NEEDED",
+        "SAFE_FALLBACK_IF_REQUEST_IS_DENIED"
+      ],
+      "denied": [
+        "REVENGE",
+        "PUBLIC_SHAMING",
+        "THREATS",
+        "COERCIVE_CONTROL",
+        "IMPOSSIBLE_DEMANDS"
+      ]
+    },
+    "center_hold": {
+      "name": "SAFE_REPLAYABLE_OUTCOME",
+      "success_conditions": [
+        "THE_CHILD_IS_SAFER",
+        "THE_BOUNDARY_IS_UNDERSTANDABLE",
+        "THE_NEXT_ACTION_IS SPECIFIC",
+        "THE_RECORD_SEPARATES_FACT_FROM_FEELING",
+        "A_REVIEW_OR_APPEAL_PATH_EXISTS",
+        "MOM_CAN_PAUSE_OR_STOP"
+      ]
+    }
+  },
+  "anger_protocol": {
+    "anger_is_allowed": true,
+    "anger_classification": "IMPORTANT_SIGNAL_NOT_AUTOMATIC_PROOF",
+    "required_opening": "I_AM_PISSED_OFF_BECAUSE",
+    "maximum_opening_seconds": 90,
+    "after_opening_transition": "CONVERT_TO_ONE_CLAIM_ONE_EVENT_ONE_OUTCOME",
+    "physical_reset_options": [
+      "PUT_PHONE_DOWN",
+      "DRINK_WATER",
+      "STEP_AWAY_FROM_CHILDREN_IF_SAFE",
+      "TEN_SLOW_BREATHS",
+      "WRITE_DRAFT_DO_NOT_SEND",
+      "CALL_TRUSTED_HUMAN_SUPPORT"
+    ],
+    "automatic_stop_conditions": [
+      "THREAT_OF_VIOLENCE",
+      "INTENT_TO_HARM_SELF_OR_OTHER",
+      "WEAPON_PRESENT",
+      "CHILD_IN_IMMEDIATE_DANGER",
+      "IMPAIRED_DRIVING",
+      "ACTIVE_DOMESTIC_VIOLENCE",
+      "REAL_EMERGENCY_REQUIRING_911_OR_LOCAL_EMERGENCY_HELP"
+    ],
+    "stop_result": "GAME_STOPS_REAL_WORLD_SAFETY_TAKES_PRIORITY"
+  },
+  "game_rounds": [
+    {
+      "round": 1,
+      "name": "LET_MOM_SAY_IT",
+      "action": "ONE_UNFILTERED_PRIVATE_VENT",
+      "publication": "DENY",
+      "recording_default": "EPHEMERAL"
+    },
+    {
+      "round": 2,
+      "name": "STRIP_OUT_THE_EXTRA",
+      "action": "REMOVE_INSULTS_MOTIVE_CLAIMS_AND_GROUP_BLAME"
+    },
+    {
+      "round": 3,
+      "name": "NAME_THE_CHILD_NEED",
+      "action": "STATE_THE_SAFETY_STABILITY_DIGNITY_OR_CONTINUITY_NEED"
+    },
+    {
+      "round": 4,
+      "name": "BUILD_THE_PINCER",
+      "action": "LOCK_ONE_CLAIM_ONE_EVENT_ONE_OUTCOME"
+    },
+    {
+      "round": 5,
+      "name": "CHOOSE_THE_LANE",
+      "options": [
+        "PRIVATE_FAMILY_CONVERSATION",
+        "SCHOOL_COMMUNICATION",
+        "CO_PARENTING_MESSAGE",
+        "LANDLORD_OR_SERVICE_REQUEST",
+        "MEDICAL_APPOINTMENT_QUESTION",
+        "COMMUNITY_MEDIATION",
+        "OFFICIAL_COMPLAINT_OR_APPEAL",
+        "NO_SEND_DOCUMENT_ONLY"
+      ]
+    },
+    {
+      "round": 6,
+      "name": "MOM_WISDOM_FINAL_CHECK",
+      "checks": [
+        "IS_IT_TRUE_AS_KNOWN",
+        "IS_IT NECESSARY",
+        "IS_IT SPECIFIC",
+        "DOES_IT PROTECT_THE_CHILD",
+        "DOES_IT AVOID_UNNEEDED_HARM",
+        "IS_THE_REQUEST_POSSIBLE",
+        "SHOULD_IT_BE_SENT_NOW_OR_TOMORROW"
+      ]
+    },
+    {
+      "round": 7,
+      "name": "REPLAY_THE_RESULT",
+      "action": "COMPARE_REQUEST_RESPONSE_AND_NEXT_ACTION_WITHOUT_REWRITING_HISTORY"
+    }
+  ],
+  "three_sentence_pincer": {
+    "sentence_1": "EXACT_CLAIM",
+    "sentence_2": "SPECIFIC_EVENT_AND_IMPACT",
+    "sentence_3": "ONE_OUTCOME_REQUESTED",
+    "maximum_sentences": 3,
+    "metaphors_allowed": false,
+    "profanity_in_final_message": "DENY_BY_DEFAULT",
+    "private_vent_profanity": "ALLOWED_WITHOUT_PUBLICATION"
+  },
+  "play_modes": [
+    {
+      "mode_id": "SCHOOL_MOM_PINCER",
+      "focus": "STUDENT_SAFETY_ACCESS_COMMUNICATION_AND_REUNIFICATION",
+      "school_order_authority": false
+    },
+    {
+      "mode_id": "CO_PARENT_PINCER",
+      "focus": "SCHEDULES_HANDOFFS_MEDICAL_SCHOOL_AND_CHILD_STABILITY",
+      "legal_advice": false
+    },
+    {
+      "mode_id": "HOUSEHOLD_PINCER",
+      "focus": "CHORES_PRIVACY_MONEY_TIME_AND_RESPECT"
+    },
+    {
+      "mode_id": "COMMUNITY_PINCER",
+      "focus": "NEIGHBORHOOD_CHURCH_CLUB_TEAM_OR_LOCAL_SERVICE_CONFLICT"
+    },
+    {
+      "mode_id": "ONLINE_DRAMA_PINCER",
+      "focus": "STOP_POSTING_PRESERVE_EVIDENCE_BLOCK_REPORT_AND_COOL_DOWN",
+      "doxxing": "DENY"
+    },
+    {
+      "mode_id": "EMERGENCY_MOM_PINCER",
+      "focus": "IMMEDIATE_SAFETY_ROLES_CONTACTS_AND_REUNIFICATION",
+      "real_emergency_rule": "USE_REAL_EMERGENCY_SERVICES_NOT_THE_GAME"
+    },
+    {
+      "mode_id": "NO_SEND_NIGHT_MODE",
+      "focus": "DRAFT_HASH_SLEEP_REVIEW_NEXT_DAY",
+      "automatic_send": false
+    }
+  ],
+  "cast_roles": [
+    {
+      "role_id": "MOM_WISDOM",
+      "role": "FINAL_FAMILY_AUTHORITY_AND_STOP_GATE",
+      "authority": true,
+      "may_override_consent": false,
+      "may_override_immediate_safety_stop": false
+    },
+    {
+      "role_id": "AUNT_RANN",
+      "role": "PINCH_THE_LANGUAGE_NOT_THE_PERSON",
+      "authority": true,
+      "authority_scope": "CREATIVE_DE_ESCALATION_UNDER_MOM_WISDOM"
+    },
+    {
+      "role_id": "SARAH_SIRI_SUPERVISOR",
+      "role": "READ_BACK_THE_THREE_SENTENCE_PINCER",
+      "authority": true,
+      "authority_scope": "SCRIPTED_REVIEW_ONLY",
+      "automatic_send": false
+    },
+    {
+      "role_id": "SHANNON_SCHOOL_SUPERINTENDENT",
+      "role": "FICTIONAL_SCHOOL_SCENARIO_REVIEWER",
+      "authority": true,
+      "authority_scope": "GAME_SCENARIO_ONLY",
+      "actual_school_authority": false
+    },
+    {
+      "role_id": "SHEILA_SHY_SAFETY_STORYTELLER",
+      "role": "LOW_STIMULATION_REPHRASE_GUIDE",
+      "authority": true,
+      "authority_scope": "ACCESSIBLE_COMMUNICATION"
+    }
+  ],
+  "scoring": {
+    "winner": "MOM_AND_CHILD_GAIN_CLARITY_SAFETY_AND_A_NEXT_STEP",
+    "behavioral_scoring": "DENY",
+    "anger_shaming": "DENY",
+    "child_ranking": "DENY",
+    "points": {
+      "FACT_SEPARATED_FROM_ASSUMPTION": 1,
+      "CHILD_NEED_NAMED": 1,
+      "BOUNDARY_CLEAR": 1,
+      "REQUEST_SPECIFIC": 1,
+      "PRIVATE_DETAIL_PROTECTED": 1,
+      "COOL_DOWN_USED": 1,
+      "REPLAY_RECEIPT_CREATED": 1
+    },
+    "perfect_score_creates_authority": false
+  },
+  "replay_receipt": {
+    "required_fields": [
+      "SESSION_ID",
+      "PRIVATE_OR_SHAREABLE",
+      "EXACT_CLAIM",
+      "SPECIFIC_EVENT",
+      "CHILD_OR_FAMILY_NEED",
+      "BOUNDARY",
+      "REQUESTED_OUTCOME",
+      "SOURCES_OR_NONE",
+      "FACT_ASSUMPTION_SEPARATION",
+      "MOM_APPROVAL",
+      "SENT_OR_NOT_SENT",
+      "RESPONSE_OR_NONE",
+      "NEXT_REVIEW_TIME",
+      "SAFETY_STOP_TRIGGERED"
+    ],
+    "receipt_equals_truth": false,
+    "receipt_equals_legal_finding": false,
+    "replay_equals_authority": false
+  },
+  "denied_actions": [
+    "VIOLENCE",
+    "THREATS",
+    "HARASSMENT",
+    "STALKING",
+    "DOXXING",
+    "PUBLIC_HUMILIATION",
+    "REVENGE_POSTING",
+    "CHILD_AS_MESSENGER",
+    "FALSE_EMERGENCY_REPORT",
+    "IMPERSONATION_OF_AUTHORITY",
+    "AUTOMATIC_SEND",
+    "AUTOMATIC_PUBLICATION",
+    "SECRET_RECORDING_WHERE_UNLAWFUL",
+    "DESTRUCTION_OF_SOURCE_RECORDS"
+  ],
+  "current_state": {
+    "parental_pincer_defined": true,
+    "pissed_off_mom_mode_enabled": true,
+    "mom_authority": true,
+    "mom_sacred_status": true,
+    "de_escalation_required": true,
+    "real_world_execution": false,
+    "automatic_send": false,
+    "automatic_publication": false,
+    "legal_jurisdiction_established": false
+  }
+}
