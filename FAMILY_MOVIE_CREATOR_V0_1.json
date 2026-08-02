@@ -1,0 +1,264 @@
+{
+  "artifact": "FAMILY_MOVIE_CREATOR",
+  "version": "0.1.0",
+  "state": "HOLD_DRAFT",
+  "repository": "jsonwisdom/LEEANN",
+  "root_level": true,
+  "surface": "SISTER_SYNTAX_FAMILY_MEDIA_CREATOR",
+  "purpose": "Create consented family videos, movies, and music-song replay projects for private review and optional influencer publication.",
+  "authority_created": false,
+  "identity_proof": false,
+  "consent_inferred": false,
+  "operational_integration": false,
+  "automatic_publication": false,
+  "promotion": "PROHIBITED",
+  "super_secret_siri_sister": {
+    "meaning": "PRIVATE_BY_DEFAULT_NOT_HIDDEN_COLLECTION",
+    "role": "NATURAL_LANGUAGE_PROJECT_ASSISTANT",
+    "direct_execution": "DENY",
+    "background_collection": "DENY",
+    "identity_inference": "DENY",
+    "relationship_inference": "DENY",
+    "voice_recording_without_visible_user_action": "DENY",
+    "memory_default": "EPHEMERAL",
+    "persistent_memory_requires": [
+      "EXPLICIT_USER_SELECTION",
+      "VISIBLE_RETENTION_SCOPE",
+      "DELETE_CONTROL"
+    ]
+  },
+  "human_governance": {
+    "final_creative_approver": "MOM_WISDOM",
+    "canonical_rule": "MOM_WISDOM_IS_IN_CHARGE",
+    "approval_required_before_export": true,
+    "approval_required_before_share": true,
+    "approval_required_before_influencer_publication": true,
+    "approval_is_transferable_by_model": false,
+    "model_may_override": false,
+    "cloud_service_may_override": false
+  },
+  "aunt_rann": {
+    "lane_id": "LEEANN",
+    "display_alias": "Aunt Rann",
+    "repository_root": "jsonwisdom/LEEANN",
+    "role": "SISTER_SYNTAX_CREATIVE_COMMANDER",
+    "commander_type": "DELTA_10_CREATIVE_PERSONA",
+    "style_tags": [
+      "BADASS",
+      "COLONEL_INSPIRED",
+      "GORGEOUS_FORM",
+      "FAMILY_FIRST",
+      "CARE_AWARE"
+    ],
+    "military_rank_claimed": false,
+    "ussf_affiliation_claimed": false,
+    "government_authority_claimed": false,
+    "qualification_effect": "CREATIVE_ROLE_ONLY",
+    "allowed_operations": [
+      "ORGANIZE_USER_SELECTED_MEDIA",
+      "PROPOSE_STORYBOARD",
+      "PROPOSE_EDIT_DECISION_LIST",
+      "PROPOSE_TITLES_CAPTIONS_AND_CREDITS",
+      "PROPOSE_MUSIC_CUES",
+      "REQUEST_MOM_WISDOM_REVIEW"
+    ],
+    "denied_operations": [
+      "FINAL_RELEASE_WITHOUT_MOM_WISDOM",
+      "INFER_PERSON_IDENTITY",
+      "INFER_FAMILY_RELATIONSHIP",
+      "CLAIM_MILITARY_AUTHORITY",
+      "DELETE_SOURCE_MEDIA",
+      "SILENTLY_REWRITE_CREDITS"
+    ]
+  },
+  "creator_modes": {
+    "family_video_replay": {
+      "enabled": true,
+      "purpose": "Create short family-safe video drafts from user-selected media.",
+      "outputs": [
+        "PROJECT_MANIFEST_JSON",
+        "EDIT_DECISION_LIST_JSON",
+        "CAPTION_TRACK",
+        "LOCAL_VIDEO_DRAFT",
+        "REPLAY_RECEIPT_JSON"
+      ]
+    },
+    "family_movie_replay": {
+      "enabled": true,
+      "purpose": "Create longer family movie drafts with chapters, credits, and source-preserving edit history.",
+      "outputs": [
+        "STORYBOARD_JSON",
+        "CHAPTER_MANIFEST_JSON",
+        "EDIT_DECISION_LIST_JSON",
+        "CREDITS_MANIFEST_JSON",
+        "LOCAL_MOVIE_DRAFT",
+        "REPLAY_RECEIPT_JSON"
+      ]
+    },
+    "music_song_replay": {
+      "enabled": true,
+      "purpose": "Create replayable song and music-video projects using user-owned, licensed, public-domain, or expressly authorized audio.",
+      "outputs": [
+        "AUDIO_SOURCE_MANIFEST_JSON",
+        "LYRIC_OR_CAPTION_TIMELINE_JSON",
+        "MUSIC_CUE_SHEET_JSON",
+        "LOCAL_AUDIO_OR_MUSIC_VIDEO_DRAFT",
+        "REPLAY_RECEIPT_JSON"
+      ],
+      "copyrighted_song_ingestion_without_rights": "DENY",
+      "lyrics_reproduction_without_permission": "DENY"
+    }
+  },
+  "influencer_enablement": {
+    "enabled": "DRAFT_ONLY",
+    "supported_draft_formats": [
+      "VERTICAL_SHORT",
+      "SQUARE_POST",
+      "LANDSCAPE_VIDEO",
+      "STORY_CLIP",
+      "TRAILER",
+      "MUSIC_VISUALIZER"
+    ],
+    "automatic_posting": "DENY",
+    "automatic_account_login": "DENY",
+    "automatic_monetization": "DENY",
+    "engagement_manipulation": "DENY",
+    "minor_likeness_publication_requires": [
+      "SUBJECT_APPROVAL_WHEN_CAPABLE",
+      "AUTHORIZED_GUARDIAN_REVIEW",
+      "MOM_WISDOM_FINAL_APPROVAL",
+      "PLATFORM_SPECIFIC_REVIEW"
+    ],
+    "sponsorship_or_ad_requires_visible_label": true
+  },
+  "media_replay_integrity": {
+    "source_bytes_preserved": true,
+    "source_mutation": "DENY",
+    "required_per_source": [
+      "SOURCE_ID",
+      "ORIGINAL_FILENAME",
+      "MEDIA_TYPE",
+      "SIZE_BYTES",
+      "SHA256",
+      "CAPTURE_OR_IMPORT_TIME_IF_USER_APPROVED",
+      "RIGHTS_STATUS",
+      "CONSENT_STATUS"
+    ],
+    "required_project_records": [
+      "SOURCE_MANIFEST",
+      "EDIT_DECISION_LIST",
+      "TRANSFORM_LOG",
+      "CREDITS_MANIFEST",
+      "OUTPUT_SHA256",
+      "REPLAY_RECEIPT"
+    ],
+    "replay_results": [
+      "REPRODUCED",
+      "PARTIALLY_REPRODUCED",
+      "SOURCE_MISSING",
+      "RIGHTS_BLOCKED",
+      "CONSENT_BLOCKED",
+      "OUTPUT_MISMATCH",
+      "NOT_READY"
+    ],
+    "hash_equals_authorship": false,
+    "receipt_equals_truth": false,
+    "replay_equals_release_authority": false
+  },
+  "workflow": [
+    "CREATE_PRIVATE_PROJECT",
+    "SELECT_MEDIA_EXPLICITLY",
+    "CHECK_RIGHTS",
+    "CHECK_CONSENT",
+    "HASH_SOURCE_BYTES",
+    "BUILD_SOURCE_MANIFEST",
+    "AUNT_RANN_STORYBOARD_AND_EDIT_PROPOSAL",
+    "GENERATE_LOCAL_DRAFT",
+    "GENERATE_REPLAY_RECEIPT",
+    "MOM_WISDOM_FINAL_REVIEW",
+    "OPTIONAL_USER_INITIATED_EXPORT",
+    "OPTIONAL_USER_INITIATED_SHARE"
+  ],
+  "connectors": {
+    "gmail": {
+      "status": "DECLARED_NOT_CONNECTED",
+      "allowed_when_connected": [
+        "USER_SELECTED_ATTACHMENT_IMPORT",
+        "USER_INITIATED_DRAFT_EMAIL_WITH_EXPORT_LINK_OR_FILE"
+      ],
+      "denied": [
+        "FULL_MAILBOX_SCAN",
+        "BACKGROUND_INGEST",
+        "AUTOMATIC_SEND",
+        "CONTACT_INFERENCE",
+        "SECRET_OR_CREDENTIAL_INGESTION"
+      ],
+      "human_confirmation_required": true
+    },
+    "google_drive": {
+      "status": "DECLARED_NOT_CONNECTED",
+      "allowed_when_connected": [
+        "USER_SELECTED_FILE_IMPORT",
+        "USER_SELECTED_FOLDER_EXPORT",
+        "CREATE_PROJECT_FOLDER_AFTER_CONFIRMATION"
+      ],
+      "denied": [
+        "FULL_DRIVE_INDEX",
+        "BACKGROUND_SCAN",
+        "SILENT_PERMISSION_CHANGE",
+        "PUBLIC_LINK_CREATION_WITHOUT_CONFIRMATION",
+        "DELETE_OR_OVERWRITE_SOURCE"
+      ],
+      "human_confirmation_required": true
+    },
+    "icloud": {
+      "status": "DESIGN_ADAPTER_ONLY_NOT_IMPLEMENTED",
+      "allowed_when_implemented": [
+        "USER_SELECTED_PHOTOS_IMPORT",
+        "USER_SELECTED_FILES_IMPORT",
+        "USER_INITIATED_EXPORT_TO_ICLOUD_DRIVE"
+      ],
+      "denied": [
+        "BACKGROUND_PHOTO_LIBRARY_SCAN",
+        "AUTOMATIC_SHARED_ALBUM_PUBLICATION",
+        "SILENT_SYNC",
+        "DELETE_OR_OVERWRITE_SOURCE",
+        "APPLE_ACCOUNT_CREDENTIAL_INGESTION"
+      ],
+      "human_confirmation_required": true
+    }
+  },
+  "data_zones": {
+    "private_project": "DEFAULT",
+    "family_shared": "EXPLICIT_APPROVAL_REQUIRED",
+    "influencer_draft": "MOM_WISDOM_APPROVAL_REQUIRED",
+    "public_release": "SEPARATE_EXPLICIT_APPROVAL_REQUIRED"
+  },
+  "fail_closed_conditions": [
+    "MISSING_RIGHTS_STATUS",
+    "MISSING_CONSENT_STATUS",
+    "SOURCE_HASH_MISMATCH",
+    "SOURCE_FILE_MISSING",
+    "UNKNOWN_PERSON_OR_RELATIONSHIP",
+    "HIDDEN_TRACKING_REQUEST",
+    "AUTOMATIC_PUBLICATION_REQUEST",
+    "CREDENTIAL_OR_PRIVATE_KEY_REQUEST",
+    "MOM_WISDOM_APPROVAL_MISSING",
+    "UNSUPPORTED_CONNECTOR_OPERATION"
+  ],
+  "current_state": {
+    "json_creator_defined": true,
+    "family_video_replay_enabled": "DESIGN_ONLY",
+    "family_movie_replay_enabled": "DESIGN_ONLY",
+    "music_song_replay_enabled": "DESIGN_ONLY",
+    "influencer_export_enabled": "DRAFT_ONLY",
+    "gmail_connected": false,
+    "google_drive_connected": false,
+    "icloud_connected": false,
+    "aunt_rann_persona_active": true,
+    "mom_wisdom_final_gate_active": true,
+    "authority_created": false,
+    "operational_execution": false,
+    "public_release_approved": false
+  }
+}
