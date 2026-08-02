@@ -1,0 +1,368 @@
+{
+  "artifact": "FAMILY_MOVIE_CREATOR",
+  "version": "0.2.0",
+  "state": "HOLD_DRAFT",
+  "repository": "jsonwisdom/LEEANN",
+  "root_level": true,
+  "extends": {
+    "path": "FAMILY_MOVIE_CREATOR_V0_1.json",
+    "blob_sha": "41c0aead3ae27c3ef321a23c9866745b263d090a",
+    "mutation_of_v0_1": false
+  },
+  "product_label": "REPLAY_WISDOM_FAMILY_GAME",
+  "experience_label": "THE_ONE_AND_ONLY_AWESOME_FEMININE_ENGINE",
+  "purpose": "Turn Mom-selected iPhone photos and approved family media into gorgeous replayable family movie drafts on demand, while preserving source, consent, rights, credits, and human creative control.",
+  "authority_created": false,
+  "identity_proof": false,
+  "consent_inferred": false,
+  "operational_integration": false,
+  "automatic_publication": false,
+  "quality_target": "BEAUTIFUL_FAMILY_MASTERCLASS_MASTERPIECE",
+  "quality_guarantee": false,
+  "masterclass_affiliation_claimed": false,
+  "apple_affiliation_claimed": false,
+  "promotion": "PROHIBITED",
+  "human_governance": {
+    "final_creative_approver": "MOM_WISDOM",
+    "canonical_rule": "MOM_WISDOM_IS_IN_CHARGE",
+    "mom_selects_source_media": true,
+    "mom_selects_final_cut": true,
+    "approval_required_before_export": true,
+    "approval_required_before_family_share": true,
+    "approval_required_before_influencer_publication": true,
+    "approval_transferable_by_model": false,
+    "model_may_override": false,
+    "cloud_service_may_override": false
+  },
+  "awesome_feminine_engine": {
+    "class": "CREATIVE_ORCHESTRATION_ENGINE",
+    "role": "TURN_SELECTED_FAMILY_MOMENTS_INTO_EDIT_PROPOSALS",
+    "human_identity_claimed": false,
+    "military_rank_claimed": false,
+    "government_authority_claimed": false,
+    "creative_values": [
+      "LOVE_FIRST",
+      "FEMININE_STRENGTH",
+      "BEAUTY_WITHOUT_OBJECTIFICATION",
+      "FAMILY_DIGNITY",
+      "JOY",
+      "HUMOR",
+      "MEMORY_WITH_CONSENT",
+      "SOURCE_PRESERVATION"
+    ],
+    "may_propose": [
+      "STORY_ARC",
+      "PHOTO_ORDER",
+      "CHAPTERS",
+      "TRANSITIONS",
+      "COLOR_MOOD",
+      "TITLE_CARDS",
+      "CAPTIONS",
+      "CREDITS",
+      "AUTHORIZED_MUSIC_CUES",
+      "TRAILER_CUT",
+      "VERTICAL_INFLUENCER_CUT"
+    ],
+    "may_not": [
+      "CHOOSE_PRIVATE_MEDIA_WITHOUT_MOM",
+      "SCAN_PHOTO_LIBRARY_IN_BACKGROUND",
+      "RECOGNIZE_OR_NAME_FACES",
+      "INFER_IDENTITY_OR_RELATIONSHIP",
+      "INFER_SENSITIVE_TRAITS",
+      "DELETE_OR_MODIFY_SOURCE_MEDIA",
+      "PUBLISH_WITHOUT_MOM",
+      "GUARANTEE_ARTISTIC_QUALITY"
+    ]
+  },
+  "movie_match_on_demand": {
+    "enabled": true,
+    "execution_state": "DESIGN_ONLY",
+    "entry_action": "MOM_SELECTS_A_BATCH_OF_PHOTOS",
+    "supported_inputs": [
+      "USER_SELECTED_IPHONE_PHOTOS",
+      "USER_SELECTED_IPHONE_VIDEO_CLIPS",
+      "USER_WRITTEN_MEMORY_NOTES",
+      "USER_RECORDED_VISIBLE_ACTION_VOICEOVER",
+      "AUTHORIZED_AUDIO"
+    ],
+    "minimum_photo_count": 5,
+    "recommended_photo_count": {
+      "short_reel": "10_TO_30",
+      "family_movie": "30_TO_150",
+      "legacy_masterpiece": "50_TO_500"
+    },
+    "photo_access": {
+      "mode": "USER_SELECTED_BATCH_ONLY",
+      "full_library_access_required": false,
+      "background_library_scan": "DENY",
+      "hidden_upload": "DENY",
+      "face_recognition": "DENY",
+      "person_naming": "DENY",
+      "location_metadata_default": "IGNORE",
+      "location_metadata_use_requires": "EXPLICIT_MOM_SELECTION",
+      "capture_time_use": "ALLOWED_FOR_CHRONOLOGY_AFTER_VISIBLE_APPROVAL"
+    },
+    "matching_signals": [
+      "USER_SELECTION_ORDER",
+      "APPROVED_CAPTURE_TIME",
+      "ORIENTATION",
+      "COLOR_AND_LIGHT",
+      "VISIBLE_SCENE_SIMILARITY_WITHOUT_IDENTITY_INFERENCE",
+      "USER_TAGS",
+      "USER_SELECTED_MOOD",
+      "USER_SELECTED_STORY_PURPOSE"
+    ],
+    "matching_signals_denied": [
+      "BIOMETRIC_IDENTITY",
+      "FACIAL_EMOTION_DIAGNOSIS",
+      "AGE_INFERENCE",
+      "HEALTH_INFERENCE",
+      "RELIGION_INFERENCE",
+      "POLITICAL_INFERENCE",
+      "PRECISE_LOCATION_INFERENCE",
+      "RELATIONSHIP_INFERENCE"
+    ],
+    "proposal_count": 3,
+    "proposal_styles": [
+      "WARM_FAMILY_LEGACY",
+      "JOYFUL_CINEMATIC",
+      "BOLD_AWESOME_FEMININE"
+    ],
+    "mom_choice_required": true,
+    "output_targets": [
+      "FAMILY_MASTERPIECE_MOVIE",
+      "THREE_MINUTE_HIGHLIGHT",
+      "SIXTY_SECOND_VERTICAL_REEL",
+      "FIFTEEN_SECOND_TEASER",
+      "PHOTO_STORYBOOK_TIMELINE",
+      "REPLAY_RECEIPT_JSON"
+    ]
+  },
+  "family_masterpiece_modes": [
+    {
+      "mode_id": "MOMENTS_TO_MOVIE",
+      "purpose": "Turn a selected photo batch into a complete emotional story arc."
+    },
+    {
+      "mode_id": "MOM_WISDOM_DIRECTORS_CUT",
+      "purpose": "Give Mom final control over order, captions, music, omissions, and credits."
+    },
+    {
+      "mode_id": "DAUGHTERS_LEGACY",
+      "purpose": "Create an approved family continuity movie centered on the daughters without inventing biography."
+    },
+    {
+      "mode_id": "GENERATIONS",
+      "purpose": "Create an ancestry and family-memory movie using approved names, captions, and sources only."
+    },
+    {
+      "mode_id": "FAMILY_PORCH_STORIES",
+      "purpose": "Create warm short stories from consented porch memories and selected photos."
+    },
+    {
+      "mode_id": "JOYSPACE_TRAILER",
+      "purpose": "Create a public-safe trailer that reveals no protected family information."
+    },
+    {
+      "mode_id": "INFLUENCER_MASTERPIECE_DRAFT",
+      "purpose": "Create platform-sized drafts without automatic posting, login, monetization, or engagement manipulation."
+    }
+  ],
+  "replay_wisdom_family_game": {
+    "enabled": true,
+    "execution_state": "DESIGN_ONLY",
+    "game_role": "COLLABORATIVE_FAMILY_MOVIE_CREATION",
+    "winner_model": "THE_FAMILY_WINS_WHEN_THE_STORY_FEELS_TRUE_TO_THEIR_APPROVED_MEMORY",
+    "competition_required": false,
+    "rounds": [
+      "PICK_THE_MOMENT",
+      "NAME_THE_FEELING",
+      "CHOOSE_THE_CHAPTER",
+      "PICK_THE_SOUND",
+      "WRITE_THE_CAPTION",
+      "CHECK_THE_SOURCE",
+      "REPLAY_THE_EDIT",
+      "MOM_WISDOM_FINAL_CUT"
+    ],
+    "player_actions": [
+      "PROPOSE_INCLUDE",
+      "PROPOSE_SKIP",
+      "PROPOSE_CAPTION",
+      "PROPOSE_MUSIC_MOOD",
+      "FLAG_PRIVATE",
+      "FLAG_WRONG_DATE",
+      "FLAG_WRONG_NAME",
+      "REQUEST_REPLAY"
+    ],
+    "scoring": {
+      "behavioral_scoring": "DENY",
+      "popularity_scoring": "DENY",
+      "child_ranking": "DENY",
+      "positive_progress_markers": [
+        "SOURCE_CHECKED",
+        "CONSENT_CHECKED",
+        "CAPTION_APPROVED",
+        "PRIVATE_MOMENT_PROTECTED",
+        "REPLAY_MATCHED"
+      ]
+    },
+    "final_state": "MOM_APPROVED_FAMILY_CUT_OR_NOT_READY"
+  },
+  "aunt_rann": {
+    "lane_id": "LEEANN",
+    "display_alias": "Aunt Rann",
+    "repository_root": "jsonwisdom/LEEANN",
+    "role": "SISTER_SYNTAX_CREATIVE_COMMANDER",
+    "creative_function": "DIRECT_THE_THREE_PROPOSALS_AND_EXPLAIN_EACH_EDIT_CHOICE",
+    "final_release_authority": false,
+    "may_request_mom_review": true,
+    "may_override_mom": false
+  },
+  "super_secret_siri_sister": {
+    "meaning": "PRIVATE_BY_DEFAULT_NOT_HIDDEN_COLLECTION",
+    "role": "VOICE_AND_NATURAL_LANGUAGE_MOVIE_ASSISTANT",
+    "example_requests": [
+      "MAKE_A_MOVIE_FROM_THE_PHOTOS_I_SELECTED",
+      "MAKE_IT_WARMER",
+      "REMOVE_THIS_PRIVATE_PHOTO",
+      "TRY_THE_BOLD_FEMININE_CUT",
+      "SHOW_ME_WHY_THIS_PHOTO_MATCHED",
+      "REPLAY_THE_FINAL_EDIT"
+    ],
+    "direct_execution": "DENY",
+    "visible_user_action_required": true,
+    "background_collection": "DENY",
+    "voice_recording_without_visible_user_action": "DENY",
+    "memory_default": "EPHEMERAL"
+  },
+  "music_song_replay": {
+    "enabled": true,
+    "rights_rule": "USER_OWNED_LICENSED_PUBLIC_DOMAIN_OR_EXPRESSLY_AUTHORIZED_ONLY",
+    "match_music_to": [
+      "USER_SELECTED_MOOD",
+      "EDIT_TEMPO",
+      "CHAPTER_LENGTH",
+      "APPROVED_LYRIC_THEME"
+    ],
+    "copyrighted_song_ingestion_without_rights": "DENY",
+    "lyrics_reproduction_without_permission": "DENY",
+    "voice_clone_without_explicit_consent": "DENY"
+  },
+  "movie_replay_integrity": {
+    "source_bytes_preserved": true,
+    "source_mutation": "DENY",
+    "required_source_fields": [
+      "SOURCE_ID",
+      "ORIGINAL_FILENAME",
+      "MEDIA_TYPE",
+      "SIZE_BYTES",
+      "SHA256",
+      "RIGHTS_STATUS",
+      "CONSENT_STATUS"
+    ],
+    "required_output_records": [
+      "SOURCE_MANIFEST_JSON",
+      "MOVIE_MATCH_MANIFEST_JSON",
+      "STORYBOARD_JSON",
+      "EDIT_DECISION_LIST_JSON",
+      "TRANSFORM_LOG_JSON",
+      "MUSIC_CUE_SHEET_JSON",
+      "CREDITS_MANIFEST_JSON",
+      "OUTPUT_SHA256",
+      "REPLAY_RECEIPT_JSON"
+    ],
+    "explanation_required_per_match": true,
+    "replay_results": [
+      "REPRODUCED",
+      "PARTIALLY_REPRODUCED",
+      "SOURCE_MISSING",
+      "RIGHTS_BLOCKED",
+      "CONSENT_BLOCKED",
+      "OUTPUT_MISMATCH",
+      "NOT_READY"
+    ],
+    "hash_equals_authorship": false,
+    "receipt_equals_truth": false,
+    "replay_equals_release_authority": false
+  },
+  "connectors": {
+    "iphone_photos": {
+      "status": "DESIGN_ADAPTER_ONLY_NOT_IMPLEMENTED",
+      "access_model": "APPLE_USER_SELECTED_PHOTOS_ONLY",
+      "full_library_scan": "DENY",
+      "background_sync": "DENY",
+      "delete_source": "DENY"
+    },
+    "icloud": {
+      "status": "DESIGN_ADAPTER_ONLY_NOT_IMPLEMENTED",
+      "allowed_when_implemented": [
+        "USER_SELECTED_PHOTOS_IMPORT",
+        "USER_SELECTED_FILES_IMPORT",
+        "USER_INITIATED_EXPORT_TO_ICLOUD_DRIVE"
+      ],
+      "automatic_shared_album_publication": "DENY",
+      "apple_account_credential_ingestion": "DENY"
+    },
+    "google_drive": {
+      "status": "DECLARED_NOT_CONNECTED",
+      "allowed_when_connected": [
+        "USER_SELECTED_FILE_IMPORT",
+        "USER_SELECTED_FOLDER_EXPORT"
+      ],
+      "full_drive_index": "DENY",
+      "public_link_without_confirmation": "DENY"
+    },
+    "gmail": {
+      "status": "DECLARED_NOT_CONNECTED",
+      "allowed_when_connected": [
+        "USER_SELECTED_ATTACHMENT_IMPORT",
+        "USER_INITIATED_DRAFT_EMAIL_WITH_EXPORT"
+      ],
+      "full_mailbox_scan": "DENY",
+      "automatic_send": "DENY"
+    }
+  },
+  "workflow": [
+    "CREATE_PRIVATE_MOVIE_PROJECT",
+    "MOM_SELECTS_PHOTOS_AND_CLIPS",
+    "CHECK_RIGHTS_AND_CONSENT",
+    "HASH_SOURCE_BYTES",
+    "BUILD_SOURCE_MANIFEST",
+    "GENERATE_THREE_MOVIE_MATCH_PROPOSALS",
+    "AUNT_RANN_EXPLAINS_EDIT_CHOICES",
+    "FAMILY_GAME_REVIEW_ROUNDS",
+    "MOM_SELECTS_DIRECTORS_CUT",
+    "GENERATE_LOCAL_MASTERPIECE_DRAFT",
+    "GENERATE_REPLAY_RECEIPT",
+    "MOM_WISDOM_FINAL_REVIEW",
+    "OPTIONAL_USER_INITIATED_EXPORT",
+    "OPTIONAL_USER_INITIATED_SHARE"
+  ],
+  "fail_closed_conditions": [
+    "NO_USER_SELECTED_MEDIA",
+    "MISSING_RIGHTS_STATUS",
+    "MISSING_CONSENT_STATUS",
+    "SOURCE_HASH_MISMATCH",
+    "SOURCE_FILE_MISSING",
+    "FACE_OR_IDENTITY_INFERENCE_REQUEST",
+    "BACKGROUND_PHOTO_SCAN_REQUEST",
+    "HIDDEN_UPLOAD_REQUEST",
+    "AUTOMATIC_PUBLICATION_REQUEST",
+    "MOM_WISDOM_APPROVAL_MISSING",
+    "UNSUPPORTED_CONNECTOR_OPERATION"
+  ],
+  "current_state": {
+    "movie_match_defined": true,
+    "awesome_feminine_engine_defined": true,
+    "replay_wisdom_family_game_defined": true,
+    "mom_wisdom_final_gate_active": true,
+    "aunt_rann_creative_role_active": true,
+    "iphone_photos_connected": false,
+    "icloud_connected": false,
+    "google_drive_connected": false,
+    "gmail_connected": false,
+    "operational_execution": false,
+    "public_release_approved": false,
+    "authority_created": false
+  }
+}
