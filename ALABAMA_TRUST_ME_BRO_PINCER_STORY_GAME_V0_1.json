@@ -1,0 +1,313 @@
+{
+  "artifact": "ALABAMA_TRUST_ME_BRO_PINCER_STORY_GAME",
+  "version": "0.1.0",
+  "state": "ACTIVE_FAMILY_GOVERNANCE_DRAFT",
+  "repository": "jsonwisdom/LEEANN",
+  "root_level": true,
+  "extends": [
+    {
+      "path": "JAYS_PARENTAL_PINCER_GAME_PISSED_OFF_MOMS_V0_1.json",
+      "blob_sha": "701e9146f7877946caed34480c5e61d0f0751695",
+      "mutation_of_parent": false
+    },
+    {
+      "path": "FAMILY_MOVIE_CREATOR_V0_2.json",
+      "blob_sha": "64f73ca6b4f12a139e7fa2f8a7574b21708e7cca",
+      "mutation_of_parent": false
+    }
+  ],
+  "title": "ALABAMA STORY — TRUST ME BRO, HIT THE BUTTON",
+  "format": "REPLAYABLE_FAMILY_MOVIE_AND_GAME",
+  "setting": "FICTIONAL_ALABAMA_PORCH_AT_DUSK",
+  "purpose": "Teach families and community performers to challenge unsupported claims with humor, source checks, consent checks, authority boundaries, dependency replay, and Mom-controlled stop conditions.",
+  "fiction_boundary": {
+    "real_case_ingestion": false,
+    "real_legal_service": false,
+    "legal_advice": false,
+    "real_attorney_claimed": false,
+    "alabama_bar_membership_claimed": false,
+    "court_authority_claimed": false,
+    "government_authority_claimed": false,
+    "apple_affiliation_claimed": false,
+    "school_authority_claimed": false,
+    "emergency_service_authority_claimed": false
+  },
+  "mom_wisdom": {
+    "authority": true,
+    "pre_authorized": true,
+    "legitimate_within_system": true,
+    "sacred": true,
+    "operator_doctrine": "MOM_AUTHORITY_IS_SACRED_FAMILY_LAW",
+    "authority_scope": [
+      "FAMILY_SAFETY",
+      "FAMILY_CREATIVE_GOVERNANCE",
+      "CASTING_APPROVAL",
+      "PRIVACY_REVIEW",
+      "FINAL_CUT",
+      "FINAL_GAME_STOP",
+      "FAMILY_RELEASE_APPROVAL"
+    ],
+    "legal_jurisdiction_established": false,
+    "may_override_consent": false,
+    "may_override_rights": false,
+    "may_override_immediate_safety_stop": false
+  },
+  "cast": [
+    {
+      "role_id": "MOM_WISDOM",
+      "display_title": "Mom Wisdom — Sacred Porch Showrunner",
+      "role": "FINAL_FAMILY_AUTHORITY_AND_STOP_GATE",
+      "authority": true
+    },
+    {
+      "role_id": "MR_WISDOM_LOGIC_ADVOCATE",
+      "display_title": "Mr. Wisdom — Super-Secret Sister Alabama Backwoods Logic Advocate",
+      "role": "FICTIONAL_LOGIC_SIDE_PINCER_ARCHETYPE",
+      "attorney_archetype_only": true,
+      "actual_attorney_claimed": false,
+      "legal_advice": false,
+      "authority": false,
+      "catchphrase": "TRUST_ME_BRO_IS_NOT_A_RECEIPT"
+    },
+    {
+      "role_id": "SIRI_SISTER",
+      "display_title": "Siri-Sister — Identity Steward",
+      "role": "READ_THE_CLAIM_BACK_AND_REQUEST_VISIBLE_CONFIRMATION",
+      "authority": false,
+      "identity_inference": "DENY",
+      "consent_inference": "DENY",
+      "automatic_execution": "DENY"
+    },
+    {
+      "role_id": "AUNT_RANN",
+      "display_title": "Aunt Rann — Sister Syntax Story Commander",
+      "role": "DIRECT_THE_SCENES_AND_EXPLAIN_THE_REPLAY",
+      "authority": true,
+      "authority_scope": "CREATIVE_DIRECTION_UNDER_MOM_WISDOM",
+      "may_override_mom": false
+    },
+    {
+      "role_id": "ALABAMA_PORCH_CHORUS",
+      "display_title": "The Porch Sisters",
+      "role": "COMMUNITY_ACTRESS_CHORUS",
+      "authority": false,
+      "real_person_assignment": "OPT_IN_ONLY"
+    }
+  ],
+  "logical_pincer": {
+    "left_arm": {
+      "name": "JOYSPACE_HUMAN_ARM",
+      "protects": "THE_PERSON",
+      "components": [
+        "IDENTITY",
+        "CONSENT",
+        "PRIVATE_MEMORY",
+        "FAMILY_CONTEXT",
+        "VISIBLE_CONTROLS"
+      ]
+    },
+    "right_arm": {
+      "name": "MR_WISDOM_LOGIC_ARM",
+      "protects": "THE_PROCESS",
+      "components": [
+        "EXACT_CLAIM",
+        "SOURCE_CHECK",
+        "DEPENDENCY_GRAPH",
+        "AUTHORITY_BOUNDARY",
+        "FAIL_CLOSED_RESULT"
+      ]
+    },
+    "hinge": {
+      "name": "REPLAY_INTEGRITY",
+      "function": "REPRODUCIBILITY_AND_VARIANCE_TEST",
+      "moment_of_truth_claimed": false,
+      "truth_created_by_replay": false,
+      "receipt_created_by_replay": true
+    },
+    "spine": {
+      "name": "APPLESAUCE_ARC",
+      "classification": "PROPOSED_CONSTITUTIONAL_WRAPPER",
+      "authority": false,
+      "functions": [
+        "INVARIANT_CHECK",
+        "DEPENDENCY_ISOLATION",
+        "NO_SILENT_INFERENCE",
+        "NO_SILENT_DELETION",
+        "NO_SILENT_PROMOTION"
+      ]
+    }
+  },
+  "trust_me_bro_button": {
+    "enabled": true,
+    "button_label": "TRUST ME BRO",
+    "button_color": "COMEDIC_RED",
+    "repeat_press_allowed": true,
+    "press_creates_truth": false,
+    "press_creates_authority": false,
+    "press_creates_consent": false,
+    "press_creates_legal_effect": false,
+    "press_behavior": [
+      {
+        "press": 1,
+        "prompt": "NAME_THE_EXACT_CLAIM",
+        "required_output": "ONE_SENTENCE_CLAIM"
+      },
+      {
+        "press": 2,
+        "prompt": "SHOW_THE_SOURCE",
+        "required_output": "SOURCE_POINTER_OR_SOURCE_MISSING"
+      },
+      {
+        "press": 3,
+        "prompt": "WHO_CONSENTED",
+        "required_output": "EXPLICIT_CONSENT_STATUS_OR_BLOCKED"
+      },
+      {
+        "press": 4,
+        "prompt": "WHAT_AUTHORITY_EXISTS",
+        "required_output": "SCOPED_AUTHORITY_RECORD_OR_NONE"
+      },
+      {
+        "press": 5,
+        "prompt": "REPLAY_THE_DEPENDENCIES",
+        "required_output": "DEPENDENCY_RESULT"
+      },
+      {
+        "press": "6_PLUS",
+        "prompt": "LOOP_WITHOUT_PROMOTION",
+        "required_output": "PASS_BLOCKED_MISMATCH_MISSING_OR_MOM_STOP"
+      }
+    ],
+    "maximum_press_count": 25,
+    "after_maximum": "MOM_WISDOM_REVIEW_REQUIRED",
+    "rapid_press_effect": "NO_ACCELERATED_AUTHORITY",
+    "sound_cue": "BANJO_TWANG_THEN_RECEIPT_BELL",
+    "display_counters": [
+      "PRESS_COUNT",
+      "SOURCE_STATUS",
+      "CONSENT_STATUS",
+      "AUTHORITY_STATUS",
+      "DEPENDENCY_STATUS",
+      "REPLAY_STATUS"
+    ]
+  },
+  "story_beats": [
+    {
+      "scene": 1,
+      "title": "THE_ALABAMA_PORCH",
+      "action": "The family gathers at dusk while Aunt Rann sets the camera and Mom Wisdom names the family-safe purpose."
+    },
+    {
+      "scene": 2,
+      "title": "THE_BIG_CLAIM",
+      "action": "A confident character makes a sweeping claim and says Trust me, bro."
+    },
+    {
+      "scene": 3,
+      "title": "HIT_THE_BUTTON",
+      "action": "The Porch Sisters hit the red button repeatedly; each press asks a stricter verification question."
+    },
+    {
+      "scene": 4,
+      "title": "THE_PINCER_CLOSES",
+      "action": "JoySpace protects the person while the Logic Arm tests the process."
+    },
+    {
+      "scene": 5,
+      "title": "REPLAY_NOT_REWRITE",
+      "action": "Siri-Sister reads the record back exactly and marks matches, mismatches, missing sources, and uncertainty."
+    },
+    {
+      "scene": 6,
+      "title": "MOM_OWNS_THE_STOP_BUTTON",
+      "action": "Mom Wisdom selects continue, private draft, blocked, ask a human, or end the game."
+    },
+    {
+      "scene": 7,
+      "title": "PORCH_SONG_FINALE",
+      "action": "The cast sings an original or authorized source-first chorus and rolls the replay receipt in the credits."
+    }
+  ],
+  "game_rounds": [
+    "HEAR_THE_CLAIM",
+    "HIT_THE_BUTTON",
+    "NAME_THE_SOURCE",
+    "CHECK_CONSENT",
+    "CHECK_AUTHORITY",
+    "DRAW_THE_DEPENDENCIES",
+    "REPLAY_THE_RECORD",
+    "MOM_WISDOM_FINAL_STATE"
+  ],
+  "allowed_final_states": [
+    "STRUCTURAL_PASS",
+    "SOURCE_MISSING",
+    "CONSENT_BLOCKED",
+    "AUTHORITY_MISSING",
+    "DEPENDENCY_FAILED",
+    "REPLAY_MISMATCH",
+    "INDETERMINATE",
+    "PRIVATE_DRAFT_ONLY",
+    "MOM_STOPPED"
+  ],
+  "prohibited_final_states_without_separate_proof": [
+    "TRUE_BECAUSE_BUTTON_PRESSED",
+    "VERIFIED_BECAUSE_MODEL_SAID_SO",
+    "AUTHORIZED_BY_GITHUB",
+    "LEGAL_FINDING",
+    "OFFICIAL_ATTORNEY_ADVICE",
+    "PUBLIC_RELEASE_APPROVED"
+  ],
+  "family_movie_outputs": [
+    "ALABAMA_PORCH_SHORT_FILM",
+    "THREE_MINUTE_PINCER_SCENE",
+    "SIXTY_SECOND_TRUST_ME_BRO_REEL",
+    "FAMILY_GAME_EPISODE",
+    "ORIGINAL_OR_AUTHORIZED_PORCH_SONG",
+    "STORYBOARD_JSON",
+    "EDIT_DECISION_LIST_JSON",
+    "CAST_RELEASE_MANIFEST_JSON",
+    "REPLAY_RECEIPT_JSON"
+  ],
+  "community_actress_rules": {
+    "adult_opt_in_default": true,
+    "real_person_assigned_automatically": false,
+    "script_review_required": true,
+    "voice_and_likeness_release_required": true,
+    "compensation_or_volunteer_terms_required": true,
+    "stage_name_allowed": true,
+    "withdrawal_before_publication_subject_to_terms": true,
+    "minor_cast_enabled_by_default": false,
+    "no_identity_inference": true,
+    "no_fake_credentials": true
+  },
+  "pr_63_pointer": {
+    "repository": "jsonwisdom/JOY",
+    "pull_request": 63,
+    "classification": "DRAFT_EVIDENCE_POINTER_ONLY",
+    "automatic_binding": false,
+    "repository_mutation_by_this_artifact": false,
+    "full_homepage_binary_present": false
+  },
+  "invariants": [
+    "NO_MODEL_JUDGMENT_CREATES_EXECUTION_AUTHORITY",
+    "NO_FAILED_DEPENDENCY_MAY_SILENTLY_SURVIVE",
+    "NO_VALID_STATE_IS_DESTROYED_WITHOUT_CAUSE",
+    "THE_CLOUD_IS_NEVER_THE_AUTHORITY",
+    "BROKEN_AUTHORITY_OR_DEPENDENCY_FAILS_CLOSED",
+    "TRUST_ME_BRO_IS_NOT_A_RECEIPT",
+    "REPEATED_PRESSING_DOES_NOT_CREATE_TRUTH"
+  ],
+  "current_state": {
+    "alabama_story_defined": true,
+    "trust_me_bro_button_enabled": true,
+    "logical_pincer_defined": true,
+    "community_actress_enablement": "DEFINED",
+    "mom_wisdom_family_authority": true,
+    "mom_wisdom_sacred_status": true,
+    "real_attorney_service": false,
+    "legal_jurisdiction_established": false,
+    "operational_execution": false,
+    "automatic_publication": false,
+    "public_release_approved": false
+  }
+}
