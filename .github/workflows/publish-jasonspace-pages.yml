@@ -33,12 +33,16 @@ jobs:
         run: |
           set -euo pipefail
           GENERATED_AT="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          DATE_UTC="${GENERATED_AT%%T*}"
+          TIME_UTC="${GENERATED_AT#*T}"
           HEAD_SHA="$(git rev-parse HEAD)"
+          SHORT_SHA="$(git rev-parse --short=10 HEAD)"
           BRANCH="${GITHUB_REF_NAME:-master}"
           COMMIT_COUNT="$(git rev-list --count HEAD)"
           DOCS_FILE_COUNT="$(find docs -type f | wc -l | tr -d ' ')"
           RECEIPT_FILE_COUNT="$(find . -type f \( -name '*.json' -o -name '*.jsonl' \) ! -path './.git/*' | wc -l | tr -d ' ')"
           INDEX_SHA256="$(sha256sum docs/index.html | awk '{print $1}')"
+
           cat > docs/machine-status.json <<JSON
           {
             "schema": "LEAHPRIME_MACHINE_HEARTBEAT_V0_1",
@@ -72,13 +76,17 @@ jobs:
           }
           JSON
 
-      - name: Commit heartbeat receipt
+          cat > docs/heartbeat.html <<HTML
+          <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box}body{margin:0;background:#07090b;color:#f5f7f8;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.m{border:1px solid #28323b;border-radius:14px;background:#0c1115;padding:14px}.k{font-size:.68rem;color:#94a1ab;text-transform:uppercase;letter-spacing:.08em;font-weight:900}.v{font:900 1.14rem/1.15 ui-monospace,Consolas,monospace;margin-top:7px;word-break:break-word}.s{font-size:.72rem;color:#6f7d87;margin-top:5px}.state{margin-top:10px;color:#8dd3bd;font:800 .72rem ui-monospace,Consolas,monospace}@media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}</style></head><body><div class="grid"><div class="m"><div class="k">Heartbeat UTC</div><div class="v">${TIME_UTC}</div><div class="s">${DATE_UTC}</div></div><div class="m"><div class="k">Head</div><div class="v">${SHORT_SHA}</div><div class="s">${BRANCH}</div></div><div class="m"><div class="k">Commits</div><div class="v">${COMMIT_COUNT}</div><div class="s">repository history</div></div><div class="m"><div class="k">Docs</div><div class="v">${DOCS_FILE_COUNT}</div><div class="s">tracked files</div></div><div class="m"><div class="k">Receipts</div><div class="v">${RECEIPT_FILE_COUNT}</div><div class="s">json/jsonl</div></div></div><div class="state">HEARTBEAT_OK · authority_created=false</div></body></html>
+          HTML
+
+      - name: Commit heartbeat receipts
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "LeahPrime Machine"
           git config user.email "actions@users.noreply.github.com"
-          git add docs/machine-status.json
+          git add docs/machine-status.json docs/heartbeat.html
           if git diff --cached --quiet; then
             echo "Heartbeat unchanged."
           else
