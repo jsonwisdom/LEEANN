@@ -1,0 +1,53 @@
+name: LeahPrime Protocol One Replay
+
+on:
+  push:
+    branches:
+      - feature/protocol-one-harness
+    paths:
+      - 'protocols/LeahPrime-Replay.ps1'
+      - '.github/workflows/protocol-one-replay.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  replay:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Protocol One harness branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run Protocol One against pinned historical head
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path .\build\receipts | Out-Null
+          .\protocols\LeahPrime-Replay.ps1 `
+            -ExpectedHead "ab7666ac6922ac79c7d21fdd2799697370e77e6b" `
+            -ReceiptPath ".\build\receipts\LeahPrimeProtocolOne.receipt.json"
+
+      - name: Print Protocol One receipt
+        if: always()
+        shell: pwsh
+        run: |
+          if (Test-Path .\build\receipts\LeahPrimeProtocolOne.receipt.json) {
+            Get-Content .\build\receipts\LeahPrimeProtocolOne.receipt.json -Raw
+            $hash = (Get-FileHash .\build\receipts\LeahPrimeProtocolOne.receipt.json -Algorithm SHA256).Hash.ToLowerInvariant()
+            Write-Host "receipt_sha256=$hash"
+          }
+
+      - name: Upload Protocol One receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: leahprime-protocol-one-ab7666ac
+          path: build/receipts/LeahPrimeProtocolOne.receipt.json
+          if-no-files-found: error
