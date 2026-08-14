@@ -1,0 +1,66 @@
+{
+  "receipt_id": "DANNELLY_CLASSIFICATION_DRY_RUN_RECEIPT_V0.1",
+  "protocol": "JSONWISDOM_TIMEGRAPH_V0.1",
+  "fixture": "fixtures/timegraph/DANNELLY_MIXED_PACKET_GENESIS_FIXTURE_V0_1.json",
+  "mode": "STRUCTURAL_DRY_RUN_NOT_EXECUTABLE_HARNESS",
+  "authority_created": false,
+  "schema_target": "COMMS_RECEIPT_SCHEMA_V2_GENESIS",
+  "schema_resolution": {
+    "status": "HOLD",
+    "reason": "Exact schema identifier was not found in accessible jsonwisdom GitHub code search; no schema instance may be claimed valid until the canonical schema is supplied or resolved."
+  },
+  "timestamp_relation_validation": {
+    "status": "HOLD",
+    "reason": "timestamp_relation definition and allowed values were not found in accessible jsonwisdom GitHub code search. The fixture retains observed_at without inventing an enum value."
+  },
+  "classification_checks": {
+    "packet_items_recorded": 5,
+    "expected_fact_candidates": 3,
+    "observed_fact_candidates": 3,
+    "expected_unknown_holds": 1,
+    "observed_unknown_holds": 1,
+    "expected_fiction_items": 1,
+    "observed_fiction_items": 1,
+    "rail_collapse": false,
+    "fact_promoted": 0
+  },
+  "unknown_hold_check": {
+    "item_id": "DAN-004",
+    "timegraph_recording": true,
+    "replayable": true,
+    "fact_promotion": false,
+    "leahprime_fact_reasoning": false,
+    "release_condition": "fresh evidence + explicit reclassification receipt",
+    "result": "PASS"
+  },
+  "fiction_check": {
+    "item_id": "DAN-005",
+    "rail": "FICTION",
+    "fact_promotion": false,
+    "result": "PASS"
+  },
+  "fact_candidate_check": {
+    "items": ["DAN-001", "DAN-002", "DAN-003"],
+    "promotion_state": "AWAITING_EXPLICIT_PROMOTION_RECEIPT",
+    "result": "PASS"
+  },
+  "box_layers": {
+    "BoxD": "CORRIDOR_PRESERVE_CROSSING",
+    "BoxDee": "HOME",
+    "separation": "PASS"
+  },
+  "canonical_byte_audit": {
+    "status": "HOLD",
+    "git_blob_identity_available": true,
+    "sha256_receipts_present": false,
+    "rule": "Git blob identity is not substituted for the requested independent SHA-256 receipt."
+  },
+  "overall": {
+    "classification_gate_dry_run": "PASS",
+    "schema_compliance": "HOLD",
+    "timestamp_relation_compliance": "HOLD",
+    "canonical_sha256_audit": "HOLD",
+    "executable_genesis_replay": "NOT_YET_RUN",
+    "merge_recommendation": "KEEP_DRAFT"
+  }
+}
