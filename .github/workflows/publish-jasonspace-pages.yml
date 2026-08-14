@@ -1,4 +1,4 @@
-name: LeahPrime Machine Daily Heartbeat
+name: Wisdom Family Console Daily Update
 
 on:
   schedule:
@@ -16,11 +16,11 @@ permissions:
   id-token: write
 
 concurrency:
-  group: leahprime-machine
+  group: wisdom-family-console-daily
   cancel-in-progress: false
 
 jobs:
-  heartbeat-and-deploy:
+  build-console:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout full replay history
@@ -28,69 +28,117 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Generate LeahPrime machine heartbeat
+      - name: Build daily console content
         shell: bash
         run: |
           set -euo pipefail
-          GENERATED_AT="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-          DATE_UTC="${GENERATED_AT%%T*}"
-          TIME_UTC="${GENERATED_AT#*T}"
-          HEAD_SHA="$(git rev-parse HEAD)"
-          SHORT_SHA="$(git rev-parse --short=10 HEAD)"
-          BRANCH="${GITHUB_REF_NAME:-master}"
-          COMMIT_COUNT="$(git rev-list --count HEAD)"
-          DOCS_FILE_COUNT="$(find docs -type f | wc -l | tr -d ' ')"
-          RECEIPT_FILE_COUNT="$(find . -type f \( -name '*.json' -o -name '*.jsonl' \) ! -path './.git/*' | wc -l | tr -d ' ')"
-          INDEX_SHA256="$(sha256sum docs/index.html | awk '{print $1}')"
+          python - <<'PY'
+          import hashlib, html, json, os, subprocess
+          from datetime import datetime, timezone
+          from pathlib import Path
 
-          cat > docs/machine-status.json <<JSON
-          {
-            "schema": "LEAHPRIME_MACHINE_HEARTBEAT_V0_1",
-            "generated_at": "${GENERATED_AT}",
-            "workflow_state": "HEARTBEAT_OK",
-            "branch": "${BRANCH}",
-            "head_sha": "${HEAD_SHA}",
-            "commit_count": ${COMMIT_COUNT},
-            "docs_file_count": ${DOCS_FILE_COUNT},
-            "receipt_file_count": ${RECEIPT_FILE_COUNT},
-            "index_sha256": "${INDEX_SHA256}",
-            "host_profile": {
-              "cpu": "AMD Ryzen 5 6600H",
-              "cores": 6,
-              "threads": 12,
-              "base_ghz": 3.3,
-              "max_boost_ghz": 4.5,
-              "ram_gb_approx": 16,
-              "gpu": "AMD Radeon 660M",
-              "os": "Windows 11 Home 64-bit"
-            },
-            "kernel": {
-              "maxwell_gate": "CLASSIFY",
-              "bitbot": "VERIFY_BYTES",
-              "boxd": "PRESERVE",
-              "crisscross": "CHECK",
-              "gray_baby": "HOLD_ALLOWED",
-              "human_gate": "TERMINAL_DECIDER",
-              "authority_created": false
-            }
+          root = Path('.')
+          docs = root / 'docs'
+          docs.mkdir(exist_ok=True)
+
+          def git(*args):
+              return subprocess.check_output(['git', *args], text=True).strip()
+
+          now = datetime.now(timezone.utc)
+          generated_at = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+          head_sha = git('rev-parse', 'HEAD')
+          short_sha = git('rev-parse', '--short=10', 'HEAD')
+          branch = os.environ.get('GITHUB_REF_NAME') or 'master'
+          commit_count = int(git('rev-list', '--count', 'HEAD'))
+          docs_count = sum(1 for p in docs.rglob('*') if p.is_file())
+          receipt_count = sum(1 for p in root.rglob('*') if p.is_file() and p.suffix.lower() in {'.json','.jsonl'} and '.git' not in p.parts)
+
+          def non_machine_commits(args, limit=None):
+              raw = git(*args)
+              out = []
+              for line in raw.splitlines() if raw else []:
+                  sha, _, subject = line.partition('\t')
+                  if subject.startswith('chore: refresh Wisdom Family Console') or subject.startswith('chore: refresh LeahPrime machine'):
+                      continue
+                  out.append((sha, subject))
+                  if limit and len(out) >= limit:
+                      break
+              return out
+
+          recent24 = non_machine_commits(('log','--since=24.hours','--pretty=format:%H%x09%s'))
+          latest = non_machine_commits(('log','-20','--pretty=format:%H%x09%s'), 6)
+          commits_24h = len(recent24)
+
+          changed = set()
+          for sha, _ in recent24:
+              names = git('diff-tree','--no-commit-id','--name-only','-r',sha)
+              changed.update(x for x in names.splitlines() if x)
+          files_24h = len(changed)
+
+          index_sha256 = hashlib.sha256((docs/'index.html').read_bytes()).hexdigest()
+
+          def scale(value, cap):
+              return min(100, round(value * 100 / cap)) if cap else 0
+
+          gauges = {
+              'commits_24h': {'value': commits_24h, 'pct': scale(commits_24h, 10), 'label': '24H COMMITS'},
+              'files_24h': {'value': files_24h, 'pct': scale(files_24h, 24), 'label': 'FILES TOUCHED'},
+              'receipts': {'value': receipt_count, 'pct': scale(receipt_count, 24), 'label': 'RECEIPTS'},
+              'docs': {'value': docs_count, 'pct': scale(docs_count, 40), 'label': 'DOCS'},
           }
-          JSON
 
-          cat > docs/heartbeat.html <<HTML
-          <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box}body{margin:0;background:#07090b;color:#f5f7f8;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.m{border:1px solid #28323b;border-radius:14px;background:#0c1115;padding:14px}.k{font-size:.68rem;color:#94a1ab;text-transform:uppercase;letter-spacing:.08em;font-weight:900}.v{font:900 1.14rem/1.15 ui-monospace,Consolas,monospace;margin-top:7px;word-break:break-word}.s{font-size:.72rem;color:#6f7d87;margin-top:5px}.state{margin-top:10px;color:#8dd3bd;font:800 .72rem ui-monospace,Consolas,monospace}@media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}</style></head><body><div class="grid"><div class="m"><div class="k">Heartbeat UTC</div><div class="v">${TIME_UTC}</div><div class="s">${DATE_UTC}</div></div><div class="m"><div class="k">Head</div><div class="v">${SHORT_SHA}</div><div class="s">${BRANCH}</div></div><div class="m"><div class="k">Commits</div><div class="v">${COMMIT_COUNT}</div><div class="s">repository history</div></div><div class="m"><div class="k">Docs</div><div class="v">${DOCS_FILE_COUNT}</div><div class="s">tracked files</div></div><div class="m"><div class="k">Receipts</div><div class="v">${RECEIPT_FILE_COUNT}</div><div class="s">json/jsonl</div></div></div><div class="state">HEARTBEAT_OK · authority_created=false</div></body></html>
-          HTML
+          if commits_24h == 0:
+              headline = 'Quiet porch. No human-authored repo changes crossed in the last 24 hours.'
+          elif commits_24h == 1:
+              headline = f'One human-authored commit crossed in the last 24 hours and touched {files_24h} file(s).'
+          else:
+              headline = f'{commits_24h} human-authored commits crossed in the last 24 hours and touched {files_24h} files.'
 
-      - name: Commit heartbeat receipts
+          status = {
+              'schema': 'WISDOM_FAMILY_CONSOLE_DAILY_V0_1',
+              'generated_at': generated_at,
+              'workflow_state': 'DAILY_CONSOLE_OK',
+              'branch': branch,
+              'head_sha': head_sha,
+              'commit_count': commit_count,
+              'commits_24h': commits_24h,
+              'files_changed_24h': files_24h,
+              'docs_file_count': docs_count,
+              'receipt_file_count': receipt_count,
+              'index_sha256': index_sha256,
+              'headline': headline,
+              'recent_commits': [{'sha': s, 'subject': t} for s,t in latest],
+              'changed_files_24h': sorted(changed)[:12],
+              'gauges': gauges,
+              'authority_created': False
+          }
+          (docs/'machine-status.json').write_text(json.dumps(status, indent=2)+'\n', encoding='utf-8')
+
+          def gauge(key, accent):
+              g = gauges[key]
+              angle = -64 + g['pct'] * 1.32
+              return f'''<div class="g"><div class="dial" style="--a:{angle}deg;--c:{accent}"><div class="sweep"></div><div class="needle"></div><div class="hub"></div><div class="num"><b>{g['value']}</b><small>{html.escape(g['label'])}</small></div></div><div class="scale">DISPLAY SCALE {g['pct']}%</div></div>'''
+
+          commits_html = ''.join(f'<li><code>{html.escape(s[:8])}</code> {html.escape(t)}</li>' for s,t in latest) or '<li>No human-authored commits in the replay window.</li>'
+          files_html = ''.join(f'<li>{html.escape(p)}</li>' for p in sorted(changed)[:8]) or '<li>No files changed in the last 24 hours.</li>'
+
+          page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>
+          :root{{--bg:#07090b;--panel:#0c1115;--line:#28323b;--text:#f5f7f8;--muted:#94a1ab;--mint:#8dd3bd;--gold:#e7c675;--red:#e46666;--blue:#86b8e7}}*{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}}.top{{display:flex;justify-content:space-between;gap:18px;align-items:end;margin-bottom:14px}}h2{{margin:0;font-size:clamp(1.45rem,4vw,2.35rem);letter-spacing:-.04em}}.stamp{{color:var(--muted);font:800 .7rem ui-monospace,Consolas,monospace}}.headline{{border:1px solid #423922;background:#17140e;border-radius:15px;padding:14px;color:#f0ddb5;font-weight:900;margin-bottom:12px}}.gauges{{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}}.g{{border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:12px}}.dial{{position:relative;width:min(145px,100%);aspect-ratio:1;margin:auto;border-radius:50%;background:radial-gradient(circle,#0d1216 0 53%,transparent 54%),conic-gradient(from 220deg,var(--c) 0 34%,#202830 34% 100%);border:1px solid #26323a;box-shadow:inset 0 0 0 10px #090d10}}.needle{{position:absolute;left:50%;bottom:50%;width:3px;height:37%;background:linear-gradient(var(--red),var(--gold));transform-origin:50% 100%;transform:translateX(-50%) rotate(var(--a));transition:transform .6s ease}}.sweep{{position:absolute;inset:7%;border-radius:50%;border:1px solid #ffffff10;border-top-color:#ffffff50;animation:spin 4s linear infinite}}@keyframes spin{{to{{transform:rotate(360deg)}}}}.hub{{position:absolute;left:50%;top:50%;width:13px;height:13px;border-radius:50%;background:#d9e2e7;border:3px solid #1d252b;transform:translate(-50%,-50%);z-index:3}}.num{{position:absolute;inset:0;display:grid;place-content:center;text-align:center}}.num b{{font-size:2rem;letter-spacing:-.05em}}.num small{{color:var(--muted);font-size:.62rem;font-weight:900;letter-spacing:.06em}}.scale{{text-align:center;color:#71808b;font:800 .62rem ui-monospace,Consolas,monospace;margin-top:7px}}.lists{{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}}.box{{border:1px solid var(--line);background:var(--panel);border-radius:15px;padding:14px}}.box b{{font-size:.72rem;letter-spacing:.08em;color:var(--mint)}}ul{{padding-left:18px;margin:9px 0 0}}li{{margin:6px 0;color:#cbd3d8;font-size:.8rem}}code{{color:var(--gold)}}.foot{{margin-top:10px;color:#7e8a94;font:800 .67rem ui-monospace,Consolas,monospace}}@media(max-width:700px){{.gauges,.lists{{grid-template-columns:repeat(2,1fr)}}}}
+          </style></head><body><div class="top"><div><div class="stamp">WISDOM FAMILY CONSOLE / DAILY UPDATE</div><h2>What changed while the porch light was on?</h2></div><div class="stamp">{generated_at}</div></div><div class="headline">{html.escape(headline)}</div><div class="gauges">{gauge('commits_24h','#8dd3bd')}{gauge('files_24h','#86b8e7')}{gauge('receipts','#e7c675')}{gauge('docs','#e46666')}</div><div class="lists"><div class="box"><b>LATEST HUMAN-AUTHORED COMMITS</b><ul>{commits_html}</ul></div><div class="box"><b>FILES TOUCHED — 24H</b><ul>{files_html}</ul></div></div><div class="foot">HEAD={short_sha} · TOTAL_COMMITS={commit_count} · authority_created=false</div></body></html>'''
+          (docs/'daily-machine.html').write_text(page, encoding='utf-8')
+          PY
+
+      - name: Commit daily console update
         shell: bash
         run: |
           set -euo pipefail
-          git config user.name "LeahPrime Machine"
+          git config user.name "Wisdom Family Console"
           git config user.email "actions@users.noreply.github.com"
-          git add docs/machine-status.json docs/heartbeat.html
+          git add docs/machine-status.json docs/daily-machine.html
           if git diff --cached --quiet; then
-            echo "Heartbeat unchanged."
+            echo "Daily console unchanged."
           else
-            git commit -m "chore: refresh LeahPrime machine heartbeat"
+            git commit -m "chore: refresh Wisdom Family Console daily update"
             git push origin HEAD:master
           fi
 
@@ -99,13 +147,13 @@ jobs:
         continue-on-error: true
         uses: actions/configure-pages@v5
 
-      - name: Upload LeahPrime Machine
+      - name: Upload console
         if: steps.pages_config.outcome == 'success'
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./docs
 
-      - name: Deploy LeahPrime Machine
+      - name: Deploy console
         if: steps.pages_config.outcome == 'success'
         id: deployment
         uses: actions/deploy-pages@v4
@@ -117,5 +165,4 @@ jobs:
             echo "PAGES_GATE=OPEN"
           else
             echo "PAGES_GATE=HOLD_REPOSITORY_SETTING"
-            echo "Heartbeat succeeded; GitHub Pages is not enabled yet."
           fi
