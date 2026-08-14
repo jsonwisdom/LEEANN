@@ -1,7 +1,7 @@
 # Jay’s Functional VA Resume — Apply Wisdom to Family
 
 **Namespace:** `jaywisdom.eth`  
-**Environment:** Family / BoxDee  
+**Environment:** Family / BoxD corridor / BoxDee home  
 **Source:** `Jason Wisdom Resume — 2026-08-14` in Jay’s Google Drive  
 **Public handling:** functional extraction only; personal contact data and VA medical details are not copied into this repository  
 **Authority created:** `false`
@@ -35,7 +35,9 @@ In the family layer, Wisdom means using experience to reduce confusion without c
 
 A family member brings a memory, question, project, disagreement, or mission.
 
-**BoxDee preserves first.** The original photo, message, story, document, receipt, or question is kept before anyone rewrites its meaning.
+**BoxD preserves the crossing first.** The original photo, message, story, document, receipt, or question is kept intact before interpretation moves through the corridor.
+
+**BoxDee is home.** The preserved object may arrive there as family context, but BoxDee does not replace or rewrite the original.
 
 **Gray Baby minds the gap.** Missing information stays missing. A confident guess does not silently become family history.
 
@@ -50,7 +52,9 @@ A family member brings a memory, question, project, disagreement, or mission.
 ```text
 FAMILY
   ↓
-BOXDEE             preserve the original
+BOXD               corridor / preserve crossing
+  ↓
+BOXDEE             home / receive family context
   ↓
 GRAY BABY          expose the gap
   ↓
@@ -110,7 +114,8 @@ It cannot create a **family authority claim**.
   "artifact": "JAYS_FUNCTIONAL_VA_RESUME_FAMILY_WISDOM",
   "operator": "jaywisdom.eth",
   "environment": "FAMILY",
-  "preservation_layer": "BoxDee",
+  "corridor_layer": "BoxD",
+  "home_layer": "BoxDee",
   "function": "SYSTEMS_RESEARCH_VERIFICATION_REPLAY",
   "medical_determination": false,
   "employment_determination": false,
