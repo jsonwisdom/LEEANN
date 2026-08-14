@@ -1,0 +1,47 @@
+name: Timegraph Genesis Replay v0.1
+
+on:
+  pull_request:
+    paths:
+      - 'timegraph/**'
+      - 'fixtures/timegraph/**'
+      - 'receipts/timegraph/**'
+      - 'tools/replay_timegraph_genesis_v0_1.py'
+      - '.github/workflows/timegraph-genesis-replay.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact PR bytes
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Execute structural genesis replay
+        run: |
+          mkdir -p build/receipts
+          python tools/replay_timegraph_genesis_v0_1.py \
+            --out build/receipts/GENESIS_EXECUTABLE_REPLAY_RECEIPT_V0_1.json
+
+      - name: Print replay receipt
+        if: always()
+        run: |
+          if [ -f build/receipts/GENESIS_EXECUTABLE_REPLAY_RECEIPT_V0_1.json ]; then
+            cat build/receipts/GENESIS_EXECUTABLE_REPLAY_RECEIPT_V0_1.json
+          fi
+
+      - name: Upload replay receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: timegraph-genesis-replay-receipt-v0-1
+          path: build/receipts/GENESIS_EXECUTABLE_REPLAY_RECEIPT_V0_1.json
+          if-no-files-found: error
