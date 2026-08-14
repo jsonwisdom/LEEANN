@@ -22,6 +22,8 @@ concurrency:
 jobs:
   build-console:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       - name: Checkout full replay history
         uses: actions/checkout@v6
@@ -33,7 +35,7 @@ jobs:
         run: |
           set -euo pipefail
           python - <<'PY'
-          import hashlib, html, json, os, subprocess
+          import hashlib, html, json, os, subprocess, urllib.request
           from datetime import datetime, timezone
           from pathlib import Path
 
@@ -44,12 +46,39 @@ jobs:
           def git(*args):
               return subprocess.check_output(['git', *args], text=True).strip()
 
+          def github_repo_meta(repo):
+              url = f'https://api.github.com/repos/{repo}'
+              req = urllib.request.Request(url, headers={
+                  'Accept': 'application/vnd.github+json',
+                  'Authorization': f"Bearer {os.environ.get('GH_TOKEN','')}",
+                  'X-GitHub-Api-Version': '2022-11-28',
+                  'User-Agent': 'Wisdom-Family-Console'
+              })
+              try:
+                  with urllib.request.urlopen(req, timeout=15) as r:
+                      return json.load(r)
+              except Exception as exc:
+                  return {'metadata_error': str(exc)}
+
           now = datetime.now(timezone.utc)
           generated_at = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+          repo_full = os.environ.get('GITHUB_REPOSITORY', 'jsonwisdom/LEEANN')
+          repo_owner = repo_full.split('/',1)[0]
+          repo_name = repo_full.split('/',1)[1] if '/' in repo_full else repo_full
+          actor = os.environ.get('GITHUB_ACTOR', 'unknown')
+          event_name = os.environ.get('GITHUB_EVENT_NAME', 'unknown')
+          run_number = os.environ.get('GITHUB_RUN_NUMBER', '0')
+          run_id = os.environ.get('GITHUB_RUN_ID', '0')
+          workflow_name = os.environ.get('GITHUB_WORKFLOW', 'Wisdom Family Console Daily Update')
+
           head_sha = git('rev-parse', 'HEAD')
           short_sha = git('rev-parse', '--short=10', 'HEAD')
           branch = os.environ.get('GITHUB_REF_NAME') or 'master'
           commit_count = int(git('rev-list', '--count', 'HEAD'))
+          head_author = git('log','-1','--pretty=format:%an')
+          head_author_email = git('log','-1','--pretty=format:%ae')
+          head_subject = git('log','-1','--pretty=format:%s')
+          head_time = git('log','-1','--pretty=format:%cI')
           docs_count = sum(1 for p in docs.rglob('*') if p.is_file())
           receipt_count = sum(1 for p in root.rglob('*') if p.is_file() and p.suffix.lower() in {'.json','.jsonl'} and '.git' not in p.parts)
 
@@ -57,25 +86,41 @@ jobs:
               raw = git(*args)
               out = []
               for line in raw.splitlines() if raw else []:
-                  sha, _, subject = line.partition('\t')
+                  sha, _, rest = line.partition('\t')
+                  parts = rest.split('\t')
+                  subject = parts[0] if parts else ''
+                  author = parts[1] if len(parts) > 1 else ''
+                  when = parts[2] if len(parts) > 2 else ''
                   if subject.startswith('chore: refresh Wisdom Family Console') or subject.startswith('chore: refresh LeahPrime machine'):
                       continue
-                  out.append((sha, subject))
+                  out.append((sha, subject, author, when))
                   if limit and len(out) >= limit:
                       break
               return out
 
-          recent24 = non_machine_commits(('log','--since=24.hours','--pretty=format:%H%x09%s'))
-          latest = non_machine_commits(('log','-20','--pretty=format:%H%x09%s'), 6)
+          recent24 = non_machine_commits(('log','--since=24.hours','--pretty=format:%H%x09%s%x09%an%x09%cI'))
+          latest = non_machine_commits(('log','-30','--pretty=format:%H%x09%s%x09%an%x09%cI'), 6)
           commits_24h = len(recent24)
 
           changed = set()
-          for sha, _ in recent24:
+          for sha, _, _, _ in recent24:
               names = git('diff-tree','--no-commit-id','--name-only','-r',sha)
               changed.update(x for x in names.splitlines() if x)
           files_24h = len(changed)
 
           index_sha256 = hashlib.sha256((docs/'index.html').read_bytes()).hexdigest()
+          meta = github_repo_meta(repo_full)
+
+          visibility = meta.get('visibility', 'unknown')
+          default_branch = meta.get('default_branch', 'unknown')
+          stars = int(meta.get('stargazers_count', 0) or 0)
+          forks = int(meta.get('forks_count', 0) or 0)
+          watchers = int(meta.get('subscribers_count', meta.get('watchers_count', 0)) or 0)
+          open_issues = int(meta.get('open_issues_count', 0) or 0)
+          pushed_at = meta.get('pushed_at', 'unknown')
+          updated_at = meta.get('updated_at', 'unknown')
+          has_pages = bool(meta.get('has_pages', False))
+          repo_id = meta.get('id', 'unknown')
 
           def scale(value, cap):
               return min(100, round(value * 100 / cap)) if cap else 0
@@ -94,12 +139,46 @@ jobs:
           else:
               headline = f'{commits_24h} human-authored commits crossed in the last 24 hours and touched {files_24h} files.'
 
+          latest_human = latest[0] if latest else ('','','','')
           status = {
-              'schema': 'WISDOM_FAMILY_CONSOLE_DAILY_V0_1',
+              'schema': 'WISDOM_FAMILY_CONSOLE_DAILY_V0_2',
               'generated_at': generated_at,
               'workflow_state': 'DAILY_CONSOLE_OK',
-              'branch': branch,
-              'head_sha': head_sha,
+              'github': {
+                  'repository': repo_full,
+                  'repository_id': repo_id,
+                  'owner': repo_owner,
+                  'name': repo_name,
+                  'visibility': visibility,
+                  'default_branch': default_branch,
+                  'active_branch': branch,
+                  'actor': actor,
+                  'event': event_name,
+                  'workflow': workflow_name,
+                  'run_number': run_number,
+                  'run_id': run_id,
+                  'stars': stars,
+                  'forks': forks,
+                  'watchers': watchers,
+                  'open_issues': open_issues,
+                  'pushed_at': pushed_at,
+                  'updated_at': updated_at,
+                  'pages_enabled': has_pages
+              },
+              'head': {
+                  'sha': head_sha,
+                  'short_sha': short_sha,
+                  'author': head_author,
+                  'author_email': head_author_email,
+                  'subject': head_subject,
+                  'committed_at': head_time
+              },
+              'latest_human_commit': {
+                  'sha': latest_human[0],
+                  'subject': latest_human[1],
+                  'author': latest_human[2],
+                  'committed_at': latest_human[3]
+              },
               'commit_count': commit_count,
               'commits_24h': commits_24h,
               'files_changed_24h': files_24h,
@@ -107,7 +186,7 @@ jobs:
               'receipt_file_count': receipt_count,
               'index_sha256': index_sha256,
               'headline': headline,
-              'recent_commits': [{'sha': s, 'subject': t} for s,t in latest],
+              'recent_commits': [{'sha': s, 'subject': t, 'author': a, 'committed_at': w} for s,t,a,w in latest],
               'changed_files_24h': sorted(changed)[:12],
               'gauges': gauges,
               'authority_created': False
@@ -119,12 +198,26 @@ jobs:
               angle = -64 + g['pct'] * 1.32
               return f'''<div class="g"><div class="dial" style="--a:{angle}deg;--c:{accent}"><div class="sweep"></div><div class="needle"></div><div class="hub"></div><div class="num"><b>{g['value']}</b><small>{html.escape(g['label'])}</small></div></div><div class="scale">DISPLAY SCALE {g['pct']}%</div></div>'''
 
-          commits_html = ''.join(f'<li><code>{html.escape(s[:8])}</code> {html.escape(t)}</li>' for s,t in latest) or '<li>No human-authored commits in the replay window.</li>'
+          commits_html = ''.join(f'<li><code>{html.escape(s[:8])}</code> {html.escape(t)} <em>— {html.escape(a)}</em></li>' for s,t,a,_ in latest) or '<li>No human-authored commits in the replay window.</li>'
           files_html = ''.join(f'<li>{html.escape(p)}</li>' for p in sorted(changed)[:8]) or '<li>No files changed in the last 24 hours.</li>'
+          page_gate = 'OPEN' if has_pages else 'HOLD'
+          metadata_html = f'''
+          <div class="meta-grid">
+            <div class="m"><span>REPOSITORY</span><b>{html.escape(repo_full)}</b><small>ID {html.escape(str(repo_id))}</small></div>
+            <div class="m"><span>OWNER / VISIBILITY</span><b>{html.escape(repo_owner)} · {html.escape(str(visibility).upper())}</b><small>default {html.escape(default_branch)}</small></div>
+            <div class="m"><span>HEAD</span><b>{html.escape(short_sha)}</b><small>{html.escape(head_author)} · {html.escape(head_time)}</small></div>
+            <div class="m"><span>WORKFLOW</span><b>RUN #{html.escape(str(run_number))}</b><small>{html.escape(event_name)} · actor {html.escape(actor)}</small></div>
+            <div class="m"><span>GITHUB SIGNAL</span><b>★ {stars} · FORKS {forks}</b><small>watchers {watchers} · open issues {open_issues}</small></div>
+            <div class="m"><span>PAGES GATE</span><b>{page_gate}</b><small>has_pages={str(has_pages).lower()}</small></div>
+          </div>'''
+
+          human_line = 'No human-authored commit resolved.'
+          if latest_human[0]:
+              human_line = f'''<code>{html.escape(latest_human[0][:8])}</code> {html.escape(latest_human[1])} <em>— {html.escape(latest_human[2])}</em>'''
 
           page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>
-          :root{{--bg:#07090b;--panel:#0c1115;--line:#28323b;--text:#f5f7f8;--muted:#94a1ab;--mint:#8dd3bd;--gold:#e7c675;--red:#e46666;--blue:#86b8e7}}*{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}}.top{{display:flex;justify-content:space-between;gap:18px;align-items:end;margin-bottom:14px}}h2{{margin:0;font-size:clamp(1.45rem,4vw,2.35rem);letter-spacing:-.04em}}.stamp{{color:var(--muted);font:800 .7rem ui-monospace,Consolas,monospace}}.headline{{border:1px solid #423922;background:#17140e;border-radius:15px;padding:14px;color:#f0ddb5;font-weight:900;margin-bottom:12px}}.gauges{{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}}.g{{border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:12px}}.dial{{position:relative;width:min(145px,100%);aspect-ratio:1;margin:auto;border-radius:50%;background:radial-gradient(circle,#0d1216 0 53%,transparent 54%),conic-gradient(from 220deg,var(--c) 0 34%,#202830 34% 100%);border:1px solid #26323a;box-shadow:inset 0 0 0 10px #090d10}}.needle{{position:absolute;left:50%;bottom:50%;width:3px;height:37%;background:linear-gradient(var(--red),var(--gold));transform-origin:50% 100%;transform:translateX(-50%) rotate(var(--a));transition:transform .6s ease}}.sweep{{position:absolute;inset:7%;border-radius:50%;border:1px solid #ffffff10;border-top-color:#ffffff50;animation:spin 4s linear infinite}}@keyframes spin{{to{{transform:rotate(360deg)}}}}.hub{{position:absolute;left:50%;top:50%;width:13px;height:13px;border-radius:50%;background:#d9e2e7;border:3px solid #1d252b;transform:translate(-50%,-50%);z-index:3}}.num{{position:absolute;inset:0;display:grid;place-content:center;text-align:center}}.num b{{font-size:2rem;letter-spacing:-.05em}}.num small{{color:var(--muted);font-size:.62rem;font-weight:900;letter-spacing:.06em}}.scale{{text-align:center;color:#71808b;font:800 .62rem ui-monospace,Consolas,monospace;margin-top:7px}}.lists{{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}}.box{{border:1px solid var(--line);background:var(--panel);border-radius:15px;padding:14px}}.box b{{font-size:.72rem;letter-spacing:.08em;color:var(--mint)}}ul{{padding-left:18px;margin:9px 0 0}}li{{margin:6px 0;color:#cbd3d8;font-size:.8rem}}code{{color:var(--gold)}}.foot{{margin-top:10px;color:#7e8a94;font:800 .67rem ui-monospace,Consolas,monospace}}@media(max-width:700px){{.gauges,.lists{{grid-template-columns:repeat(2,1fr)}}}}
-          </style></head><body><div class="top"><div><div class="stamp">WISDOM FAMILY CONSOLE / DAILY UPDATE</div><h2>What changed while the porch light was on?</h2></div><div class="stamp">{generated_at}</div></div><div class="headline">{html.escape(headline)}</div><div class="gauges">{gauge('commits_24h','#8dd3bd')}{gauge('files_24h','#86b8e7')}{gauge('receipts','#e7c675')}{gauge('docs','#e46666')}</div><div class="lists"><div class="box"><b>LATEST HUMAN-AUTHORED COMMITS</b><ul>{commits_html}</ul></div><div class="box"><b>FILES TOUCHED — 24H</b><ul>{files_html}</ul></div></div><div class="foot">HEAD={short_sha} · TOTAL_COMMITS={commit_count} · authority_created=false</div></body></html>'''
+          :root{{--bg:#07090b;--panel:#0c1115;--line:#28323b;--text:#f5f7f8;--muted:#94a1ab;--mint:#8dd3bd;--gold:#e7c675;--red:#e46666;--blue:#86b8e7}}*{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}}.top{{display:flex;justify-content:space-between;gap:18px;align-items:end;margin-bottom:12px}}h2{{margin:0;font-size:clamp(1.45rem,4vw,2.35rem);letter-spacing:-.04em}}.stamp{{color:var(--muted);font:800 .7rem ui-monospace,Consolas,monospace}}.headline{{border:1px solid #423922;background:#17140e;border-radius:15px;padding:14px;color:#f0ddb5;font-weight:900;margin-bottom:10px}}.meta-grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}}.m{{border:1px solid var(--line);background:var(--panel);border-radius:13px;padding:10px}}.m span{{display:block;color:var(--muted);font-size:.6rem;font-weight:900;letter-spacing:.08em}}.m b{{display:block;margin-top:4px;font:900 .86rem/1.2 ui-monospace,Consolas,monospace;word-break:break-word}}.m small{{display:block;color:#74818c;font-size:.64rem;margin-top:4px;word-break:break-word}}.human{{border:1px solid #30443d;background:#0e1814;border-radius:13px;padding:11px;color:#cfe9df;font-size:.78rem;margin-bottom:10px}}.human b{{color:var(--mint);font-size:.65rem;letter-spacing:.08em}}.human em,li em{{color:#89959e;font-style:normal}}.gauges{{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}}.g{{border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:12px}}.dial{{position:relative;width:min(138px,100%);aspect-ratio:1;margin:auto;border-radius:50%;background:radial-gradient(circle,#0d1216 0 53%,transparent 54%),conic-gradient(from 220deg,var(--c) 0 34%,#202830 34% 100%);border:1px solid #26323a;box-shadow:inset 0 0 0 10px #090d10}}.needle{{position:absolute;left:50%;bottom:50%;width:3px;height:37%;background:linear-gradient(var(--red),var(--gold));transform-origin:50% 100%;transform:translateX(-50%) rotate(var(--a))}}.sweep{{position:absolute;inset:7%;border-radius:50%;border:1px solid #ffffff10;border-top-color:#ffffff50;animation:spin 4s linear infinite}}@keyframes spin{{to{{transform:rotate(360deg)}}}}.hub{{position:absolute;left:50%;top:50%;width:13px;height:13px;border-radius:50%;background:#d9e2e7;border:3px solid #1d252b;transform:translate(-50%,-50%);z-index:3}}.num{{position:absolute;inset:0;display:grid;place-content:center;text-align:center}}.num b{{font-size:1.9rem;letter-spacing:-.05em}}.num small{{color:var(--muted);font-size:.58rem;font-weight:900;letter-spacing:.06em}}.scale{{text-align:center;color:#71808b;font:800 .58rem ui-monospace,Consolas,monospace;margin-top:6px}}.lists{{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}}.box{{border:1px solid var(--line);background:var(--panel);border-radius:15px;padding:12px}}.box b{{font-size:.68rem;letter-spacing:.08em;color:var(--mint)}}ul{{padding-left:18px;margin:8px 0 0}}li{{margin:5px 0;color:#cbd3d8;font-size:.74rem}}code{{color:var(--gold)}}.foot{{margin-top:9px;color:#7e8a94;font:800 .62rem ui-monospace,Consolas,monospace}}@media(max-width:800px){{.meta-grid{{grid-template-columns:repeat(2,1fr)}}.gauges,.lists{{grid-template-columns:repeat(2,1fr)}}}}
+          </style></head><body><div class="top"><div><div class="stamp">WISDOM FAMILY CONSOLE / GITHUB PROVENANCE</div><h2>What changed while the porch light was on?</h2></div><div class="stamp">{generated_at}</div></div>{metadata_html}<div class="human"><b>LAST HUMAN-AUTHORED COMMIT</b><br>{human_line}</div><div class="headline">{html.escape(headline)}</div><div class="gauges">{gauge('commits_24h','#8dd3bd')}{gauge('files_24h','#86b8e7')}{gauge('receipts','#e7c675')}{gauge('docs','#e46666')}</div><div class="lists"><div class="box"><b>LATEST HUMAN-AUTHORED COMMITS</b><ul>{commits_html}</ul></div><div class="box"><b>FILES TOUCHED — 24H</b><ul>{files_html}</ul></div></div><div class="foot">PUSHED={html.escape(str(pushed_at))} · UPDATED={html.escape(str(updated_at))} · TOTAL_COMMITS={commit_count} · authority_created=false</div></body></html>'''
           (docs/'daily-machine.html').write_text(page, encoding='utf-8')
           PY
 
