@@ -1,30 +1,71 @@
 {
-  "schema": "LEAHPRIME_MACHINE_HEARTBEAT_V0_1",
-  "generated_at": "2026-08-14T22:45:24Z",
-  "workflow_state": "HEARTBEAT_OK",
+  "schema": "WISDOM_FAMILY_CONSOLE_DAILY_V0_1",
+  "generated_at": "2026-08-14T22:47:14Z",
+  "workflow_state": "DAILY_CONSOLE_OK",
   "branch": "master",
-  "head_sha": "2e4dff9ab651183c0baf9e628b819acfbd1c86fe",
-  "commit_count": 44,
+  "head_sha": "a638847c64aad7176f4e97981a4bc22609a9b721",
+  "commit_count": 46,
+  "commits_24h": 15,
+  "files_changed_24h": 6,
   "docs_file_count": 16,
   "receipt_file_count": 7,
   "index_sha256": "1740f382511a04118807961ba7182fdcb08829dae0db4943177d2a88e6a7da3f",
-  "host_profile": {
-    "cpu": "AMD Ryzen 5 6600H",
-    "cores": 6,
-    "threads": 12,
-    "base_ghz": 3.3,
-    "max_boost_ghz": 4.5,
-    "ram_gb_approx": 16,
-    "gpu": "AMD Radeon 660M",
-    "os": "Windows 11 Home 64-bit"
+  "headline": "15 human-authored commits crossed in the last 24 hours and touched 6 files.",
+  "recent_commits": [
+    {
+      "sha": "a638847c64aad7176f4e97981a4bc22609a9b721",
+      "subject": "Upgrade LeahPrime to Wisdom Family Console daily updates"
+    },
+    {
+      "sha": "2e4dff9ab651183c0baf9e628b819acfbd1c86fe",
+      "subject": "Wire native daily heartbeat into LeahPrime Machine"
+    },
+    {
+      "sha": "c4c397b6e9244be39f61d16fcf34aa14ba0eca2d",
+      "subject": "Generate native LeahPrime heartbeat panel daily"
+    },
+    {
+      "sha": "66c5ad29d43843fa7282fb2f30d952dbcadf7a89",
+      "subject": "Add native LeahPrime heartbeat panel"
+    },
+    {
+      "sha": "e72a6f5bf1a8accd43c9005768d9c91c3a743fd4",
+      "subject": "Make LeahPrime Machine native interactive"
+    },
+    {
+      "sha": "12e4ccafdbcac8bc64aa1a7d99db4f5ac8427023",
+      "subject": "Fix LeahPrime heartbeat recursion and soft-gate Pages"
+    }
+  ],
+  "changed_files_24h": [
+    ".github/workflows/publish-jasonspace-pages.yml",
+    "README.md",
+    "docs/.nojekyll",
+    "docs/AUNT_RANN_REAL_SYNTHETIC_BOUNDARY_V0.1.md",
+    "docs/heartbeat.html",
+    "docs/index.html"
+  ],
+  "gauges": {
+    "commits_24h": {
+      "value": 15,
+      "pct": 100,
+      "label": "24H COMMITS"
+    },
+    "files_24h": {
+      "value": 6,
+      "pct": 25,
+      "label": "FILES TOUCHED"
+    },
+    "receipts": {
+      "value": 7,
+      "pct": 29,
+      "label": "RECEIPTS"
+    },
+    "docs": {
+      "value": 16,
+      "pct": 40,
+      "label": "DOCS"
+    }
   },
-  "kernel": {
-    "maxwell_gate": "CLASSIFY",
-    "bitbot": "VERIFY_BYTES",
-    "boxd": "PRESERVE",
-    "crisscross": "CHECK",
-    "gray_baby": "HOLD_ALLOWED",
-    "human_gate": "TERMINAL_DECIDER",
-    "authority_created": false
-  }
+  "authority_created": false
 }
