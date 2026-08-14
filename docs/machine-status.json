@@ -1,17 +1,21 @@
 {
   "schema": "WISDOM_FAMILY_CONSOLE_DAILY_V0_1",
-  "generated_at": "2026-08-14T22:47:14Z",
+  "generated_at": "2026-08-14T22:47:44Z",
   "workflow_state": "DAILY_CONSOLE_OK",
   "branch": "master",
-  "head_sha": "a638847c64aad7176f4e97981a4bc22609a9b721",
-  "commit_count": 46,
-  "commits_24h": 15,
+  "head_sha": "566624cba2d2784c4083673b7bbdb1a14bf58fae",
+  "commit_count": 48,
+  "commits_24h": 16,
   "files_changed_24h": 6,
-  "docs_file_count": 16,
+  "docs_file_count": 17,
   "receipt_file_count": 7,
-  "index_sha256": "1740f382511a04118807961ba7182fdcb08829dae0db4943177d2a88e6a7da3f",
-  "headline": "15 human-authored commits crossed in the last 24 hours and touched 6 files.",
+  "index_sha256": "b43db2c9f1b018362a362fa5f801153caa0c5a13ecbb5772f878f7126110dd56",
+  "headline": "16 human-authored commits crossed in the last 24 hours and touched 6 files.",
   "recent_commits": [
+    {
+      "sha": "566624cba2d2784c4083673b7bbdb1a14bf58fae",
+      "subject": "Make Wisdom Family Console the LeahPrime front page"
+    },
     {
       "sha": "a638847c64aad7176f4e97981a4bc22609a9b721",
       "subject": "Upgrade LeahPrime to Wisdom Family Console daily updates"
@@ -31,10 +35,6 @@
     {
       "sha": "e72a6f5bf1a8accd43c9005768d9c91c3a743fd4",
       "subject": "Make LeahPrime Machine native interactive"
-    },
-    {
-      "sha": "12e4ccafdbcac8bc64aa1a7d99db4f5ac8427023",
-      "subject": "Fix LeahPrime heartbeat recursion and soft-gate Pages"
     }
   ],
   "changed_files_24h": [
@@ -47,7 +47,7 @@
   ],
   "gauges": {
     "commits_24h": {
-      "value": 15,
+      "value": 16,
       "pct": 100,
       "label": "24H COMMITS"
     },
@@ -62,8 +62,8 @@
       "label": "RECEIPTS"
     },
     "docs": {
-      "value": 16,
-      "pct": 40,
+      "value": 17,
+      "pct": 42,
       "label": "DOCS"
     }
   },
