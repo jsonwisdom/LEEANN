@@ -1,40 +1,85 @@
 {
-  "schema": "WISDOM_FAMILY_CONSOLE_DAILY_V0_1",
-  "generated_at": "2026-08-14T22:47:44Z",
+  "schema": "WISDOM_FAMILY_CONSOLE_DAILY_V0_2",
+  "generated_at": "2026-08-14T22:52:32Z",
   "workflow_state": "DAILY_CONSOLE_OK",
-  "branch": "master",
-  "head_sha": "566624cba2d2784c4083673b7bbdb1a14bf58fae",
-  "commit_count": 48,
-  "commits_24h": 16,
+  "github": {
+    "repository": "jsonwisdom/LEEANN",
+    "repository_id": 71436642,
+    "owner": "jsonwisdom",
+    "name": "LEEANN",
+    "visibility": "public",
+    "default_branch": "master",
+    "active_branch": "master",
+    "actor": "jsonwisdom",
+    "event": "push",
+    "workflow": "Wisdom Family Console Daily Update",
+    "run_number": "11",
+    "run_id": "31848283134",
+    "stars": 0,
+    "forks": 0,
+    "watchers": 0,
+    "open_issues": 1,
+    "pushed_at": "2026-08-14T22:52:23Z",
+    "updated_at": "2026-08-14T22:47:49Z",
+    "pages_enabled": false
+  },
+  "head": {
+    "sha": "6c289612a62bcf7f483114eac68cb8258f53609b",
+    "short_sha": "6c289612a6",
+    "author": "Jay Wisdom \u2699\ufe0f",
+    "author_email": "jsonwisdom@yahoo.com",
+    "subject": "Add GitHub provenance metadata to Wisdom Family Console",
+    "committed_at": "2026-08-14T17:52:23-05:00"
+  },
+  "latest_human_commit": {
+    "sha": "6c289612a62bcf7f483114eac68cb8258f53609b",
+    "subject": "Add GitHub provenance metadata to Wisdom Family Console",
+    "author": "Jay Wisdom \u2699\ufe0f",
+    "committed_at": "2026-08-14T17:52:23-05:00"
+  },
+  "commit_count": 50,
+  "commits_24h": 17,
   "files_changed_24h": 6,
   "docs_file_count": 17,
   "receipt_file_count": 7,
   "index_sha256": "b43db2c9f1b018362a362fa5f801153caa0c5a13ecbb5772f878f7126110dd56",
-  "headline": "16 human-authored commits crossed in the last 24 hours and touched 6 files.",
+  "headline": "17 human-authored commits crossed in the last 24 hours and touched 6 files.",
   "recent_commits": [
     {
+      "sha": "6c289612a62bcf7f483114eac68cb8258f53609b",
+      "subject": "Add GitHub provenance metadata to Wisdom Family Console",
+      "author": "Jay Wisdom \u2699\ufe0f",
+      "committed_at": "2026-08-14T17:52:23-05:00"
+    },
+    {
       "sha": "566624cba2d2784c4083673b7bbdb1a14bf58fae",
-      "subject": "Make Wisdom Family Console the LeahPrime front page"
+      "subject": "Make Wisdom Family Console the LeahPrime front page",
+      "author": "Jay Wisdom \u2699\ufe0f",
+      "committed_at": "2026-08-14T17:47:35-05:00"
     },
     {
       "sha": "a638847c64aad7176f4e97981a4bc22609a9b721",
-      "subject": "Upgrade LeahPrime to Wisdom Family Console daily updates"
+      "subject": "Upgrade LeahPrime to Wisdom Family Console daily updates",
+      "author": "Jay Wisdom \u2699\ufe0f",
+      "committed_at": "2026-08-14T17:47:04-05:00"
     },
     {
       "sha": "2e4dff9ab651183c0baf9e628b819acfbd1c86fe",
-      "subject": "Wire native daily heartbeat into LeahPrime Machine"
+      "subject": "Wire native daily heartbeat into LeahPrime Machine",
+      "author": "Jay Wisdom \u2699\ufe0f",
+      "committed_at": "2026-08-14T17:45:17-05:00"
     },
     {
       "sha": "c4c397b6e9244be39f61d16fcf34aa14ba0eca2d",
-      "subject": "Generate native LeahPrime heartbeat panel daily"
+      "subject": "Generate native LeahPrime heartbeat panel daily",
+      "author": "Jay Wisdom \u2699\ufe0f",
+      "committed_at": "2026-08-14T17:44:36-05:00"
     },
     {
       "sha": "66c5ad29d43843fa7282fb2f30d952dbcadf7a89",
-      "subject": "Add native LeahPrime heartbeat panel"
-    },
-    {
-      "sha": "e72a6f5bf1a8accd43c9005768d9c91c3a743fd4",
-      "subject": "Make LeahPrime Machine native interactive"
+      "subject": "Add native LeahPrime heartbeat panel",
+      "author": "Jay Wisdom \u2699\ufe0f",
+      "committed_at": "2026-08-14T17:44:17-05:00"
     }
   ],
   "changed_files_24h": [
@@ -47,7 +92,7 @@
   ],
   "gauges": {
     "commits_24h": {
-      "value": 16,
+      "value": 17,
       "pct": 100,
       "label": "24H COMMITS"
     },
