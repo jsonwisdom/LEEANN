@@ -5,10 +5,13 @@
   "namespace": "jaywisdom.base.eth",
   "operator_claim": "jaywisdom.base.eth",
   "operator_verified": false,
-  "purpose": "Recover preserved state, verify evidence, route responsibility, and stop at the human decision gate.",
+  "purpose": "Recover preserved state, verify evidence, route responsibility, learn from replay, and stop at the human decision gate.",
   "flow": [
     "RECOVER_STATE",
     "VERIFY_EVIDENCE",
+    "RUN_BOUNDED_EXPERIMENT",
+    "EVALUATE_CONCEPT",
+    "CAPTURE_LESSON",
     "ROUTE_RESPONSIBILITY",
     "HUMAN_GATE"
   ],
@@ -25,6 +28,27 @@
     "CrissCross": "EVIDENCE_TYPE_GATE",
     "BoxD": "PRESERVATION_CORRIDOR",
     "BoxDee": "PRIVATE_HOME_CONTEXT"
+  },
+  "delta10_mission_applied": {
+    "status": "APPLIED_AS_PUBLIC_EDUCATIONAL_MODEL",
+    "source_domain": "USSF_SPACE_DELTA_10_PUBLIC_MISSION_PATTERN",
+    "mission_functions": [
+      "WARGAMING",
+      "FIELD_EXPERIMENTATION",
+      "CONCEPT_EVALUATION",
+      "DOCTRINE_DEVELOPMENT",
+      "LESSONS_LEARNED"
+    ],
+    "prime_rann_translation": {
+      "WARGAMING": "RUN_BOUNDED_SCENARIO_REPLAY",
+      "FIELD_EXPERIMENTATION": "TEST_ASSUMPTION_WITHOUT_PROMOTION",
+      "CONCEPT_EVALUATION": "COMPARE_CANDIDATE_BEHAVIORS",
+      "DOCTRINE_DEVELOPMENT": "PROPOSE_VERSIONED_RULE_UPDATE",
+      "LESSONS_LEARNED": "CAPTURE_FAILURE_SUCCESS_AND_GAPS_AS_RECEIPTS"
+    },
+    "crossing_rule": "PUBLIC_MISSION_PATTERN_MAY_INFORM_SYSTEM_DESIGN_BUT_DOES_NOT_CREATE_COMMAND_AUTHORITY_OR_INSTITUTIONAL_AFFILIATION",
+    "real_world_command_binding": false,
+    "operational_access_claimed": false
   },
   "github_binding": {
     "repository": "jsonwisdom/LEEANN",
