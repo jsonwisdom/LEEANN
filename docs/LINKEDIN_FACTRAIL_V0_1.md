@@ -18,12 +18,14 @@ MAXWELL CLASSIFICATION
    ↓
 RAIL ASSIGNMENT
    ↓
-BOXD PRESERVATION
+BOXD CORRIDOR / PRESERVATION RECEIPT
    ↓
 FACT PROMOTION GATE
    ↓ PASS ONLY
 LINKEDIN FACTRAIL
 ```
+
+BoxD is the corridor through which the preserved object and its receipt cross. BoxDee is a family home context and is not the LinkedIn release gate.
 
 ## UNKNOWN_HOLD
 
@@ -76,6 +78,22 @@ The genesis adversarial packet contains five distinct items:
 
 The fixture itself promotes **zero** facts. Source support is necessary but an explicit promotion receipt remains required.
 
+## Hardening Hold
+
+`COMMS_RECEIPT_SCHEMA_V2_GENESIS` and the canonical `timestamp_relation` definition have not yet been resolved in the accessible `jsonwisdom` GitHub codebase.
+
+Therefore:
+
+```text
+SCHEMA_COMPLIANCE      = HOLD
+TIMESTAMP_RELATION     = HOLD
+CANONICAL_SHA256       = HOLD UNTIL INDEPENDENT RECEIPTS EXIST
+LINKEDIN_RELEASE       = CLOSED
+MERGE_RECOMMENDATION   = KEEP DRAFT
+```
+
+No missing schema field or enum value may be guessed into existence.
+
 ## Version-Locked Invariant
 
 Protocol rules are version-locked, not metaphysically immutable.
@@ -88,6 +106,10 @@ Corrections create a new protocol version. Prior versions, packets, classificati
 GATE FIRST
     ↓
 HISTORY SECOND
+    ↓
+RESOLVE CANONICAL SCHEMA + TIMESTAMP RELATION
+    ↓
+CANONICAL BYTE / SHA-256 RECEIPTS
     ↓
 EXECUTABLE GENESIS REPLAY
     ↓
