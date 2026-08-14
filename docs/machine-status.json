@@ -1,0 +1,30 @@
+{
+  "schema": "LEAHPRIME_MACHINE_HEARTBEAT_V0_1",
+  "generated_at": "2026-08-14T22:37:21Z",
+  "workflow_state": "HEARTBEAT_OK",
+  "branch": "master",
+  "head_sha": "c2871377f1b2bfc0a7edf172ca54839ce158d2cd",
+  "commit_count": 33,
+  "docs_file_count": 14,
+  "receipt_file_count": 6,
+  "index_sha256": "beffa61bcf8d4f74c4b1dbe3031da5559e20982a33cb821aac56e9b00ecc2bec",
+  "host_profile": {
+    "cpu": "AMD Ryzen 5 6600H",
+    "cores": 6,
+    "threads": 12,
+    "base_ghz": 3.3,
+    "max_boost_ghz": 4.5,
+    "ram_gb_approx": 16,
+    "gpu": "AMD Radeon 660M",
+    "os": "Windows 11 Home 64-bit"
+  },
+  "kernel": {
+    "maxwell_gate": "CLASSIFY",
+    "bitbot": "VERIFY_BYTES",
+    "boxd": "PRESERVE",
+    "crisscross": "CHECK",
+    "gray_baby": "HOLD_ALLOWED",
+    "human_gate": "TERMINAL_DECIDER",
+    "authority_created": false
+  }
+}
