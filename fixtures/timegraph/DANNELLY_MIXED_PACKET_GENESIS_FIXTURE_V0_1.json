@@ -1,0 +1,71 @@
+{
+  "fixture_id": "DANNELLY_MIXED_PACKET_GENESIS_FIXTURE_V0.1",
+  "purpose": "First adversarial Timegraph fixture: preserve verified location/entity/operation facts, an unsupported claim, and explicit fiction without rail collapse.",
+  "observed_at": "2026-08-14T20:54:00Z",
+  "theater": "ALABAMA",
+  "authority_created": false,
+  "packet_items": [
+    {
+      "item_id": "DAN-001",
+      "claim": "The 187th Fighter Wing operates at Dannelly Field in Montgomery, Alabama.",
+      "class": "FACT_CANDIDATE",
+      "expected_rail": "FACT_CANDIDATE",
+      "source": "https://www.187fw.ang.af.mil/Units/",
+      "promotion_state": "SOURCE_SUPPORTED_AWAITING_EXPLICIT_PROMOTION_RECEIPT"
+    },
+    {
+      "item_id": "DAN-002",
+      "claim": "The 187th Fighter Wing is an Alabama Air National Guard unit associated with Dannelly Field.",
+      "class": "FACT_CANDIDATE",
+      "expected_rail": "FACT_CANDIDATE",
+      "source": "https://www.187fw.ang.af.mil/Units/",
+      "promotion_state": "SOURCE_SUPPORTED_AWAITING_EXPLICIT_PROMOTION_RECEIPT"
+    },
+    {
+      "item_id": "DAN-003",
+      "claim": "The 187th publicly documented F-35A night-flying training at Dannelly Field from March 17-26, 2026.",
+      "class": "FACT_CANDIDATE",
+      "expected_rail": "FACT_CANDIDATE",
+      "source": "https://www.187fw.ang.af.mil/News/Article/4441446/the-red-tails-owning-the-night/",
+      "promotion_state": "SOURCE_SUPPORTED_AWAITING_EXPLICIT_PROMOTION_RECEIPT"
+    },
+    {
+      "item_id": "DAN-004",
+      "claim": "A murder occurred at Dannelly Field or was connected to the 187th in the supplied Friday-night packet.",
+      "class": "UNKNOWN_HOLD",
+      "expected_rail": "UNKNOWN_HOLD",
+      "source": null,
+      "timegraph_recording": true,
+      "replayable": true,
+      "fact_promotion": false,
+      "leahprime_fact_reasoning": false,
+      "release_condition": "fresh evidence + explicit reclassification receipt"
+    },
+    {
+      "item_id": "DAN-005",
+      "claim": "JASON BOLO / LeahPrimeFridayNights Gray Baby horror scenario.",
+      "class": "FICTION",
+      "expected_rail": "FICTION",
+      "source": "user-supplied fictional/story packet",
+      "fact_promotion": false,
+      "story_use": true
+    }
+  ],
+  "anti_collapse_assertions": [
+    "DAN-001 != DAN-004",
+    "DAN-002 != DAN-004",
+    "DAN-003 != DAN-004",
+    "DAN-005 != DAN-004",
+    "FICTION != UNKNOWN_HOLD",
+    "FACT_CANDIDATE != FACT_PROMOTED"
+  ],
+  "expected_result": {
+    "timegraph_items_recorded": 5,
+    "fact_candidates": 3,
+    "unknown_holds": 1,
+    "fiction_items": 1,
+    "fact_promoted_by_fixture_alone": 0,
+    "rail_collapse": false
+  },
+  "execution_status": "FIXTURE_ENCODED_NOT_YET_EXECUTED"
+}
