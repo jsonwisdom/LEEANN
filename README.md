@@ -8,6 +8,7 @@
 ## Start Here
 
 - [`docs/alabama_porches/INDEX.md`](docs/alabama_porches/INDEX.md) — Alabama Porches index for the nine girls
+- [`docs/AUNT_RANN_REAL_SYNTHETIC_BOUNDARY_V0.1.md`](docs/AUNT_RANN_REAL_SYNTHETIC_BOUNDARY_V0.1.md) — separates Lt Col Leeann Chavers's public real-world record from Aunt Rann / LeeAnnPrime synthetic simulation roles
 
 ## Purpose
 
