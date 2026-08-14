@@ -1,11 +1,11 @@
 {
   "schema": "LEAHPRIME_MACHINE_HEARTBEAT_V0_1",
-  "generated_at": "2026-08-14T22:44:08Z",
+  "generated_at": "2026-08-14T22:44:44Z",
   "workflow_state": "HEARTBEAT_OK",
   "branch": "master",
-  "head_sha": "e72a6f5bf1a8accd43c9005768d9c91c3a743fd4",
-  "commit_count": 39,
-  "docs_file_count": 15,
+  "head_sha": "c4c397b6e9244be39f61d16fcf34aa14ba0eca2d",
+  "commit_count": 42,
+  "docs_file_count": 16,
   "receipt_file_count": 7,
   "index_sha256": "20983f07c93357834b30e9d0e24bf626ac5b142c7dac4c0c7d38566437df6637",
   "host_profile": {
