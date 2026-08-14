@@ -1,6 +1,8 @@
-name: Publish JasonSpace Porch
+name: LeahPrime Machine Daily Heartbeat
 
 on:
+  schedule:
+    - cron: '17 13 * * *'
   push:
     branches: [master]
     paths:
@@ -9,32 +11,92 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 concurrency:
-  group: pages
+  group: leahprime-machine
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  heartbeat-and-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout full replay history
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Generate LeahPrime machine heartbeat
+        shell: bash
+        run: |
+          set -euo pipefail
+          GENERATED_AT="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          HEAD_SHA="$(git rev-parse HEAD)"
+          BRANCH="${GITHUB_REF_NAME:-master}"
+          COMMIT_COUNT="$(git rev-list --count HEAD)"
+          DOCS_FILE_COUNT="$(find docs -type f | wc -l | tr -d ' ')"
+          RECEIPT_FILE_COUNT="$(find . -type f \( -name '*.json' -o -name '*.jsonl' \) ! -path './.git/*' | wc -l | tr -d ' ')"
+          INDEX_SHA256="$(sha256sum docs/index.html | awk '{print $1}')"
+          cat > docs/machine-status.json <<JSON
+          {
+            "schema": "LEAHPRIME_MACHINE_HEARTBEAT_V0_1",
+            "generated_at": "${GENERATED_AT}",
+            "workflow_state": "HEARTBEAT_OK",
+            "branch": "${BRANCH}",
+            "head_sha": "${HEAD_SHA}",
+            "commit_count": ${COMMIT_COUNT},
+            "docs_file_count": ${DOCS_FILE_COUNT},
+            "receipt_file_count": ${RECEIPT_FILE_COUNT},
+            "index_sha256": "${INDEX_SHA256}",
+            "host_profile": {
+              "cpu": "AMD Ryzen 5 6600H",
+              "cores": 6,
+              "threads": 12,
+              "base_ghz": 3.3,
+              "max_boost_ghz": 4.5,
+              "ram_gb_approx": 16,
+              "gpu": "AMD Radeon 660M",
+              "os": "Windows 11 Home 64-bit"
+            },
+            "kernel": {
+              "maxwell_gate": "CLASSIFY",
+              "bitbot": "VERIFY_BYTES",
+              "boxd": "PRESERVE",
+              "crisscross": "CHECK",
+              "gray_baby": "HOLD_ALLOWED",
+              "human_gate": "TERMINAL_DECIDER",
+              "authority_created": false
+            }
+          }
+          JSON
+
+      - name: Commit heartbeat receipt
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "LeahPrime Machine"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/machine-status.json
+          if git diff --cached --quiet; then
+            echo "Heartbeat unchanged."
+          else
+            git commit -m "chore: refresh LeahPrime machine heartbeat"
+            git push origin HEAD:master
+          fi
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload JasonSpace porch
+      - name: Upload LeahPrime Machine
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./docs
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy LeahPrime Machine
         id: deployment
         uses: actions/deploy-pages@v4
