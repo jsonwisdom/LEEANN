@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="Aunt Rann / LEEANN — a public educational replay site that keeps verified public facts separate from synthetic family and systems roles." />
+  <meta property="og:title" content="Aunt Rann — LEEANN RePlay" />
+  <meta property="og:description" content="Honor the real record. Label the synthetic role. Never use one to manufacture authority for the other." />
+  <meta property="og:type" content="website" />
+  <title>Aunt Rann — LEEANN RePlay</title>
+  <style>
+    :root{
+      --bg:#0b0d10;--panel:#11151a;--panel2:#171c22;--text:#f4f6f8;--muted:#aab4bf;
+      --line:#2a323c;--accent:#e5c27a;--accent2:#8ec5b9;--hold:#d6a85a;--good:#9ad2b4;
+      --radius:22px;--shadow:0 18px 60px rgba(0,0,0,.28)
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(circle at 20% -10%,#1b222b 0,#0b0d10 38%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
+    a{color:inherit}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}
+    .top{position:sticky;top:0;z-index:10;background:rgba(11,13,16,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-weight:800;letter-spacing:.08em;font-size:.84rem}.brand span{color:var(--accent)}
+    .navlinks{display:flex;gap:18px;flex-wrap:wrap}.navlinks a{text-decoration:none;color:var(--muted);font-size:.9rem}.navlinks a:hover{color:var(--text)}
+    .hero{padding:92px 0 52px}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.025);padding:8px 12px;border-radius:999px;color:var(--muted);font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--good);box-shadow:0 0 0 4px rgba(154,210,180,.08)}
+    h1{font-size:clamp(3rem,8vw,6.6rem);line-height:.92;letter-spacing:-.065em;margin:25px 0 24px;max-width:900px}
+    .lead{max-width:790px;font-size:clamp(1.08rem,2vw,1.35rem);color:#ccd4dc;margin:0 0 26px}
+    .rule{font-size:1.08rem;font-weight:700;color:var(--accent);margin-top:25px}
+    .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.chip{border:1px solid var(--line);border-radius:999px;padding:9px 12px;color:var(--muted);font-size:.82rem;background:#101419}
+    section{padding:44px 0}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:22px}.sectionhead h2{margin:0;font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-.04em}.sectionhead p{margin:0;max-width:520px;color:var(--muted)}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+    .label{font-size:.75rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:800}.card h3{font-size:1.75rem;line-height:1.05;margin:10px 0 14px;letter-spacing:-.03em}.meta{color:var(--muted);margin:0 0 18px}.kv{display:grid;gap:10px}.kv div{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding-top:10px;font-size:.92rem}.kv strong{text-align:right;font-weight:700}.status{font-size:.78rem;padding:5px 8px;border-radius:999px;border:1px solid #4d4230;color:#f2ca7e;background:#18140e;white-space:nowrap}
+    .portrait{height:190px;border:1px dashed #4a535f;border-radius:18px;display:grid;place-items:center;text-align:center;background:repeating-linear-gradient(135deg,rgba(255,255,255,.014),rgba(255,255,255,.014) 10px,transparent 10px,transparent 20px);color:var(--muted);margin:20px 0}.portrait b{display:block;color:var(--text);margin-bottom:5px}
+    .glyph{height:190px;border:1px solid #31443f;border-radius:18px;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at center,#20332e 0,#111816 52%,#0e1214 100%);margin:20px 0}.glyph:before,.glyph:after{content:"";position:absolute;width:170px;height:170px;border:1px solid rgba(142,197,185,.24);transform:rotate(45deg);border-radius:28px}.glyph:after{width:110px;height:110px;border-color:rgba(229,194,122,.32);transform:rotate(18deg)}.glyph span{position:relative;z-index:2;font-weight:900;letter-spacing:.16em;font-size:1.05rem;color:#dcefe9}
+    .cross{margin:18px 0;padding:18px;border-radius:18px;border:1px solid #3a3231;background:#151210;color:#e8d4b0;text-align:center;font-weight:800;letter-spacing:.03em}
+    .flow{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.step{min-height:110px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;justify-content:space-between}.step b{font-size:.82rem;color:var(--accent)}.step span{font-size:.9rem;color:#d5dce3}.arrow{color:#55606c;text-align:center;margin-top:6px;font-size:1.3rem}
+    .formation{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.repo{padding:20px;border-radius:18px;border:1px solid var(--line);background:var(--panel2)}.repo .rname{font-weight:850;margin-bottom:6px}.repo p{margin:0;color:var(--muted);font-size:.92rem}.repo a{display:inline-block;margin-top:14px;color:var(--accent2);text-decoration:none;font-weight:700;font-size:.88rem}.repo a:hover{text-decoration:underline}
+    .quote{padding:34px;border:1px solid #3f382a;background:linear-gradient(135deg,#15130e,#111419);border-radius:var(--radius);font-size:clamp(1.35rem,3vw,2.3rem);font-weight:800;letter-spacing:-.03em;color:#f3dfb8}
+    .share{display:flex;justify-content:space-between;gap:24px;align-items:center;padding:26px;border:1px solid #2c453d;background:#101713;border-radius:20px}.share p{margin:4px 0 0;color:#b9c8c1}.badge{padding:9px 12px;border:1px solid #345248;background:#13231d;border-radius:999px;color:#b9e2cf;font-weight:800;font-size:.8rem;white-space:nowrap}
+    .sources{display:grid;gap:10px}.source{display:flex;gap:14px;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}.source div{min-width:0}.source b{display:block}.source small{color:var(--muted)}.source a{color:var(--accent2);text-decoration:none;font-weight:700;font-size:.86rem}.source a:hover{text-decoration:underline}
+    footer{padding:52px 0 70px;color:#7f8a95;font-size:.85rem}.footrule{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:860px){.grid2,.formation{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.sectionhead{display:block}.sectionhead p{margin-top:8px}.navlinks{display:none}.hero{padding-top:70px}}
+    @media(max-width:520px){.flow{grid-template-columns:1fr}.share{display:block}.badge{display:inline-block;margin-top:14px}.kv div{display:block}.kv strong{display:block;text-align:left;margin-top:2px}.hero{padding-bottom:30px}}
+  </style>
+</head>
+<body>
+  <div class="top">
+    <div class="wrap nav">
+      <div class="brand">JSONWISDOM / <span>LEEANN</span></div>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#boundary">Boundary</a><a href="#replay">RePlay</a><a href="#formation">Formation</a><a href="#sources">Sources</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <header class="wrap hero">
+      <div class="eyebrow"><span class="dot"></span> Public educational simulation</div>
+      <h1>Aunt Rann.<br/>Real record.<br/>Synthetic role.</h1>
+      <p class="lead">A tiny public site for one rule: verified public facts may be cited, synthetic roles may be explored, and the two must never silently collapse into each other.</p>
+      <div class="rule">Honor the real record. Label the synthetic role. Never use one to manufacture authority for the other.</div>
+      <div class="chips"><span class="chip">authority_created = false</span><span class="chip">human gate required</span><span class="chip">portrait gap = HOLD</span><span class="chip">receipt ≠ authority</span></div>
+    </header>
+
+    <section id="boundary">
+      <div class="wrap">
+        <div class="sectionhead"><h2>CrissCross boundary</h2><p>The page begins with the distinction, not the mythology. The left rail is the public record; the right rail is JSONWisdom's explicitly synthetic design space.</p></div>
+        <div class="grid2">
+          <article class="card">
+            <div class="label">Panel A — real person reference</div>
+            <h3>Lt Col Leeann Chavers</h3>
+            <p class="meta">Current official public-role reference, observed August 14, 2026.</p>
+            <div class="portrait"><div><b>Official portrait not used</b>OFFICIAL SOURCE REQUIRED<br/><span class="status">HOLD</span></div></div>
+            <div class="kv">
+              <div><span>Rank</span><strong>Lieutenant Colonel</strong></div>
+              <div><span>Public role</span><strong>Commander, Force Support Squadron</strong></div>
+              <div><span>Unit reference</span><strong>187th Fighter Wing</strong></div>
+              <div><span>Location reference</span><strong>Montgomery, Alabama</strong></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="label">Panel B — synthetic system role</div>
+            <h3>Aunt Rann / LeeAnnPrime</h3>
+            <p class="meta">A JSONWisdom family and systems character. Not a military identity, endorsement, billet, or command authority.</p>
+            <div class="glyph" aria-label="Abstract synthetic role mark"><span>AUNT RANN</span></div>
+            <div class="kv">
+              <div><span>Family role</span><strong>Sister Syntax Creative Commander</strong></div>
+              <div><span>Creative function</span><strong>Direct 3 proposals + explain choices</strong></div>
+              <div><span>Strategic replay role</span><strong>Strategic Replay Caller</strong></div>
+              <div><span>Final authority</span><strong>false</strong></div>
+            </div>
+          </article>
+        </div>
+        <div class="cross">REAL RANK ≠ SIMULATION ROLE &nbsp; · &nbsp; PUBLIC FACT ≠ FAMILY STORY &nbsp; · &nbsp; PORTRAIT GAP ≠ PERMISSION TO INVENT</div>
+      </div>
+    </section>
+
+    <section id="replay">
+      <div class="wrap">
+        <div class="sectionhead"><h2>The RePlay</h2><p>Small end-to-end grammar: preserve what arrived, keep classification attached, expose contradictions and gaps, and stop before authority is invented.</p></div>
+        <div class="flow">
+          <div class="step"><b>01 OBSERVE</b><span>Receive the packet without promotion.</span></div>
+          <div class="step"><b>02 CLASSIFY</b><span>Evidence, story, or UNKNOWN_HOLD.</span></div>
+          <div class="step"><b>03 PRESERVE</b><span>BoxD / receipt keeps the source trail.</span></div>
+          <div class="step"><b>04 COMPARE</b><span>Twin RearView + Double Gemini + CrissCross.</span></div>
+          <div class="step"><b>05 EXPLAIN</b><span>Aunt Rann / LeahPrime narrates without promotion.</span></div>
+          <div class="step"><b>06 HUMAN GATE</b><span>Only a human makes the final crossing.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="formation">
+      <div class="wrap">
+        <div class="sectionhead"><h2>Three-repo formation</h2><p>LEEANN is the front porch. The deeper doctrine, reasoning, and replay evidence live in separate rails so one file never has to pretend to be everything.</p></div>
+        <div class="formation">
+          <div class="repo"><div class="rname">JSONWisdom / AL</div><p>Doctrine and public educational simulation theater for the Art of War RePlay.</p><a href="https://github.com/jsonwisdom/AL/blob/master/docs/LEEANN-GENERAL-WAR-CIVIL-ART-OF-WAR-REPLAY-V0.1.md">Open doctrine →</a></div>
+          <div class="repo"><div class="rname">JSONWisdom / COMPUTERWISDOM</div><p>Bounded reasoning/state-machine layer. Promotion remains behind repository verification and the human gate.</p><a href="https://github.com/jsonwisdom/COMPUTERWISDOM/pull/472">Open reasoning PR →</a></div>
+          <div class="repo"><div class="rname">JSONWisdom / receiptos-base</div><p>Cross-repo receipt and replay evidence envelope that records what is committed, proposed, or held.</p><a href="https://github.com/jsonwisdom/receiptos-base/blob/main/receipts/art-of-war-replay/LEEANN_GENERAL_WAR_CIVIL_V0_1.json">Open receipt →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap"><div class="quote">“The code is choreography. RePlay is proof that the same steps can be danced again.”</div></div>
+    </section>
+
+    <section>
+      <div class="wrap share">
+        <div><div class="label">Share-safe boundary</div><h3 style="margin:6px 0 0;font-size:1.45rem">No official portrait. No personal contact data. No endorsement claim.</h3><p>This site is intentionally modest enough to inspect before anyone decides it is worth sharing.</p></div>
+        <div class="badge">PUBLIC / BOUNDED / REPLAYABLE</div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="wrap">
+        <div class="sectionhead"><h2>Source trail</h2><p>The public fact rail points outward to the official source. The synthetic role rail points inward to the repository receipts that define its boundaries.</p></div>
+        <div class="card sources">
+          <div class="source"><div><b>187th Fighter Wing — Mission Support Group</b><small>Official source for the current Force Support Squadron commander listing.</small></div><a href="https://www.187fw.ang.af.mil/Units/Mission-Support-Group/">Official source →</a></div>
+          <div class="source"><div><b>Aunt Rann real/synthetic boundary receipt</b><small>Defines the separation between Lt Col Chavers and the synthetic JSONWisdom roles.</small></div><a href="https://github.com/jsonwisdom/LEEANN/blob/master/docs/AUNT_RANN_REAL_SYNTHETIC_BOUNDARY_V0.1.md">Boundary receipt →</a></div>
+          <div class="source"><div><b>Family Movie Creator v0.2</b><small>Defines Aunt Rann as Sister Syntax Creative Commander with no final release authority.</small></div><a href="https://github.com/jsonwisdom/LEEANN/blob/master/FAMILY_MOVIE_CREATOR_V0_2.json">Creative-role source →</a></div>
+          <div class="source"><div><b>LEEANN repository</b><small>Public source history and supporting artifacts.</small></div><a href="https://github.com/jsonwisdom/LEEANN">GitHub repo →</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footrule"><span>JSONWisdom / LEEANN · v0.1 · 2026-08-14</span><span>Simulation only · No USAF / ANG endorsement · Authority created: false</span></div>
+  </footer>
+</body>
+</html>
