@@ -1,0 +1,61 @@
+{
+  "protocol": "PrimeRannProtocol",
+  "version": "0.1",
+  "status": "ACTIVE_COORDINATION_ONLY",
+  "namespace": "jaywisdom.base.eth",
+  "operator_claim": "jaywisdom.base.eth",
+  "operator_verified": false,
+  "purpose": "Recover preserved state, verify evidence, route responsibility, and stop at the human decision gate.",
+  "flow": [
+    "RECOVER_STATE",
+    "VERIFY_EVIDENCE",
+    "ROUTE_RESPONSIBILITY",
+    "HUMAN_GATE"
+  ],
+  "surfaces": {
+    "Google_Calendar": "WAKE_UP_CHECKPOINT",
+    "Google_Drive": "PRESERVED_WORKING_STATE",
+    "GitHub_Actions": "REPRODUCIBLE_MACHINE_VERIFICATION",
+    "Human": "FINAL_JUDGMENT_AND_AUTHORIZATION"
+  },
+  "functional_labels": {
+    "LeahPrime": "TRANSLATE_AND_REPLAY",
+    "RizRannRun": "RESPONSIBILITY_ROUTER",
+    "GrayBaby": "GAP_DETECTION",
+    "CrissCross": "EVIDENCE_TYPE_GATE",
+    "BoxD": "PRESERVATION_CORRIDOR",
+    "BoxDee": "PRIVATE_HOME_CONTEXT"
+  },
+  "github_binding": {
+    "repository": "jsonwisdom/LEEANN",
+    "workflow": ".github/workflows/timegraph-genesis-replay.yml",
+    "canonical_target_sha": "ab7666ac6922ac79c7d21fdd2799697370e77e6b",
+    "current_pr": 1,
+    "merge_authorized": false
+  },
+  "barrier_fallback": {
+    "rule": "PRODUCT_LIMIT_DOES_NOT_CANCEL_MISSION_STATE",
+    "route": [
+      "PRESERVE_IN_DRIVE",
+      "WAKE_VIA_CALENDAR",
+      "VERIFY_VIA_GITHUB",
+      "RETURN_TO_HUMAN"
+    ],
+    "silent_execution": false
+  },
+  "promotion": {
+    "enabled": false,
+    "facts_promoted": 0,
+    "schema_compliance": "HOLD",
+    "timestamp_relation": "HOLD",
+    "bitbot_validator": "CLOSED",
+    "linkedin_factrail": "CLOSED"
+  },
+  "boundaries": {
+    "military_authority": false,
+    "family_authority": false,
+    "institutional_affiliation_inferred": false,
+    "identity_binding_inferred": false,
+    "authority_created": false
+  }
+}
