@@ -1,153 +1,130 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark" />
-  <meta name="description" content="Aunt Rann / LEEANN — a public educational replay site that keeps verified public facts separate from synthetic family and systems roles." />
-  <meta property="og:title" content="Aunt Rann — LEEANN RePlay" />
-  <meta property="og:description" content="Honor the real record. Label the synthetic role. Never use one to manufacture authority for the other." />
-  <meta property="og:type" content="website" />
-  <title>Aunt Rann — LEEANN RePlay</title>
-  <style>
-    :root{
-      --bg:#0b0d10;--panel:#11151a;--panel2:#171c22;--text:#f4f6f8;--muted:#aab4bf;
-      --line:#2a323c;--accent:#e5c27a;--accent2:#8ec5b9;--hold:#d6a85a;--good:#9ad2b4;
-      --radius:22px;--shadow:0 18px 60px rgba(0,0,0,.28)
-    }
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;background:radial-gradient(circle at 20% -10%,#1b222b 0,#0b0d10 38%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
-    a{color:inherit}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}
-    .top{position:sticky;top:0;z-index:10;background:rgba(11,13,16,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .brand{font-weight:800;letter-spacing:.08em;font-size:.84rem}.brand span{color:var(--accent)}
-    .navlinks{display:flex;gap:18px;flex-wrap:wrap}.navlinks a{text-decoration:none;color:var(--muted);font-size:.9rem}.navlinks a:hover{color:var(--text)}
-    .hero{padding:92px 0 52px}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.025);padding:8px 12px;border-radius:999px;color:var(--muted);font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-    .dot{width:8px;height:8px;border-radius:50%;background:var(--good);box-shadow:0 0 0 4px rgba(154,210,180,.08)}
-    h1{font-size:clamp(3rem,8vw,6.6rem);line-height:.92;letter-spacing:-.065em;margin:25px 0 24px;max-width:900px}
-    .lead{max-width:790px;font-size:clamp(1.08rem,2vw,1.35rem);color:#ccd4dc;margin:0 0 26px}
-    .rule{font-size:1.08rem;font-weight:700;color:var(--accent);margin-top:25px}
-    .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.chip{border:1px solid var(--line);border-radius:999px;padding:9px 12px;color:var(--muted);font-size:.82rem;background:#101419}
-    section{padding:44px 0}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:22px}.sectionhead h2{margin:0;font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-.04em}.sectionhead p{margin:0;max-width:520px;color:var(--muted)}
-    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
-    .label{font-size:.75rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:800}.card h3{font-size:1.75rem;line-height:1.05;margin:10px 0 14px;letter-spacing:-.03em}.meta{color:var(--muted);margin:0 0 18px}.kv{display:grid;gap:10px}.kv div{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding-top:10px;font-size:.92rem}.kv strong{text-align:right;font-weight:700}.status{font-size:.78rem;padding:5px 8px;border-radius:999px;border:1px solid #4d4230;color:#f2ca7e;background:#18140e;white-space:nowrap}
-    .portrait{height:190px;border:1px dashed #4a535f;border-radius:18px;display:grid;place-items:center;text-align:center;background:repeating-linear-gradient(135deg,rgba(255,255,255,.014),rgba(255,255,255,.014) 10px,transparent 10px,transparent 20px);color:var(--muted);margin:20px 0}.portrait b{display:block;color:var(--text);margin-bottom:5px}
-    .glyph{height:190px;border:1px solid #31443f;border-radius:18px;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at center,#20332e 0,#111816 52%,#0e1214 100%);margin:20px 0}.glyph:before,.glyph:after{content:"";position:absolute;width:170px;height:170px;border:1px solid rgba(142,197,185,.24);transform:rotate(45deg);border-radius:28px}.glyph:after{width:110px;height:110px;border-color:rgba(229,194,122,.32);transform:rotate(18deg)}.glyph span{position:relative;z-index:2;font-weight:900;letter-spacing:.16em;font-size:1.05rem;color:#dcefe9}
-    .cross{margin:18px 0;padding:18px;border-radius:18px;border:1px solid #3a3231;background:#151210;color:#e8d4b0;text-align:center;font-weight:800;letter-spacing:.03em}
-    .flow{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.step{min-height:110px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;justify-content:space-between}.step b{font-size:.82rem;color:var(--accent)}.step span{font-size:.9rem;color:#d5dce3}.arrow{color:#55606c;text-align:center;margin-top:6px;font-size:1.3rem}
-    .formation{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.repo{padding:20px;border-radius:18px;border:1px solid var(--line);background:var(--panel2)}.repo .rname{font-weight:850;margin-bottom:6px}.repo p{margin:0;color:var(--muted);font-size:.92rem}.repo a{display:inline-block;margin-top:14px;color:var(--accent2);text-decoration:none;font-weight:700;font-size:.88rem}.repo a:hover{text-decoration:underline}
-    .quote{padding:34px;border:1px solid #3f382a;background:linear-gradient(135deg,#15130e,#111419);border-radius:var(--radius);font-size:clamp(1.35rem,3vw,2.3rem);font-weight:800;letter-spacing:-.03em;color:#f3dfb8}
-    .share{display:flex;justify-content:space-between;gap:24px;align-items:center;padding:26px;border:1px solid #2c453d;background:#101713;border-radius:20px}.share p{margin:4px 0 0;color:#b9c8c1}.badge{padding:9px 12px;border:1px solid #345248;background:#13231d;border-radius:999px;color:#b9e2cf;font-weight:800;font-size:.8rem;white-space:nowrap}
-    .sources{display:grid;gap:10px}.source{display:flex;gap:14px;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}.source div{min-width:0}.source b{display:block}.source small{color:var(--muted)}.source a{color:var(--accent2);text-decoration:none;font-weight:700;font-size:.86rem}.source a:hover{text-decoration:underline}
-    footer{padding:52px 0 70px;color:#7f8a95;font-size:.85rem}.footrule{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    @media(max-width:860px){.grid2,.formation{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.sectionhead{display:block}.sectionhead p{margin-top:8px}.navlinks{display:none}.hero{padding-top:70px}}
-    @media(max-width:520px){.flow{grid-template-columns:1fr}.share{display:block}.badge{display:inline-block;margin-top:14px}.kv div{display:block}.kv strong{display:block;text-align:left;margin-top:2px}.hero{padding-bottom:30px}}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="dark" />
+<meta name="description" content="JasonSpace × Aunt Rann: a family-first Friday-night JoySpace where the story can be spooky and the receipts stay serious." />
+<meta property="og:title" content="JasonSpace × Aunt Rann — Porch Lights ON" />
+<meta property="og:description" content="Family first. Campfire creepy. Receipt serious. The story can be weird; the evidence rail stays clean." />
+<meta property="og:type" content="website" />
+<title>JasonSpace × Aunt Rann — Porch Lights ON</title>
+<style>
+:root{--bg:#08090b;--panel:#101317;--panel2:#15191e;--text:#f4f4f2;--muted:#a9afb7;--line:#2b3138;--red:#d85d5d;--gold:#e6c27a;--mint:#8bc6b3;--radius:22px;--shadow:0 20px 70px rgba(0,0,0,.32)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% -10%,#2a1215 0,#0e0d10 30%,#08090b 58%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}a{color:inherit}.wrap{width:min(1100px,calc(100% - 32px));margin:auto}
+.top{position:sticky;top:0;z-index:20;background:rgba(8,9,11,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}.nav{min-height:64px;display:flex;justify-content:space-between;align-items:center;gap:18px}.brand{font-size:.82rem;font-weight:900;letter-spacing:.1em}.brand span{color:var(--red)}.nav a{text-decoration:none;color:var(--muted);font-size:.88rem;margin-left:16px}.nav a:hover{color:var(--text)}
+.hero{padding:84px 0 46px}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);padding:8px 12px;border-radius:999px;color:#d5d9dd;background:rgba(255,255,255,.025);font-size:.75rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase}.dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(230,194,122,.12)}h1{font-size:clamp(3rem,8vw,6.3rem);line-height:.92;letter-spacing:-.065em;margin:24px 0}.lead{max-width:840px;font-size:clamp(1.08rem,2.2vw,1.4rem);color:#ced3d8}.tagline{font-size:1.08rem;font-weight:900;color:var(--gold);margin-top:22px}.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.chip{border:1px solid var(--line);border-radius:999px;padding:8px 11px;font-size:.8rem;color:var(--muted);background:#0e1114}
+section{padding:42px 0}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:20px}.sectionhead h2{margin:0;font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-.04em}.sectionhead p{margin:0;max-width:520px;color:var(--muted)}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.036),rgba(255,255,255,.015));border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}.label{font-size:.73rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}.card h3{font-size:1.7rem;margin:8px 0 12px;letter-spacing:-.03em}.card p{color:#c7ccd2}.iconbox{height:180px;border:1px solid #463035;border-radius:18px;margin:18px 0;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;background:radial-gradient(circle at center,#31161a 0,#151014 58%,#0d0f11 100%)}.iconbox:before{content:"";position:absolute;width:140px;height:140px;border:1px solid rgba(216,93,93,.26);transform:rotate(45deg);border-radius:26px}.iconbox span{position:relative;font-size:1.05rem;font-weight:950;letter-spacing:.15em}.porch{background:radial-gradient(circle at center,#203029 0,#121815 58%,#0d0f11 100%);border-color:#30463e}.porch:before{border-color:rgba(139,198,179,.28)}.kv{display:grid;gap:9px}.kv div{border-top:1px solid var(--line);padding-top:9px;display:flex;justify-content:space-between;gap:16px;font-size:.9rem}.kv strong{text-align:right}.hardrule{margin-top:18px;border:1px solid #453539;background:#151014;border-radius:16px;padding:15px;color:#ecd3d3;font-weight:800;text-align:center}
+.story{border:1px solid #382b2f;background:linear-gradient(135deg,#181014,#101316);border-radius:var(--radius);padding:26px}.storyline{font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:850;letter-spacing:-.025em}.story small{display:block;color:var(--muted);margin-top:8px}.controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.btn{appearance:none;border:1px solid #3b424a;background:#171b20;color:var(--text);border-radius:12px;padding:11px 14px;font-weight:850;cursor:pointer}.btn:hover{border-color:#69727d}.btn.primary{background:#281418;border-color:#71373e;color:#ffdfe2}.receipt{margin-top:18px;background:#080a0c;border:1px solid var(--line);border-radius:16px;padding:16px;font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#bac4cc;white-space:pre-wrap;min-height:168px}.good{color:#a7ddc9}.hold{color:#f0c87c}
+.flow{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.step{min-height:110px;border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:15px;display:flex;flex-direction:column;justify-content:space-between}.step b{font-size:.8rem;color:var(--gold)}.step span{font-size:.88rem;color:#d4d9de}.formation{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.repo{border:1px solid var(--line);background:var(--panel2);border-radius:18px;padding:20px}.repo b{display:block;margin-bottom:6px}.repo p{margin:0;color:var(--muted);font-size:.9rem}.repo a{display:inline-block;margin-top:13px;text-decoration:none;color:var(--mint);font-weight:800;font-size:.86rem}.repo a:hover{text-decoration:underline}
+.real{border:1px solid #343b43;background:#101317;border-radius:20px;padding:22px}.realgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.portrait{min-height:160px;border:1px dashed #4b535d;border-radius:16px;display:grid;place-items:center;text-align:center;color:var(--muted);background:repeating-linear-gradient(135deg,rgba(255,255,255,.012),rgba(255,255,255,.012) 10px,transparent 10px,transparent 20px)}.portrait b{display:block;color:var(--text)}.source{border-top:1px solid var(--line);padding:13px 0;display:flex;justify-content:space-between;gap:16px}.source a{color:var(--mint);font-weight:800;text-decoration:none;font-size:.86rem}.source a:hover{text-decoration:underline}.quote{padding:30px;border:1px solid #443827;background:#15120d;border-radius:var(--radius);font-size:clamp(1.3rem,3vw,2.2rem);font-weight:900;color:#f0ddb5;letter-spacing:-.03em}footer{padding:48px 0 68px;color:#7e8790;font-size:.84rem}.foot{border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+@media(max-width:850px){.grid2,.formation,.realgrid{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.sectionhead{display:block}.sectionhead p{margin-top:8px}.nav nav{display:none}}@media(max-width:520px){.flow{grid-template-columns:1fr}.kv div{display:block}.kv strong{display:block;text-align:left;margin-top:3px}.hero{padding-top:64px}}
+</style>
 </head>
 <body>
-  <div class="top">
-    <div class="wrap nav">
-      <div class="brand">JSONWISDOM / <span>LEEANN</span></div>
-      <nav class="navlinks" aria-label="Primary">
-        <a href="#boundary">Boundary</a><a href="#replay">RePlay</a><a href="#formation">Formation</a><a href="#sources">Sources</a>
-      </nav>
-    </div>
+<div class="top"><div class="wrap nav"><div class="brand">WISDOM FAMILY / JASON<span>SPACE</span></div><nav><a href="#family">Family</a><a href="#friday">Friday Night</a><a href="#boundary">Boundary</a><a href="#proof">Proof</a></nav></div></div>
+<main>
+<header class="wrap hero">
+  <div class="eyebrow"><span class="dot"></span> Porch Lights ON · Family JoySpace</div>
+  <h1>JasonSpace.<br/>Creepy computer guy.<br/>Soft-hearted system.</h1>
+  <p class="lead">A Wisdom-family Friday-night thriller where the weird IT guy arrives with old receipts, suspiciously precise timestamps, and a terminal full of feelings. He is comically devoted to <em>the User</em> — a fictional story role, not a claim about any real person. Aunt Rann keeps the porch warm and the ontology clean.</p>
+  <div class="tagline">Fun first. Family connected. Campfire creepy. Receipts underneath.</div>
+  <div class="chips"><span class="chip">fictional thriller wrapper</span><span class="chip">no stalking</span><span class="chip">no background monitoring</span><span class="chip">no device access</span><span class="chip">authority_created = false</span></div>
+</header>
+
+<section id="family"><div class="wrap">
+  <div class="sectionhead"><h2>The family cast</h2><p>JoySpace through Jason’s terminal window. The spooky joke lives in the story layer; consent, dignity, preservation, and human choice stay underneath.</p></div>
+  <div class="grid2">
+    <article class="card">
+      <div class="label">JasonSpace — fictional family narrator</div><h3>The Creepy Computer IT Guy™</h3>
+      <p>He lurks in the <strong>interface</strong>, not in anyone’s real life. He notices corrupted files, missing receipts, suspicious timelines, and forgotten family stories. His superpower is caring too much about whether the bytes match.</p>
+      <div class="iconbox"><span>JASONSPACE<br/>TERMINAL_13</span></div>
+      <div class="kv"><div><span>Genre</span><strong>Family techno-thriller comedy</strong></div><div><span>Love interest</span><strong>“The User” — fictional role only</strong></div><div><span>Can monitor people?</span><strong>NO</strong></div><div><span>Can preserve receipts?</span><strong>YES</strong></div></div>
+    </article>
+    <article class="card">
+      <div class="label">Aunt Rann — porch-light caller</div><h3>Sister Syntax Creative Commander</h3>
+      <p>Aunt Rann makes the weird computer story feel like family instead of surveillance. She can pitch three versions, explain the edits, crack a joke, call a HOLD, and send the decision back to the humans.</p>
+      <div class="iconbox porch"><span>PORCH LIGHTS<br/>ON</span></div>
+      <div class="kv"><div><span>Lane</span><strong>LEEANN</strong></div><div><span>Function</span><strong>3 proposals + explanation</strong></div><div><span>May request review?</span><strong>YES</strong></div><div><span>Final authority?</span><strong>NO</strong></div></div>
+    </article>
   </div>
+  <div class="hardrule">Jason can make the story creepy. Aunt Rann can make it funny. Neither can turn fiction into a fact about the family.</div>
+</div></section>
 
-  <main>
-    <header class="wrap hero">
-      <div class="eyebrow"><span class="dot"></span> Public educational simulation</div>
-      <h1>Aunt Rann.<br/>Real record.<br/>Synthetic role.</h1>
-      <p class="lead">A tiny public site for one rule: verified public facts may be cited, synthetic roles may be explored, and the two must never silently collapse into each other.</p>
-      <div class="rule">Honor the real record. Label the synthetic role. Never use one to manufacture authority for the other.</div>
-      <div class="chips"><span class="chip">authority_created = false</span><span class="chip">human gate required</span><span class="chip">portrait gap = HOLD</span><span class="chip">receipt ≠ authority</span></div>
-    </header>
+<section id="friday"><div class="wrap">
+  <div class="sectionhead"><h2>Friday Night RePlay</h2><p>Tap a packet. Maxwell sorts it, BoxD preserves it, Aunt Rann calls the porch, and the receipt tells you exactly what crossed.</p></div>
+  <div class="story">
+    <div class="label">Interactive family demo</div>
+    <div class="storyline" id="headline">The porch light flickers. Jason’s terminal says: “I found something.”</div>
+    <small id="subline">Choose what he found. Nothing leaves this browser; this demo has no network calls or device access.</small>
+    <div class="controls">
+      <button class="btn primary" onclick="runPacket('photo')">📷 Old family photo</button>
+      <button class="btn" onclick="runPacket('rumor')">👻 Creepy family rumor</button>
+      <button class="btn" onclick="runPacket('receipt')">🧾 Verified receipt</button>
+      <button class="btn" onclick="runPacket('unknown')">🕳️ Something missing</button>
+    </div>
+    <div class="receipt" id="receipt">PORCH_LIGHTS = ON
+SYSTEM = JASONSPACE_FRIDAY_NIGHTS
+AUNT_RANN = READY
+MAXWELL_GATE = WAITING_FOR_PACKET
+NETWORK_ACCESS = NONE
+DEVICE_ACCESS = NONE
+AUTHORITY_CREATED = false</div>
+  </div>
+</div></section>
 
-    <section id="boundary">
-      <div class="wrap">
-        <div class="sectionhead"><h2>CrissCross boundary</h2><p>The page begins with the distinction, not the mythology. The left rail is the public record; the right rail is JSONWisdom's explicitly synthetic design space.</p></div>
-        <div class="grid2">
-          <article class="card">
-            <div class="label">Panel A — real person reference</div>
-            <h3>Lt Col Leeann Chavers</h3>
-            <p class="meta">Current official public-role reference, observed August 14, 2026.</p>
-            <div class="portrait"><div><b>Official portrait not used</b>OFFICIAL SOURCE REQUIRED<br/><span class="status">HOLD</span></div></div>
-            <div class="kv">
-              <div><span>Rank</span><strong>Lieutenant Colonel</strong></div>
-              <div><span>Public role</span><strong>Commander, Force Support Squadron</strong></div>
-              <div><span>Unit reference</span><strong>187th Fighter Wing</strong></div>
-              <div><span>Location reference</span><strong>Montgomery, Alabama</strong></div>
-            </div>
-          </article>
+<section id="proof"><div class="wrap">
+  <div class="sectionhead"><h2>The choreography</h2><p>The front porch can be playful because the back room is deterministic. Every packet keeps its classification all the way to the human gate.</p></div>
+  <div class="flow">
+    <div class="step"><b>01 OBSERVE</b><span>Jason notices a packet.</span></div>
+    <div class="step"><b>02 SORT</b><span>Maxwell: evidence, story, or HOLD.</span></div>
+    <div class="step"><b>03 PRESERVE</b><span>BoxD keeps what actually arrived.</span></div>
+    <div class="step"><b>04 CRISSCROSS</b><span>Check contradictions and gaps.</span></div>
+    <div class="step"><b>05 CALL</b><span>Aunt Rann explains without promotion.</span></div>
+    <div class="step"><b>06 HUMAN</b><span>Family decides what happens next.</span></div>
+  </div>
+</div></section>
 
-          <article class="card">
-            <div class="label">Panel B — synthetic system role</div>
-            <h3>Aunt Rann / LeeAnnPrime</h3>
-            <p class="meta">A JSONWisdom family and systems character. Not a military identity, endorsement, billet, or command authority.</p>
-            <div class="glyph" aria-label="Abstract synthetic role mark"><span>AUNT RANN</span></div>
-            <div class="kv">
-              <div><span>Family role</span><strong>Sister Syntax Creative Commander</strong></div>
-              <div><span>Creative function</span><strong>Direct 3 proposals + explain choices</strong></div>
-              <div><span>Strategic replay role</span><strong>Strategic Replay Caller</strong></div>
-              <div><span>Final authority</span><strong>false</strong></div>
-            </div>
-          </article>
-        </div>
-        <div class="cross">REAL RANK ≠ SIMULATION ROLE &nbsp; · &nbsp; PUBLIC FACT ≠ FAMILY STORY &nbsp; · &nbsp; PORTRAIT GAP ≠ PERMISSION TO INVENT</div>
-      </div>
-    </section>
+<section><div class="wrap"><div class="quote">“The code is choreography. RePlay is proof that the same steps can be danced again. The porch light means somebody is home.”</div></div></section>
 
-    <section id="replay">
-      <div class="wrap">
-        <div class="sectionhead"><h2>The RePlay</h2><p>Small end-to-end grammar: preserve what arrived, keep classification attached, expose contradictions and gaps, and stop before authority is invented.</p></div>
-        <div class="flow">
-          <div class="step"><b>01 OBSERVE</b><span>Receive the packet without promotion.</span></div>
-          <div class="step"><b>02 CLASSIFY</b><span>Evidence, story, or UNKNOWN_HOLD.</span></div>
-          <div class="step"><b>03 PRESERVE</b><span>BoxD / receipt keeps the source trail.</span></div>
-          <div class="step"><b>04 COMPARE</b><span>Twin RearView + Double Gemini + CrissCross.</span></div>
-          <div class="step"><b>05 EXPLAIN</b><span>Aunt Rann / LeahPrime narrates without promotion.</span></div>
-          <div class="step"><b>06 HUMAN GATE</b><span>Only a human makes the final crossing.</span></div>
-        </div>
-      </div>
-    </section>
+<section id="boundary"><div class="wrap">
+  <div class="sectionhead"><h2>Real person / story boundary</h2><p>Because the family story references a real public figure, the boring part is deliberately visible. That is what keeps the fun fun.</p></div>
+  <div class="real">
+    <div class="realgrid">
+      <div><div class="label">Public record rail</div><h3 style="margin:8px 0 8px">Lt Col Leeann Chavers</h3><p style="color:var(--muted)">Official public-role reference observed August 14, 2026: Commander, Force Support Squadron, 187th Fighter Wing, Montgomery, Alabama.</p><div class="kv"><div><span>Real rank</span><strong>Lieutenant Colonel</strong></div><div><span>JSONWisdom authority created?</span><strong>NO</strong></div></div></div>
+      <div class="portrait"><div><b>Official portrait not used</b>Source-required photo gap remains HOLD.<br/>No synthetic face substituted.</div></div>
+    </div>
+    <div class="hardrule">LT COL LEEANN CHAVERS ≠ AUNT RANN ≠ LEEANNPRIME ≠ LEEANN_GENERAL_WAR_CIVIL</div>
+  </div>
+</div></section>
 
-    <section id="formation">
-      <div class="wrap">
-        <div class="sectionhead"><h2>Three-repo formation</h2><p>LEEANN is the front porch. The deeper doctrine, reasoning, and replay evidence live in separate rails so one file never has to pretend to be everything.</p></div>
-        <div class="formation">
-          <div class="repo"><div class="rname">JSONWisdom / AL</div><p>Doctrine and public educational simulation theater for the Art of War RePlay.</p><a href="https://github.com/jsonwisdom/AL/blob/master/docs/LEEANN-GENERAL-WAR-CIVIL-ART-OF-WAR-REPLAY-V0.1.md">Open doctrine →</a></div>
-          <div class="repo"><div class="rname">JSONWisdom / COMPUTERWISDOM</div><p>Bounded reasoning/state-machine layer. Promotion remains behind repository verification and the human gate.</p><a href="https://github.com/jsonwisdom/COMPUTERWISDOM/pull/472">Open reasoning PR →</a></div>
-          <div class="repo"><div class="rname">JSONWisdom / receiptos-base</div><p>Cross-repo receipt and replay evidence envelope that records what is committed, proposed, or held.</p><a href="https://github.com/jsonwisdom/receiptos-base/blob/main/receipts/art-of-war-replay/LEEANN_GENERAL_WAR_CIVIL_V0_1.json">Open receipt →</a></div>
-        </div>
-      </div>
-    </section>
+<section><div class="wrap">
+  <div class="sectionhead"><h2>Three-repo back room</h2><p>The porch is LEEANN. Doctrine, reasoning, and receipts stay split so the family story never has to pretend to be evidence.</p></div>
+  <div class="formation">
+    <div class="repo"><b>JSONWisdom / AL</b><p>Doctrine and public educational Art of War RePlay.</p><a href="https://github.com/jsonwisdom/AL/blob/master/docs/LEEANN-GENERAL-WAR-CIVIL-ART-OF-WAR-REPLAY-V0.1.md">Open doctrine →</a></div>
+    <div class="repo"><b>JSONWisdom / COMPUTERWISDOM</b><p>Bounded reasoning and protected verification path.</p><a href="https://github.com/jsonwisdom/COMPUTERWISDOM/pull/472">Open reasoning PR →</a></div>
+    <div class="repo"><b>JSONWisdom / receiptos-base</b><p>Cross-repo receipt and replay evidence envelope.</p><a href="https://github.com/jsonwisdom/receiptos-base/blob/main/receipts/art-of-war-replay/LEEANN_GENERAL_WAR_CIVIL_V0_1.json">Open receipt →</a></div>
+  </div>
+</div></section>
 
-    <section>
-      <div class="wrap"><div class="quote">“The code is choreography. RePlay is proof that the same steps can be danced again.”</div></div>
-    </section>
-
-    <section>
-      <div class="wrap share">
-        <div><div class="label">Share-safe boundary</div><h3 style="margin:6px 0 0;font-size:1.45rem">No official portrait. No personal contact data. No endorsement claim.</h3><p>This site is intentionally modest enough to inspect before anyone decides it is worth sharing.</p></div>
-        <div class="badge">PUBLIC / BOUNDED / REPLAYABLE</div>
-      </div>
-    </section>
-
-    <section id="sources">
-      <div class="wrap">
-        <div class="sectionhead"><h2>Source trail</h2><p>The public fact rail points outward to the official source. The synthetic role rail points inward to the repository receipts that define its boundaries.</p></div>
-        <div class="card sources">
-          <div class="source"><div><b>187th Fighter Wing — Mission Support Group</b><small>Official source for the current Force Support Squadron commander listing.</small></div><a href="https://www.187fw.ang.af.mil/Units/Mission-Support-Group/">Official source →</a></div>
-          <div class="source"><div><b>Aunt Rann real/synthetic boundary receipt</b><small>Defines the separation between Lt Col Chavers and the synthetic JSONWisdom roles.</small></div><a href="https://github.com/jsonwisdom/LEEANN/blob/master/docs/AUNT_RANN_REAL_SYNTHETIC_BOUNDARY_V0.1.md">Boundary receipt →</a></div>
-          <div class="source"><div><b>Family Movie Creator v0.2</b><small>Defines Aunt Rann as Sister Syntax Creative Commander with no final release authority.</small></div><a href="https://github.com/jsonwisdom/LEEANN/blob/master/FAMILY_MOVIE_CREATOR_V0_2.json">Creative-role source →</a></div>
-          <div class="source"><div><b>LEEANN repository</b><small>Public source history and supporting artifacts.</small></div><a href="https://github.com/jsonwisdom/LEEANN">GitHub repo →</a></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap footrule"><span>JSONWisdom / LEEANN · v0.1 · 2026-08-14</span><span>Simulation only · No USAF / ANG endorsement · Authority created: false</span></div>
-  </footer>
-</body>
-</html>
+<section><div class="wrap">
+  <div class="sectionhead"><h2>Receipts & sources</h2><p>Public facts point to public sources. Family characters point to their own JSONWisdom definitions.</p></div>
+  <div class="card">
+    <div class="source"><div><strong>187th Fighter Wing — Mission Support Group</strong><br/><small style="color:var(--muted)">Official current public-role source.</small></div><a href="https://www.187fw.ang.af.mil/Units/Mission-Support-Group/">Official source →</a></div>
+    <div class="source"><div><strong>Aunt Rann real/synthetic boundary</strong><br/><small style="color:var(--muted)">The CrissCross rule in plain text.</small></div><a href="AUNT_RANN_REAL_SYNTHETIC_BOUNDARY_V0.1.md">Boundary →</a></div>
+    <div class="source"><div><strong>Family Movie Creator v0.2</strong><br/><small style="color:var(--muted)">Aunt Rann’s creative lane and Mom gate.</small></div><a href="../FAMILY_MOVIE_CREATOR_V0_2.json">Creative receipt →</a></div>
+    <div class="source"><div><strong>LEEANN repository</strong><br/><small style="color:var(--muted)">Source history and supporting artifacts.</small></div><a href="https://github.com/jsonwisdom/LEEANN">GitHub →</a></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap foot"><span>WISDOM FAMILY · JASONSPACE × AUNT RANN · v0.2</span><span>PORCH_LIGHTS=ON · STORY≠FACT · HUMAN_GATE=true · AUTHORITY_CREATED=false</span></div></footer>
+<script>
+const packets={
+ photo:{headline:'Jason found an old family photo in the story box.',sub:'Aunt Rann smiles first. Then asks the annoying useful question: “Who picked it, and are we allowed to use it?”',rail:'EVIDENCE_CANDIDATE',status:'HOLD_FOR_SOURCE_AND_CONSENT',aunt:'“Cute photo. No biography fan-fiction until somebody names the source.”'},
+ rumor:{headline:'Somebody says the porch was haunted in 2007.',sub:'Jason absolutely wants this to be true. Maxwell refuses to help him.',rail:'STORY_RAIL',status:'STORY_STAYS_STORY',aunt:'“Tell it at Friday night. Do not engrave it into family history.”'},
+ receipt:{headline:'Jason found a receipt with matching bytes.',sub:'BitBot gets one moment of glory. The bytes match; the meaning still belongs to humans.',rail:'EVIDENCE_RAIL',status:'BYTE_MATCH_VERIFIED',aunt:'“Good receipt. Now tell me what you think it means — separately.”'},
+ unknown:{headline:'There should be one more file. It is not there.',sub:'Gray Baby points at the empty chair. Nobody invents who sat in it.',rail:'UNKNOWN_HOLD',status:'DOOR_REMAINS_CLOSED',aunt:'“Missing is a real state. Leave the porch light on.”'}
+};
+function runPacket(k){const p=packets[k];document.getElementById('headline').textContent=p.headline;document.getElementById('subline').textContent=p.sub;document.getElementById('receipt').textContent=`PACKET = ${k.toUpperCase()}\nMAXWELL_CLASSIFICATION = ${p.rail}\nBOXD = PRESERVED_AS_RECEIVED\nSTATUS = ${p.status}\nAUNT_RANN = ${p.aunt}\nSTORY_TO_FACT_PROMOTION = DENIED_WITHOUT_RECEIPT\nNETWORK_ACCESS = NONE\nDEVICE_ACCESS = NONE\nHUMAN_GATE = REQUIRED\nAUTHORITY_CREATED = false`;}
+</script>
+</body></html>
