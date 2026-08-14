@@ -1,0 +1,103 @@
+name: LeeAnn Public Link 200 Proof
+
+on:
+  push:
+    branches:
+      - feature/protocol-one-harness
+    paths:
+      - 'briefings/LEEANN_END_TO_END_JASON_WISDOM.md'
+      - '.github/workflows/leeann-public-link-proof.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prove-public-link:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build immutable URLs
+        id: urls
+        shell: bash
+        run: |
+          set -euo pipefail
+          PATH_IN_REPO='briefings/LEEANN_END_TO_END_JASON_WISDOM.md'
+          RENDERED_URL="https://github.com/${GITHUB_REPOSITORY}/blob/${GITHUB_SHA}/${PATH_IN_REPO}"
+          RAW_URL="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_SHA}/${PATH_IN_REPO}"
+          echo "rendered_url=${RENDERED_URL}" >> "$GITHUB_OUTPUT"
+          echo "raw_url=${RAW_URL}" >> "$GITHUB_OUTPUT"
+          echo "Rendered: ${RENDERED_URL}"
+          echo "Raw:      ${RAW_URL}"
+
+      - name: Require rendered GitHub link HTTP 200
+        id: rendered
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='${{ steps.urls.outputs.rendered_url }}'
+          CODE="$(curl --retry 3 --retry-delay 2 -L -sS -o /tmp/rendered.html -w '%{http_code}' "$URL")"
+          echo "http_status=${CODE}" >> "$GITHUB_OUTPUT"
+          echo "HTTP ${CODE} ${URL}"
+          test "$CODE" = '200'
+
+      - name: Require raw GitHub link HTTP 200
+        id: raw
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='${{ steps.urls.outputs.raw_url }}'
+          CODE="$(curl --retry 3 --retry-delay 2 -L -sS -o /tmp/briefing.md -w '%{http_code}' "$URL")"
+          echo "http_status=${CODE}" >> "$GITHUB_OUTPUT"
+          echo "HTTP ${CODE} ${URL}"
+          test "$CODE" = '200'
+          grep -Fq '# LeeAnn — End-to-End Replay' /tmp/briefing.md
+          grep -Fq '## From Jason Wisdom' /tmp/briefing.md
+
+      - name: Emit proof receipt
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build/receipts
+          python - <<'PY'
+          import json, os
+          from datetime import datetime, timezone
+          receipt = {
+              'receipt_type': 'LEEANN_PUBLIC_LINK_200_PROOF',
+              'repository': os.environ['GITHUB_REPOSITORY'],
+              'commit_sha': os.environ['GITHUB_SHA'],
+              'briefing': 'briefings/LEEANN_END_TO_END_JASON_WISDOM.md',
+              'rendered_url': '${{ steps.urls.outputs.rendered_url }}',
+              'rendered_http_status': int('${{ steps.rendered.outputs.http_status }}'),
+              'raw_url': '${{ steps.urls.outputs.raw_url }}',
+              'raw_http_status': int('${{ steps.raw.outputs.http_status }}'),
+              'content_marker_check': 'PASS',
+              'promotion': False,
+              'authority_created': False,
+              'checked_at_utc': datetime.now(timezone.utc).isoformat()
+          }
+          with open('build/receipts/LEEANN_PUBLIC_LINK_200_PROOF.json', 'w', encoding='utf-8') as f:
+              json.dump(receipt, f, indent=2)
+              f.write('\n')
+          print(json.dumps(receipt, indent=2))
+          PY
+
+      - name: Add proof to job summary
+        shell: bash
+        run: |
+          {
+            echo '## LeeAnn Public Link Proof'
+            echo
+            echo '- Rendered GitHub URL: **HTTP ${{ steps.rendered.outputs.http_status }}**'
+            echo '- Raw GitHub URL: **HTTP ${{ steps.raw.outputs.http_status }}**'
+            echo '- Content marker: **PASS**'
+            echo '- Authority created: **false**'
+            echo
+            echo '${{ steps.urls.outputs.rendered_url }}'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload proof receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: leeann-public-link-200-proof
+          path: build/receipts/LEEANN_PUBLIC_LINK_200_PROOF.json
+          if-no-files-found: error
