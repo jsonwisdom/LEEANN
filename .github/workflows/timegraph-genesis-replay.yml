@@ -13,12 +13,25 @@ on:
 permissions:
   contents: read
 
+env:
+  CANONICAL_TARGET_SHA: ab7666ac6922ac79c7d21fdd2799697370e77e6b
+
 jobs:
   replay:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout exact PR bytes
+      - name: Checkout historical PR HEAD under test
         uses: actions/checkout@v4
+        with:
+          ref: ${{ env.CANONICAL_TARGET_SHA }}
+          fetch-depth: 1
+
+      - name: Verify checked-out commit exactly
+        run: |
+          ACTUAL_SHA="$(git rev-parse HEAD)"
+          echo "expected=${CANONICAL_TARGET_SHA}"
+          echo "actual=${ACTUAL_SHA}"
+          test "${ACTUAL_SHA}" = "${CANONICAL_TARGET_SHA}"
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -38,10 +51,10 @@ jobs:
             cat build/receipts/GENESIS_EXECUTABLE_REPLAY_RECEIPT_V0_1.json
           fi
 
-      - name: Upload replay receipt
+      - name: Upload canonical-head replay receipt
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: timegraph-genesis-replay-receipt-v0-1
+          name: timegraph-genesis-replay-canonical-head-ab7666ac
           path: build/receipts/GENESIS_EXECUTABLE_REPLAY_RECEIPT_V0_1.json
           if-no-files-found: error
