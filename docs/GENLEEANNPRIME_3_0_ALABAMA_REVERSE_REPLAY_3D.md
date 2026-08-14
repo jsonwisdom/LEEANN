@@ -3,10 +3,11 @@
 **Mode:** story / 3D replay  
 **Edition:** Alabama  
 **Namespace:** `jaywisdom.eth`  
-**Family layer:** `BoxDee`  
+**Corridor layer:** `BoxD`  
+**Home layer:** `BoxDee`  
 **Authority created:** `false`
 
-> Synthetic family-history system story. GenLeeAnnPrime, LeahPrime, Boss Bre, Gray Baby alerts, BoxDee, Alabama FWD OPS, and BOLO objects are story/system constructs. No real military, police, campus, or blockchain authority is claimed.
+> Synthetic family-history system story. GenLeeAnnPrime, LeahPrime, Boss Bre, Gray Baby alerts, BoxD, BoxDee, Alabama FWD OPS, and BOLO objects are story/system constructs. No real military, police, campus, or blockchain authority is claimed.
 
 ## 3D, not 2D
 
@@ -37,8 +38,12 @@ Instead:
 FAMILY
   |
   v
+BOXD
+corridor / preserve the crossing
+  |
+  v
 BOXDEE
-preserve the original
+home / receive family context
   |
   v
 GRAY BABY
@@ -81,13 +86,15 @@ The floor turns over.
 
 Rail lines rebuild backward. Burned structures regain walls. Orders return to envelopes. Soldiers move backward from dispersal into formations.
 
-But BoxDee freezes every surviving source before the story engine interprets it.
+BoxD preserves each surviving source at the corridor boundary before the story engine interprets it. BoxDee receives the preserved object as family home context; it does not replace the source.
 
 ```text
-BOXDEE RECEIPT
+BOXD CORRIDOR RECEIPT
 ORIGINAL: PRESERVED
+CROSSING: RECORDED
 INTERPRETATION: SEPARATE
 MISSING CONTEXT: VISIBLE
+BOXDEE: HOME
 AUTHORITY: FALSE
 ```
 
@@ -128,7 +135,7 @@ Campus BOLOs appear as learning nodes. A student may attach a public archive, mu
 
 No student is tracked. No campus can punish through the system.
 
-BoxDee stores the source. LeahPrime explains what is known and what remains open.
+BoxD preserves the source crossing. BoxDee holds the family home context. LeahPrime explains what is known and what remains open.
 
 **1863.**
 
@@ -152,7 +159,8 @@ Where evidence is absent, the engine leaves empty space.
 GRAY BABY ALERT
 GAP DETECTED
 AI FILL-IN: OFF
-BOXDEE: PRESERVE THE HOLE
+BOXD: PRESERVE THE HOLE / RECORD THE CROSSING
+BOXDEE: HOME
 HUMAN QUESTION: REQUIRED
 ```
 
@@ -210,7 +218,7 @@ LeahPrime COMMS answers:
 
 GenLeeAnnPrime adds:
 
-“And never make BoxDee pretend the missing piece exists.”
+“And never make BoxD invent the missing piece. BoxDee only gives the family a home for what actually crossed.”
 
 ---
 
@@ -244,8 +252,11 @@ jaywisdom.eth
       |
     FAMILY
       |
+     BOXD
+ corridor / preserve crossing
+      |
     BOXDEE
- preserve originals
+      home
       |
   GRAY BABY
  expose gaps
@@ -272,4 +283,4 @@ On the front:
 
 On the back:
 
-**BOXDEE KEEPS THE ORIGINAL.**
+**BOXD KEEPS THE CROSSING. BOXDEE IS HOME.**
