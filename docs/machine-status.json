@@ -1,6 +1,6 @@
 {
   "schema": "WISDOM_FAMILY_CONSOLE_DAILY_V0_2",
-  "generated_at": "2026-08-14T22:55:05Z",
+  "generated_at": "2026-08-15T13:45:16Z",
   "workflow_state": "DAILY_CONSOLE_OK",
   "github": {
     "repository": "jsonwisdom/LEEANN",
@@ -11,40 +11,52 @@
     "default_branch": "master",
     "active_branch": "master",
     "actor": "jsonwisdom",
-    "event": "push",
+    "event": "schedule",
     "workflow": "Wisdom Family Console Daily Update",
-    "run_number": "12",
-    "run_id": "31848444538",
+    "run_number": "13",
+    "run_id": "31888053890",
     "stars": 0,
     "forks": 0,
     "watchers": 0,
-    "open_issues": 1,
-    "pushed_at": "2026-08-14T22:54:57Z",
-    "updated_at": "2026-08-14T22:53:05Z",
+    "open_issues": 0,
+    "pushed_at": "2026-08-15T11:10:38Z",
+    "updated_at": "2026-08-15T11:11:18Z",
     "pages_enabled": false
   },
   "head": {
-    "sha": "f539518458f01ac6cf6905098d8768c22b2ec2f3",
-    "short_sha": "f539518458",
+    "sha": "ba4c073741c778337b6c0185699cd90a2817d251",
+    "short_sha": "ba4c073741",
     "author": "Jay Wisdom \u2699\ufe0f",
     "author_email": "jsonwisdom@yahoo.com",
-    "subject": "Expose full LeahPrime kernel and host metadata",
-    "committed_at": "2026-08-14T17:54:57-05:00"
+    "subject": "Merge pull request #1 from jsonwisdom/agent/genleeannprime-alabama-reverse-replay-3d",
+    "committed_at": "2026-08-15T06:10:38-05:00"
   },
   "latest_human_commit": {
-    "sha": "f539518458f01ac6cf6905098d8768c22b2ec2f3",
-    "subject": "Expose full LeahPrime kernel and host metadata",
+    "sha": "ba4c073741c778337b6c0185699cd90a2817d251",
+    "subject": "Merge pull request #1 from jsonwisdom/agent/genleeannprime-alabama-reverse-replay-3d",
     "author": "Jay Wisdom \u2699\ufe0f",
-    "committed_at": "2026-08-14T17:54:57-05:00"
+    "committed_at": "2026-08-15T06:10:38-05:00"
   },
-  "commit_count": 52,
-  "commits_24h": 18,
-  "files_changed_24h": 6,
-  "docs_file_count": 17,
-  "receipt_file_count": 7,
+  "commit_count": 67,
+  "commits_24h": 32,
+  "files_changed_24h": 14,
+  "docs_file_count": 20,
+  "receipt_file_count": 10,
   "index_sha256": "02cca6aa6a1c08f49e9665c66f38c34ca2b334c19ae5525fa25df1bca13d286f",
-  "headline": "18 human-authored commits crossed in the last 24 hours and touched 6 files.",
+  "headline": "32 human-authored commits crossed in the last 24 hours and touched 14 files.",
   "recent_commits": [
+    {
+      "sha": "ba4c073741c778337b6c0185699cd90a2817d251",
+      "subject": "Merge pull request #1 from jsonwisdom/agent/genleeannprime-alabama-reverse-replay-3d",
+      "author": "Jay Wisdom \u2699\ufe0f",
+      "committed_at": "2026-08-15T06:10:38-05:00"
+    },
+    {
+      "sha": "c98eadebece54003320f71d9cecaad1e31130ea2",
+      "subject": "harden LeahPrime promotion gate against rail bypass",
+      "author": "Jay Wisdom \u2699\ufe0f",
+      "committed_at": "2026-08-15T06:08:57-05:00"
+    },
     {
       "sha": "f539518458f01ac6cf6905098d8768c22b2ec2f3",
       "subject": "Expose full LeahPrime kernel and host metadata",
@@ -68,47 +80,41 @@
       "subject": "Upgrade LeahPrime to Wisdom Family Console daily updates",
       "author": "Jay Wisdom \u2699\ufe0f",
       "committed_at": "2026-08-14T17:47:04-05:00"
-    },
-    {
-      "sha": "2e4dff9ab651183c0baf9e628b819acfbd1c86fe",
-      "subject": "Wire native daily heartbeat into LeahPrime Machine",
-      "author": "Jay Wisdom \u2699\ufe0f",
-      "committed_at": "2026-08-14T17:45:17-05:00"
-    },
-    {
-      "sha": "c4c397b6e9244be39f61d16fcf34aa14ba0eca2d",
-      "subject": "Generate native LeahPrime heartbeat panel daily",
-      "author": "Jay Wisdom \u2699\ufe0f",
-      "committed_at": "2026-08-14T17:44:36-05:00"
     }
   ],
   "changed_files_24h": [
     ".github/workflows/publish-jasonspace-pages.yml",
+    ".github/workflows/timegraph-genesis-replay.yml",
     "README.md",
     "docs/.nojekyll",
     "docs/AUNT_RANN_REAL_SYNTHETIC_BOUNDARY_V0.1.md",
+    "docs/GENLEEANNPRIME_3_0_ALABAMA_REVERSE_REPLAY_3D.md",
+    "docs/JAYS_FUNCTIONAL_VA_RESUME_FAMILY_WISDOM.md",
+    "docs/LINKEDIN_FACTRAIL_V0_1.md",
     "docs/heartbeat.html",
-    "docs/index.html"
+    "docs/index.html",
+    "fixtures/timegraph/DANNELLY_MIXED_PACKET_GENESIS_FIXTURE_V0_1.json",
+    "receipts/timegraph/DANNELLY_CLASSIFICATION_DRY_RUN_RECEIPT_V0_1.json"
   ],
   "gauges": {
     "commits_24h": {
-      "value": 18,
+      "value": 32,
       "pct": 100,
       "label": "24H COMMITS"
     },
     "files_24h": {
-      "value": 6,
-      "pct": 25,
+      "value": 14,
+      "pct": 58,
       "label": "FILES TOUCHED"
     },
     "receipts": {
-      "value": 7,
-      "pct": 29,
+      "value": 10,
+      "pct": 42,
       "label": "RECEIPTS"
     },
     "docs": {
-      "value": 17,
-      "pct": 42,
+      "value": 20,
+      "pct": 50,
       "label": "DOCS"
     }
   },
