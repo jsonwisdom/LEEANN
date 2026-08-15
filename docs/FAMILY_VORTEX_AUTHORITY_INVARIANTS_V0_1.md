@@ -132,3 +132,62 @@ AL
 `SOURCE_MUTATED = FALSE`
 
 `AUTHORITY_CREATED = FALSE`
+
+## Reversible command-layer binding
+
+Canonical command artifact:
+
+`docs/SUPER_SECRET_SISTER_SYNTAX_V0_1.md`
+
+The Family Vortex is now structurally bound to a local replay command grammar with the following state:
+
+```text
+PLAYABLE_STRUCTURE      = TRUE
+SHAREABLE_ARTIFACT      = TRUE
+REPEATABLE_REPLAY       = TRUE_WITH_RECEIPT
+REVERSE_REPLAY          = TRUE_WITH_RECEIPT
+VOICE_COMMAND_SCHEMA    = DEFINED
+VOICE_COMMAND_RUNTIME   = NOT_ESTABLISHED
+SYSTEM_COMMAND_SCOPE    = JAY_OWNED_SYSTEMS
+AUTHORITY_CREATED       = FALSE
+```
+
+The command grammar may be entered by voice, text, or touch when an input runtime exists, but this artifact does not claim that a live microphone, speech recognizer, wake word, or production command executor is deployed.
+
+### Reverse-replay law
+
+```text
+FORWARD:
+SOURCE
+→ PRESERVE
+→ CLASSIFY
+→ COMPARE
+→ MIND_THE_GAP
+→ ROUTE
+→ EXPLAIN
+→ OUTPUT
+→ RECEIPT
+
+REVERSE:
+RECEIPT
+→ OUTPUT
+→ DECLARED TRANSFORMS
+→ ROUTE
+→ GAP SNAPSHOT
+→ COMPARE INPUTS
+→ SOURCE STATUS
+→ SOURCE REFERENCES
+→ PRESERVED ORIGINAL
+```
+
+```text
+REVERSE_REPLAY = PROVENANCE_TRAVERSAL
+REVERSE_REPLAY != SOURCE_REWRITE
+REVERSE_REPLAY != IDENTITY_TRANSFORM
+VOICE_COMMAND  != MILITARY_COMMAND
+SHARE          != ENDORSEMENT
+REPEAT         != REVERIFY
+AUDIT          != ADJUDICATE
+```
+
+Forward replay proves that a derivation was bounded. Reverse replay proves that the resulting claims remain traceable to recorded sources. Neither direction creates evidence, personnel status, or external authority.
