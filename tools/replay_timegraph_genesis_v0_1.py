@@ -25,6 +25,20 @@ EXPECTED_GENESIS = [
 ]
 
 ALLOWED_RAILS = {"FACT_CANDIDATE", "UNKNOWN_HOLD", "FICTION", "CONTEXT_ONLY"}
+PROMOTION_ELIGIBLE_RAILS = {"FACT_CANDIDATE"}
+PROMOTION_RECLASSIFICATION_REQUIRED_FROM = {
+    "UNKNOWN_HOLD",
+    "FICTION",
+    "CONTEXT_ONLY",
+}
+PROMOTION_REQUIRED = {
+    "source_present",
+    "source_supports_claim",
+    "classification_receipt_present",
+    "current_rail_FACT_CANDIDATE",
+    "rail_transition_receipts_complete",
+    "explicit_fact_promotion_receipt",
+}
 
 
 def read_json_bytes(path: Path):
@@ -70,6 +84,20 @@ def validate_genesis(doc: dict) -> list[str]:
         if unknown.get(key) != expected:
             errors.append(f"UNKNOWN_HOLD.{key} expected {expected!r}")
 
+    promotion_gate = doc.get("promotion_gate", {})
+    if set(promotion_gate.get("eligible_current_rails", [])) != PROMOTION_ELIGIBLE_RAILS:
+        errors.append("promotion_gate eligible_current_rails must be FACT_CANDIDATE only")
+    if set(promotion_gate.get("reclassification_required_from", [])) != PROMOTION_RECLASSIFICATION_REQUIRED_FROM:
+        errors.append(
+            "promotion_gate reclassification_required_from must include UNKNOWN_HOLD, FICTION, and CONTEXT_ONLY"
+        )
+    if promotion_gate.get("reclassification_target") != "FACT_CANDIDATE":
+        errors.append("promotion_gate reclassification_target must be FACT_CANDIDATE")
+    if promotion_gate.get("reclassification_rule") != "fresh evidence + explicit reclassification receipt":
+        errors.append("promotion_gate reclassification_rule mismatch")
+    if set(promotion_gate.get("required", [])) != PROMOTION_REQUIRED:
+        errors.append("promotion_gate required conditions mismatch")
+
     rail_event = next(
         (item for item in order or [] if item.get("event_id") == "TG-000003"), None
     )
@@ -103,6 +131,10 @@ def validate_fixture(doc: dict) -> tuple[list[str], dict]:
         promotion_state = str(item.get("promotion_state", ""))
         if promotion_state == "FACT_PROMOTED" or item.get("fact_promotion") is True:
             promoted += 1
+            if cls not in PROMOTION_ELIGIBLE_RAILS:
+                errors.append(
+                    f"{item.get('item_id')}: {cls} cannot be promoted directly; reclassify to FACT_CANDIDATE first"
+                )
 
         if cls == "UNKNOWN_HOLD":
             expected = {

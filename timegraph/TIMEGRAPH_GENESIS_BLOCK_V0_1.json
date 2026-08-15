@@ -56,10 +56,22 @@
     }
   ],
   "promotion_gate": {
+    "eligible_current_rails": [
+      "FACT_CANDIDATE"
+    ],
+    "reclassification_required_from": [
+      "UNKNOWN_HOLD",
+      "FICTION",
+      "CONTEXT_ONLY"
+    ],
+    "reclassification_target": "FACT_CANDIDATE",
+    "reclassification_rule": "fresh evidence + explicit reclassification receipt",
     "required": [
       "source_present",
       "source_supports_claim",
       "classification_receipt_present",
+      "current_rail_FACT_CANDIDATE",
+      "rail_transition_receipts_complete",
       "explicit_fact_promotion_receipt"
     ],
     "forbidden_shortcuts": [
