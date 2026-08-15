@@ -1,0 +1,60 @@
+name: Timegraph Genesis Replay v0.1
+
+on:
+  pull_request:
+    paths:
+      - 'timegraph/**'
+      - 'fixtures/timegraph/**'
+      - 'receipts/timegraph/**'
+      - 'tools/replay_timegraph_genesis_v0_1.py'
+      - '.github/workflows/timegraph-genesis-replay.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  CANONICAL_TARGET_SHA: ab7666ac6922ac79c7d21fdd2799697370e77e6b
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout historical PR HEAD under test
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.CANONICAL_TARGET_SHA }}
+          fetch-depth: 1
+
+      - name: Verify checked-out commit exactly
+        run: |
+          ACTUAL_SHA="$(git rev-parse HEAD)"
+          echo "expected=${CANONICAL_TARGET_SHA}"
+          echo "actual=${ACTUAL_SHA}"
+          test "${ACTUAL_SHA}" = "${CANONICAL_TARGET_SHA}"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Execute structural genesis replay
+        run: |
+          mkdir -p build/receipts
+          python tools/replay_timegraph_genesis_v0_1.py \
+            --out build/receipts/GENESIS_EXECUTABLE_REPLAY_RECEIPT_V0_1.json
+
+      - name: Print replay receipt
+        if: always()
+        run: |
+          if [ -f build/receipts/GENESIS_EXECUTABLE_REPLAY_RECEIPT_V0_1.json ]; then
+            cat build/receipts/GENESIS_EXECUTABLE_REPLAY_RECEIPT_V0_1.json
+          fi
+
+      - name: Upload canonical-head replay receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: timegraph-genesis-replay-canonical-head-ab7666ac
+          path: build/receipts/GENESIS_EXECUTABLE_REPLAY_RECEIPT_V0_1.json
+          if-no-files-found: error

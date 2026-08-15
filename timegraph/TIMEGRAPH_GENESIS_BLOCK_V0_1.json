@@ -1,0 +1,92 @@
+{
+  "protocol": "JSONWISDOM_TIMEGRAPH_V0.1",
+  "artifact": "TIMEGRAPH_GENESIS_BLOCK",
+  "namespace": "jaywisdom.eth",
+  "version_lock": "v0.1",
+  "version_policy": "Prior protocol versions remain replayable. Future corrections require a new version and may not rewrite this genesis record.",
+  "authority_created": false,
+  "invariants": {
+    "observation_is_not_fact": true,
+    "classification_is_not_authority": true,
+    "preservation_is_not_promotion": true,
+    "unknown_hold_is_recorded": true,
+    "unknown_hold_is_replayable": true,
+    "unknown_hold_is_fact_promoted": false,
+    "fiction_is_preserved_without_fact_promotion": true
+  },
+  "UNKNOWN_HOLD": {
+    "timegraph_recording": true,
+    "replayable": true,
+    "fact_promotion": false,
+    "leahprime_fact_reasoning": false,
+    "release_condition": "fresh evidence + explicit reclassification receipt"
+  },
+  "genesis_order": [
+    {
+      "event_id": "TG-000000",
+      "event": "SYSTEM_GENESIS",
+      "state": "VERSION_LOCKED"
+    },
+    {
+      "event_id": "TG-000001",
+      "event": "RAW_PACKET_OBSERVED",
+      "rule": "Record existence and observation time without promoting content."
+    },
+    {
+      "event_id": "TG-000002",
+      "event": "MAXWELL_CLASSIFICATION",
+      "role": "CLASSIFICATION_GATE",
+      "authority": "NONE",
+      "rule": "Sort, do not judge."
+    },
+    {
+      "event_id": "TG-000003",
+      "event": "RAIL_ASSIGNMENT",
+      "allowed_rails": [
+        "FACT_CANDIDATE",
+        "UNKNOWN_HOLD",
+        "FICTION",
+        "CONTEXT_ONLY"
+      ]
+    },
+    {
+      "event_id": "TG-000004",
+      "event": "BOXD_PRESERVATION_RECEIPT",
+      "rule": "Preserve original packet and classification receipt before downstream reasoning."
+    }
+  ],
+  "promotion_gate": {
+    "eligible_current_rails": [
+      "FACT_CANDIDATE"
+    ],
+    "reclassification_required_from": [
+      "UNKNOWN_HOLD",
+      "FICTION",
+      "CONTEXT_ONLY"
+    ],
+    "reclassification_target": "FACT_CANDIDATE",
+    "reclassification_rule": "fresh evidence + explicit reclassification receipt",
+    "required": [
+      "source_present",
+      "source_supports_claim",
+      "classification_receipt_present",
+      "current_rail_FACT_CANDIDATE",
+      "rail_transition_receipts_complete",
+      "explicit_fact_promotion_receipt"
+    ],
+    "forbidden_shortcuts": [
+      "name_similarity",
+      "location_proximity",
+      "story_context",
+      "authority_inference",
+      "model_confidence"
+    ]
+  },
+  "build_order": [
+    "GATE",
+    "HISTORY",
+    "EXECUTABLE_REPLAY",
+    "BITBOT_SCHEMA_VALIDATOR"
+  ],
+  "status": "GENESIS_DEFINED_REPLAY_NOT_YET_EXECUTED"
+}
