@@ -1,0 +1,42 @@
+{
+  "fixture": "ALABAMA_COLONEL_KM_TEST_MANIFEST_V0_2",
+  "classification": "PUBLIC_EDUCATIONAL_TEST",
+  "frozen_packet": "fixtures/leeann/ALABAMA_COLONEL_KM_FROZEN_PACKET_V0_2.json",
+  "transport_policy": {
+    "hold_statuses": [403, 429, 500, 502, 503, 504],
+    "fail_statuses": [404, 410],
+    "rule": "Transport denial or transient infrastructure failure is an environmental HOLD, not evidence that the source claim is false."
+  },
+  "live_sources": [
+    {
+      "id": "AFDPO_PUBLICATIONS_REPOSITORY",
+      "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/1407777/air-force-departmental-publishing-office/",
+      "required_markers": ["Air Force Departmental Publishing Office", "e-Publishing"]
+    },
+    {
+      "id": "AF_WEB_POLICY",
+      "url": "https://www.af.mil/Web-Policy/",
+      "required_markers": ["WEB POLICY", "Air Force Instruction 35-101"]
+    },
+    {
+      "id": "KM_OFFICE_PROFILE_2024",
+      "url": "https://www.warren.af.mil/News/Article-Display/Article/3740415/knowledge-management-office-profile/",
+      "required_markers": ["Knowledge Management Office Profile", "records management"]
+    },
+    {
+      "id": "KNOWLEDGE_NOW_2007",
+      "url": "https://www.af.mil/News/Article-Display/Article/125872/air-forces-knowledge-now-streamlines-flow-of-information/",
+      "required_markers": ["Knowledge Now", "Communities of Practice"]
+    }
+  ],
+  "required_invariants": {
+    "byte_change_must_be_detectable": true,
+    "controlled_transform_can_support_causal_edge": true,
+    "http_200_equals_truth": false,
+    "http_403_equals_false_claim": false,
+    "official_source_equals_current_forever": false,
+    "historical_article_equals_current_policy": false,
+    "hash_match_equals_story_truth": false,
+    "authority_created": false
+  }
+}
