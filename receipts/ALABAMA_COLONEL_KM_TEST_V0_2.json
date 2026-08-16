@@ -1,0 +1,98 @@
+{
+  "receipt_type": "ALABAMA_COLONEL_KM_TEST_SEALED_RECEIPT",
+  "version": "0.2.0",
+  "test_name": "The Alabama Colonel Test of Byte-by-Byte USAF Knowledge Management",
+  "classification": "PUBLIC_EDUCATIONAL_TEST",
+  "status": "PASS",
+  "checked_at_utc": "2026-08-16T06:04:54.117174+00:00",
+  "repository": "jsonwisdom/LEEANN",
+  "branch": "feature/protocol-one-harness",
+  "tested_commit_sha": "e2f80f5d1a64fd4c0c15b526114c493e08fb987b",
+  "workflow": {
+    "name": "LeeAnn Alabama Colonel KM Test v0.2",
+    "run_id": 31930540054,
+    "job_id": 95124503751,
+    "conclusion": "success",
+    "artifact_id": 9259124005,
+    "artifact_name": "leeann-alabama-colonel-km-test-v0-2-receipt",
+    "artifact_zip_sha256": "398376b4dc94de1ca7c3b8a2775329110f7f596a9375356f87f073793f6ffd8d"
+  },
+  "prior_failure": {
+    "version": "0.1.0",
+    "run_id": 31930475839,
+    "observation": "Official Air Force pages returned HTTP 403 to the first GitHub-hosted test runner.",
+    "lesson": "TRANSPORT_DENIAL_NE_FALSE_CLAIM",
+    "correction": "v0.2 separates deterministic byte mechanics from the live transport probe and types access denial as an environmental HOLD."
+  },
+  "frozen_packet": {
+    "path": "fixtures/leeann/ALABAMA_COLONEL_KM_FROZEN_PACKET_V0_2.json",
+    "bytes": 2527,
+    "sha256": "d3c91aa58f494a742c07e97ee924b72856373f4027b69730f0015a2ba8fcf2ed"
+  },
+  "controlled_transition": {
+    "S0_sha256": "d3c91aa58f494a742c07e97ee924b72856373f4027b69730f0015a2ba8fcf2ed",
+    "interaction": "XOR_SINGLE_BYTE_WITH_0x01",
+    "interaction_index": 1263,
+    "S1_sha256": "b01be313ad543d6267ae0cf4413f78c685eef18d6f4c33d6dd087ee99ddabd63",
+    "measured_byte_differences": 1,
+    "digest_changed": true,
+    "replay_sha256": "b01be313ad543d6267ae0cf4413f78c685eef18d6f4c33d6dd087ee99ddabd63",
+    "replay_matches_S1": true,
+    "derivation_edge_supported": true,
+    "causal_edge_supported_for_test_transition": true
+  },
+  "live_public_sources": [
+    {
+      "id": "AFDPO_PUBLICATIONS_REPOSITORY",
+      "http_status": 200,
+      "bytes": 106825,
+      "sha256": "1b4ac3b2f991b03cf0a0e4b60ca1990aa6573476343eac9f9e742f6597c8d529",
+      "markers": "PASS",
+      "state": "LIVE_SOURCE_OBSERVED"
+    },
+    {
+      "id": "AF_WEB_POLICY",
+      "http_status": 200,
+      "bytes": 54862,
+      "sha256": "7d42b8085aaa66c6e43f9ae75e3a888eaf293d10e7af67977b6c625888b0991b",
+      "markers": "PASS",
+      "state": "LIVE_SOURCE_OBSERVED"
+    },
+    {
+      "id": "KM_OFFICE_PROFILE_2024",
+      "http_status": 200,
+      "bytes": 83198,
+      "sha256": "17bc88ff259fd97da18b1a6c6759b6b55b79dc372f197f61c6e5346de10b175f",
+      "markers": "PASS",
+      "state": "LIVE_SOURCE_OBSERVED"
+    },
+    {
+      "id": "KNOWLEDGE_NOW_2007",
+      "http_status": 200,
+      "bytes": 71754,
+      "sha256": "4c80003c4ebfd513989d4801fd26ee7528cfc5d012273697701e2e1b4307770f",
+      "markers": "PASS",
+      "state": "LIVE_SOURCE_OBSERVED"
+    }
+  ],
+  "invariants": {
+    "STATE_TRANSITION_REQUIRES_MEASUREMENT": true,
+    "FORCE_OBSERVED_NE_FORCE_CAUSED_RESULT": true,
+    "HTTP_ACCESS_NE_TRUTH": true,
+    "TRANSPORT_DENIAL_NE_FALSE_CLAIM": true,
+    "OFFICIAL_NE_CURRENT_FOREVER": true,
+    "HASH_MATCH_NE_STORY_TRUTH": true,
+    "FAILURE_IS_EVIDENCE": true
+  },
+  "summary": {
+    "deterministic_byte_mechanics": "PASS",
+    "invariants": "PASS",
+    "live_sources_observed": "4/4",
+    "environmental_holds": 0,
+    "source_endpoint_failures": 0,
+    "facts_promoted": 0,
+    "military_authority": false,
+    "institutional_endorsement": false,
+    "authority_created": false
+  }
+}
