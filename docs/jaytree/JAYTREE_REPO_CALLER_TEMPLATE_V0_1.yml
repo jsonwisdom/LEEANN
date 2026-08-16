@@ -1,0 +1,64 @@
+# Reference template only. Copy into a repository as
+# .github/workflows/jaytree-self-audit.yml after that repository is classified.
+name: JayTree Self Audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '47 6 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  self-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Record repository boundary receipt
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build/jaytree
+          python - <<'PY'
+          import json, subprocess
+          from datetime import datetime, timedelta, timezone
+          from zoneinfo import ZoneInfo
+
+          tz=ZoneInfo('America/Chicago')
+          now=datetime.now(tz)
+          today=now.replace(hour=0,minute=0,second=0,microsecond=0)
+          yesterday=today-timedelta(days=1)
+          yend=today-timedelta(seconds=1)
+          starts={
+            'TODAY': today,
+            'YESTERDAY': yesterday,
+            'LAST_7_DAYS': today-timedelta(days=7),
+            'LAST_30_DAYS': today-timedelta(days=30),
+            'LAST_3_YEARS': today.replace(year=today.year-3),
+          }
+          ends={k:(now if k=='TODAY' else yend) for k in starts}
+          def git(*a):
+            return subprocess.check_output(['git',*a],text=True).strip()
+          windows=[]
+          for k,start in starts.items():
+            end=ends[k]
+            raw=git('log',f'--since={start.astimezone(timezone.utc).isoformat()}',f'--until={end.astimezone(timezone.utc).isoformat()}','--pretty=format:%H')
+            commits=[x for x in raw.splitlines() if x]
+            windows.append({'window_id':k,'commit_count':len(commits),'last_commit_in_window':commits[0] if commits else None})
+          out={'schema':'JAYTREE_SELF_AUDIT_V0_1','head_sha':git('rev-parse','HEAD'),'windows':windows,'authority_created':False}
+          open('build/jaytree/self-audit.json','w',encoding='utf-8').write(json.dumps(out,indent=2)+'\n')
+          print(json.dumps(out,indent=2))
+          PY
+
+      - name: Upload receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: jaytree-self-audit-${{ github.run_id }}
+          path: build/jaytree/self-audit.json
+          if-no-files-found: error
+          retention-days: 30
