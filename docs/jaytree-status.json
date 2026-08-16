@@ -1,27 +1,28 @@
 {
   "schema": "JAYTREE_BACKWARD_SYNC_RECEIPT_V0_1",
-  "generated_at": "2026-08-16T05:36:02Z",
+  "generated_at": "2026-08-16T05:36:24Z",
   "timezone": "America/Chicago",
   "repository": "https://github.com/jsonwisdom/LEEANN",
   "branch": "master",
-  "head_sha": "1c792cf9f89192139a6b823880ffeeb3a51d0c55",
+  "head_sha": "8545c6493af0d2dc311984d98dde3ec7bf52ca94",
   "windows": [
     {
       "window_id": "TODAY",
       "start_local": "2026-08-16T00:00:00-05:00",
-      "end_local": "2026-08-16T00:36:02-05:00",
+      "end_local": "2026-08-16T00:36:24-05:00",
       "start_utc": "2026-08-16T05:00:00Z",
-      "end_utc": "2026-08-16T05:36:02Z",
+      "end_utc": "2026-08-16T05:36:24Z",
       "base_before_window_sha": "8ff6afe282f1bfacd3b18d15e4d9014806ccabfb",
       "first_commit_in_window": "0bf2e0c42b7334982fbdb2d9e8130b9cfb0afdbd",
-      "last_commit_in_window": "1c792cf9f89192139a6b823880ffeeb3a51d0c55",
-      "commit_count": 9,
+      "last_commit_in_window": "8545c6493af0d2dc311984d98dde3ec7bf52ca94",
+      "commit_count": 11,
       "changed_files": [
         ".github/workflows/jaytree-backward-sync.yml",
         "docs/jaytree-status.json",
         "docs/jaytree/JAYTREE_BACKWARD_SYNC_LADDER_V0_1.md",
         "docs/jaytree/JAYTREE_REPO_CALLER_TEMPLATE_V0_1.yml",
         "docs/jaytree/JSONWISDOM_STRUCTURE_CORRECTION_REPORT_V0_1.md",
+        "receipts/jaytree/JAYTREE_ROLLOUT_TRACKER_V0_1.json",
         "receipts/jaytree/JAYTREE_TODAY_SYNC_BRIDGE_2026_08_16_V0_1.json",
         "tools/jaytree_backward_sync_v0_1.py",
         "tools/jaytree_estate_inventory_v0_1.py"
@@ -146,7 +147,7 @@
     "AUTHORITY_CREATED = FALSE"
   ],
   "authority_created": false,
-  "receipt_sha256": "c5bf940fa3665b3bdd969f764949066d362e7b827f8f1ba5dd1d73c5bb1a00ec",
+  "receipt_sha256": "a13a642dc156024ddb051c4fe06f6e52c168f5722c08d15524d1cabe0f7d6e5d",
   "receipt_head_role": "HEAD_BEFORE_STATUS_COMMIT",
   "delivery_surface": "docs/jaytree-status.json",
   "local_machine_claim": "PENDING_GIT_PULL_RECEIPT"
