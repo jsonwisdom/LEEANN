@@ -1,0 +1,56 @@
+{
+  "fixture": "ALABAMA_COLONEL_KM_PUBLIC_SOURCE_MANIFEST_V0_1",
+  "classification": "PUBLIC_EDUCATIONAL_TEST",
+  "purpose": "Exercise byte preservation, source typing, historical/current separation, and HOLD behavior against public U.S. Air Force knowledge-management surfaces.",
+  "sources": [
+    {
+      "id": "AFDPO_PUBLICATIONS_REPOSITORY",
+      "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/1407777/air-force-departmental-publishing-office/",
+      "source_class": "OFFICIAL_AIR_FORCE_PUBLIC_FACT_SHEET",
+      "temporal_class": "CURRENT_SURFACE_RECHECK_REQUIRED",
+      "required_markers": [
+        "Air Force Departmental Publishing Office",
+        "e-Publishing"
+      ]
+    },
+    {
+      "id": "AF_WEB_POLICY",
+      "url": "https://www.af.mil/Web-Policy/",
+      "source_class": "OFFICIAL_AIR_FORCE_PUBLIC_POLICY_INDEX",
+      "temporal_class": "CURRENT_SURFACE_RECHECK_REQUIRED",
+      "required_markers": [
+        "WEB POLICY",
+        "Air Force Instruction 35-101"
+      ]
+    },
+    {
+      "id": "KM_OFFICE_PROFILE_2024",
+      "url": "https://www.warren.af.mil/News/Article-Display/Article/3740415/knowledge-management-office-profile/",
+      "source_class": "OFFICIAL_AIR_FORCE_PUBLIC_NEWS_ARTICLE",
+      "temporal_class": "HISTORICAL_CONTEXT",
+      "required_markers": [
+        "Knowledge Management Office Profile",
+        "records management"
+      ]
+    },
+    {
+      "id": "KNOWLEDGE_NOW_2007",
+      "url": "https://www.af.mil/News/Article-Display/Article/125872/air-forces-knowledge-now-streamlines-flow-of-information/",
+      "source_class": "OFFICIAL_AIR_FORCE_PUBLIC_NEWS_ARTICLE",
+      "temporal_class": "HISTORICAL_CONTEXT",
+      "required_markers": [
+        "Knowledge Now",
+        "Communities of Practice"
+      ]
+    }
+  ],
+  "invariants": {
+    "http_200_equals_truth": false,
+    "official_domain_equals_current_forever": false,
+    "historical_article_equals_current_policy": false,
+    "hash_match_equals_story_truth": false,
+    "byte_change_must_be_detectable": true,
+    "unknown_or_volatile_state_must_be_preserved": true,
+    "authority_created": false
+  }
+}
