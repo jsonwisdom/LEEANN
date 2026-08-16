@@ -1,0 +1,20 @@
+{
+  "schema": "JAYTREE_ROLLOUT_TRACKER_V0_1",
+  "reference_root": "jsonwisdom/LEEANN",
+  "phases": [
+    {"id":"P0","name":"LEEANN reference implementation","state":"ACTIVE"},
+    {"id":"P1","name":"Estate inventory","state":"ACTIVE_PUBLIC / PRIVATE_TOKEN_DEPENDENT"},
+    {"id":"P2","name":"Active nonempty repository classification","state":"OPEN_AFTER_INVENTORY"},
+    {"id":"P3","name":"Workflow defect correction","state":"MEASUREMENT_REQUIRED"},
+    {"id":"P4","name":"Per-repository JayTree caller rollout","state":"TEMPLATE_READY / NO_BLIND_MASS_MUTATION"},
+    {"id":"P5","name":"RYZEN5 local convergence","state":"PENDING_GIT_PULL_RECEIPT"}
+  ],
+  "forbidden": [
+    "force_push",
+    "synthetic_backdating",
+    "history_rewrite_for_aesthetics",
+    "gap_to_pass_promotion_without_receipt",
+    "silent_pr_merge"
+  ],
+  "authority_created": false
+}
