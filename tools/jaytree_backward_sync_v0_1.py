@@ -53,14 +53,22 @@ def one_before(moment: datetime) -> str | None:
     return out or None
 
 
-def changed_files(base: str | None, head: str | None) -> list[str]:
+def changed_files(base: str | None, head: str | None, commits_desc: list[str]) -> list[str]:
     if not head:
         return []
-    if not base:
-        out = git("show", "--pretty=format:", "--name-only", head, allow_empty=True)
-    else:
+    if base:
         out = git("diff", "--name-only", base, head, allow_empty=True)
-    return sorted({x for x in out.splitlines() if x})
+        return sorted({x for x in out.splitlines() if x})
+
+    # No commit exists before this window in the reachable history. In that case
+    # there is no valid diff base. Aggregate the file names touched by every
+    # commit in the window instead of pretending the last commit represents the
+    # whole window.
+    names: set[str] = set()
+    for sha in commits_desc:
+        out = git("show", "--pretty=format:", "--name-only", sha, allow_empty=True)
+        names.update(x for x in out.splitlines() if x)
+    return sorted(names)
 
 
 def make_window(window_id: str, start: datetime, end: datetime) -> dict:
@@ -87,7 +95,7 @@ def make_window(window_id: str, start: datetime, end: datetime) -> dict:
         "first_commit_in_window": first,
         "last_commit_in_window": last,
         "commit_count": len(commits_desc),
-        "changed_files": changed_files(base, last),
+        "changed_files": changed_files(base, last, commits_desc),
         "status": status,
     }
 
