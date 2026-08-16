@@ -1,6 +1,6 @@
 {
   "schema": "WISDOM_FAMILY_CONSOLE_DAILY_V0_2",
-  "generated_at": "2026-08-15T13:45:16Z",
+  "generated_at": "2026-08-16T13:46:17Z",
   "workflow_state": "DAILY_CONSOLE_OK",
   "github": {
     "repository": "jsonwisdom/LEEANN",
@@ -13,108 +13,106 @@
     "actor": "jsonwisdom",
     "event": "schedule",
     "workflow": "Wisdom Family Console Daily Update",
-    "run_number": "13",
-    "run_id": "31888053890",
+    "run_number": "14",
+    "run_id": "31950765561",
     "stars": 0,
     "forks": 0,
     "watchers": 0,
-    "open_issues": 0,
-    "pushed_at": "2026-08-15T11:10:38Z",
-    "updated_at": "2026-08-15T11:11:18Z",
+    "open_issues": 3,
+    "pushed_at": "2026-08-16T07:45:27Z",
+    "updated_at": "2026-08-16T07:11:59Z",
     "pages_enabled": false
   },
   "head": {
-    "sha": "ba4c073741c778337b6c0185699cd90a2817d251",
-    "short_sha": "ba4c073741",
-    "author": "Jay Wisdom \u2699\ufe0f",
-    "author_email": "jsonwisdom@yahoo.com",
-    "subject": "Merge pull request #1 from jsonwisdom/agent/genleeannprime-alabama-reverse-replay-3d",
-    "committed_at": "2026-08-15T06:10:38-05:00"
+    "sha": "0eeb6ce6c662e650953226ca8c83df52c0bc7cc0",
+    "short_sha": "0eeb6ce6c6",
+    "author": "JayTree Sync",
+    "author_email": "actions@users.noreply.github.com",
+    "subject": "chore: refresh JayTree backward sync receipt",
+    "committed_at": "2026-08-16T07:10:52Z"
   },
   "latest_human_commit": {
-    "sha": "ba4c073741c778337b6c0185699cd90a2817d251",
-    "subject": "Merge pull request #1 from jsonwisdom/agent/genleeannprime-alabama-reverse-replay-3d",
-    "author": "Jay Wisdom \u2699\ufe0f",
-    "committed_at": "2026-08-15T06:10:38-05:00"
+    "sha": "0eeb6ce6c662e650953226ca8c83df52c0bc7cc0",
+    "subject": "chore: refresh JayTree backward sync receipt",
+    "author": "JayTree Sync",
+    "committed_at": "2026-08-16T07:10:52Z"
   },
-  "commit_count": 67,
-  "commits_24h": 32,
-  "files_changed_24h": 14,
-  "docs_file_count": 20,
-  "receipt_file_count": 10,
+  "commit_count": 84,
+  "commits_24h": 16,
+  "files_changed_24h": 10,
+  "docs_file_count": 25,
+  "receipt_file_count": 13,
   "index_sha256": "02cca6aa6a1c08f49e9665c66f38c34ca2b334c19ae5525fa25df1bca13d286f",
-  "headline": "32 human-authored commits crossed in the last 24 hours and touched 14 files.",
+  "headline": "16 human-authored commits crossed in the last 24 hours and touched 10 files.",
   "recent_commits": [
     {
-      "sha": "ba4c073741c778337b6c0185699cd90a2817d251",
-      "subject": "Merge pull request #1 from jsonwisdom/agent/genleeannprime-alabama-reverse-replay-3d",
-      "author": "Jay Wisdom \u2699\ufe0f",
-      "committed_at": "2026-08-15T06:10:38-05:00"
+      "sha": "0eeb6ce6c662e650953226ca8c83df52c0bc7cc0",
+      "subject": "chore: refresh JayTree backward sync receipt",
+      "author": "JayTree Sync",
+      "committed_at": "2026-08-16T07:10:52Z"
     },
     {
-      "sha": "c98eadebece54003320f71d9cecaad1e31130ea2",
-      "subject": "harden LeahPrime promotion gate against rail bypass",
-      "author": "Jay Wisdom \u2699\ufe0f",
-      "committed_at": "2026-08-15T06:08:57-05:00"
+      "sha": "0ba8d4f01fe52578eee5d7dc03aaad36dc4edd8c",
+      "subject": "chore: refresh JayTree backward sync receipt",
+      "author": "JayTree Sync",
+      "committed_at": "2026-08-16T05:37:42Z"
     },
     {
-      "sha": "f539518458f01ac6cf6905098d8768c22b2ec2f3",
-      "subject": "Expose full LeahPrime kernel and host metadata",
+      "sha": "567c78ec629a5a3bb37359444073c3fc85faffb6",
+      "subject": "Fix JayTree root-window file delta accounting",
       "author": "Jay Wisdom \u2699\ufe0f",
-      "committed_at": "2026-08-14T17:54:57-05:00"
+      "committed_at": "2026-08-16T00:37:32-05:00"
     },
     {
-      "sha": "6c289612a62bcf7f483114eac68cb8258f53609b",
-      "subject": "Add GitHub provenance metadata to Wisdom Family Console",
-      "author": "Jay Wisdom \u2699\ufe0f",
-      "committed_at": "2026-08-14T17:52:23-05:00"
+      "sha": "71576bededcdaa4dee56fff69444f0dcdf1ade4b",
+      "subject": "chore: refresh JayTree backward sync receipt",
+      "author": "JayTree Sync",
+      "committed_at": "2026-08-16T05:36:25Z"
     },
     {
-      "sha": "566624cba2d2784c4083673b7bbdb1a14bf58fae",
-      "subject": "Make Wisdom Family Console the LeahPrime front page",
+      "sha": "8545c6493af0d2dc311984d98dde3ec7bf52ca94",
+      "subject": "Add JayTree estate rollout tracker receipt",
       "author": "Jay Wisdom \u2699\ufe0f",
-      "committed_at": "2026-08-14T17:47:35-05:00"
+      "committed_at": "2026-08-16T00:36:16-05:00"
     },
     {
-      "sha": "a638847c64aad7176f4e97981a4bc22609a9b721",
-      "subject": "Upgrade LeahPrime to Wisdom Family Console daily updates",
-      "author": "Jay Wisdom \u2699\ufe0f",
-      "committed_at": "2026-08-14T17:47:04-05:00"
+      "sha": "d2c9d132c42309f0d154c37caf7b4eca08f8057c",
+      "subject": "chore: refresh JayTree backward sync receipt",
+      "author": "JayTree Sync",
+      "committed_at": "2026-08-16T05:36:03Z"
     }
   ],
   "changed_files_24h": [
-    ".github/workflows/publish-jasonspace-pages.yml",
-    ".github/workflows/timegraph-genesis-replay.yml",
-    "README.md",
-    "docs/.nojekyll",
-    "docs/AUNT_RANN_REAL_SYNTHETIC_BOUNDARY_V0.1.md",
-    "docs/GENLEEANNPRIME_3_0_ALABAMA_REVERSE_REPLAY_3D.md",
-    "docs/JAYS_FUNCTIONAL_VA_RESUME_FAMILY_WISDOM.md",
-    "docs/LINKEDIN_FACTRAIL_V0_1.md",
-    "docs/heartbeat.html",
-    "docs/index.html",
-    "fixtures/timegraph/DANNELLY_MIXED_PACKET_GENESIS_FIXTURE_V0_1.json",
-    "receipts/timegraph/DANNELLY_CLASSIFICATION_DRY_RUN_RECEIPT_V0_1.json"
+    ".github/workflows/jaytree-backward-sync.yml",
+    "docs/jaytree-status.json",
+    "docs/jaytree/JAYTREE_BACKWARD_SYNC_LADDER_V0_1.md",
+    "docs/jaytree/JAYTREE_REPO_CALLER_TEMPLATE_V0_1.yml",
+    "docs/jaytree/JSONWISDOM_STRUCTURE_CORRECTION_REPORT_V0_1.md",
+    "docs/public_record/LEEANN_H_CHAVERS_SOURCE_BOUND_PUBLIC_PROFILE_V0_1.md",
+    "receipts/jaytree/JAYTREE_ROLLOUT_TRACKER_V0_1.json",
+    "receipts/jaytree/JAYTREE_TODAY_SYNC_BRIDGE_2026_08_16_V0_1.json",
+    "tools/jaytree_backward_sync_v0_1.py",
+    "tools/jaytree_estate_inventory_v0_1.py"
   ],
   "gauges": {
     "commits_24h": {
-      "value": 32,
+      "value": 16,
       "pct": 100,
       "label": "24H COMMITS"
     },
     "files_24h": {
-      "value": 14,
-      "pct": 58,
+      "value": 10,
+      "pct": 42,
       "label": "FILES TOUCHED"
     },
     "receipts": {
-      "value": 10,
-      "pct": 42,
+      "value": 13,
+      "pct": 54,
       "label": "RECEIPTS"
     },
     "docs": {
-      "value": 20,
-      "pct": 50,
+      "value": 25,
+      "pct": 62,
       "label": "DOCS"
     }
   },
