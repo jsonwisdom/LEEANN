@@ -3,7 +3,8 @@ name: JayTree Backward Sync Audit
 on:
   workflow_dispatch:
   schedule:
-    - cron: '37 5 * * *'
+    # 06:37 UTC is after local midnight in Alabama in both CST and CDT.
+    - cron: '37 6 * * *'
   push:
     branches: [master]
     paths:
@@ -13,7 +14,7 @@ on:
       - '.github/workflows/jaytree-backward-sync.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: jaytree-backward-sync
@@ -53,9 +54,23 @@ jobs:
           print('JAYTREE_LEEANN_RECEIPT=PASS')
           PY
 
+      - name: Prepare RYZEN5 pull surface
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          src=Path('build/jaytree/JAYTREE_LEEANN_RECEIPT.json')
+          d=json.loads(src.read_text(encoding='utf-8'))
+          d['receipt_head_role']='HEAD_BEFORE_STATUS_COMMIT'
+          d['delivery_surface']='docs/jaytree-status.json'
+          d['local_machine_claim']='PENDING_GIT_PULL_RECEIPT'
+          Path('docs/jaytree-status.json').write_text(json.dumps(d, indent=2)+'\n', encoding='utf-8')
+          PY
+
       - name: Inventory JSONWisdom estate
         env:
-          # Optional. Deliberately not required: without it, coverage is PUBLIC_ONLY.
+          # Optional and deliberately scoped. Without it, coverage is PUBLIC_ONLY.
           JAYTREE_ESTATE_TOKEN: ${{ secrets.JAYTREE_ESTATE_TOKEN }}
         run: |
           set -euo pipefail
@@ -76,6 +91,20 @@ jobs:
           if d['coverage']=='PUBLIC_ONLY':
               print('PRIVATE_REPO_SCAN=GAP_AUTH_SCOPE')
           PY
+
+      - name: Commit machine-readable JayTree status
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "JayTree Sync"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/jaytree-status.json
+          if git diff --cached --quiet; then
+            echo "JayTree status unchanged."
+          else
+            git commit -m "chore: refresh JayTree backward sync receipt"
+            git push origin HEAD:master
+          fi
 
       - name: Upload JayTree receipts
         uses: actions/upload-artifact@v4
