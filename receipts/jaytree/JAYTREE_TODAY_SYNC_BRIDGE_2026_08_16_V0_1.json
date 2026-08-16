@@ -1,0 +1,55 @@
+{
+  "schema": "JAYTREE_TODAY_SYNC_BRIDGE_V0_1",
+  "capture_local": "2026-08-16T00:30:00-05:00",
+  "root_repository": "jsonwisdom/LEEANN",
+  "source_surfaces": {
+    "computerwisdom": {
+      "repository": "jsonwisdom/COMPUTERWISDOM",
+      "pull_request": 477,
+      "branch": "agent/ziggyprime-leahprime-wisconsin-lesson-002-v0-1",
+      "head_sha": "c67321c3fb8049737d26b2f404ab31d7b12746b5",
+      "state": "OPEN_DRAFT_UNMERGED"
+    },
+    "google_drive": {
+      "document_id": "1p8dLOlGmq5fi3jIPUfViVE1hIFeeT4U6GRN4RaGjJlg",
+      "title": "Gray Baby Series 004 — Mission 004-032 — The Contract Address v0.1",
+      "phase2_hold_receipt_present": true
+    }
+  },
+  "series004": {
+    "invariant_001": "ACTIVE",
+    "burden_rule": "CLAIMANT_OF_STRONGER_STATE -> BURDEN_OF_PROOF",
+    "I": {
+      "lifecycle_trace": "PASS",
+      "runtime_receipt": "GAP_CAPTURE",
+      "state_delta": "HOLD"
+    },
+    "J": {
+      "similar_match": "PASS",
+      "indexed_constructor_divergence": "PASS",
+      "primary_tx_inputs": "GAP_CAPTURE",
+      "constructor_provenance_replay": "HOLD"
+    },
+    "K": {
+      "create2_derivation": "PASS",
+      "derived_address": "PASS",
+      "code_object_at_N": "GAP_CAPTURE",
+      "empty_state_at_N": "HOLD"
+    },
+    "leahprime_gate": "CLOSED",
+    "authority_created": false
+  },
+  "machine_sync": {
+    "expected_local_path": "C:\\Users\\jsonw\\LEEANN",
+    "remote_repository": "jsonwisdom/LEEANN",
+    "local_pull_required_after_this_receipt": true,
+    "ryzen5_sync_state": "PENDING_PRIMARY_LOCAL_PULL_RECEIPT"
+  },
+  "invariants": [
+    "REMOTE_UPDATED != LOCAL_MACHINE_PULLED",
+    "UPSTREAM_PASS != DOWNSTREAM_PROMOTION",
+    "SYNC_CLAIM != SYNC_RECEIPT",
+    "AUTHORITY_CREATED = FALSE"
+  ],
+  "authority_created": false
+}
