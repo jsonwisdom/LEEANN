@@ -1,0 +1,86 @@
+name: JayTree Backward Sync Audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '37 5 * * *'
+  push:
+    branches: [master]
+    paths:
+      - 'docs/jaytree/**'
+      - 'receipts/jaytree/**'
+      - 'tools/jaytree_*'
+      - '.github/workflows/jaytree-backward-sync.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: jaytree-backward-sync
+  cancel-in-progress: false
+
+jobs:
+  leeann-reference:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate LEEANN JayTree receipt
+        run: |
+          set -euo pipefail
+          python tools/jaytree_backward_sync_v0_1.py \
+            --out build/jaytree/JAYTREE_LEEANN_RECEIPT.json
+
+      - name: Validate constitutional fields
+        run: |
+          python - <<'PY'
+          import json
+          p='build/jaytree/JAYTREE_LEEANN_RECEIPT.json'
+          d=json.load(open(p, encoding='utf-8'))
+          assert d['schema']=='JAYTREE_BACKWARD_SYNC_RECEIPT_V0_1'
+          assert d['authority_created'] is False
+          ids=[w['window_id'] for w in d['windows']]
+          assert ids==['TODAY','YESTERDAY','LAST_7_DAYS','LAST_30_DAYS','LAST_3_YEARS']
+          assert d['receipt_sha256']
+          print('JAYTREE_LEEANN_RECEIPT=PASS')
+          PY
+
+      - name: Inventory JSONWisdom estate
+        env:
+          # Optional. Deliberately not required: without it, coverage is PUBLIC_ONLY.
+          JAYTREE_ESTATE_TOKEN: ${{ secrets.JAYTREE_ESTATE_TOKEN }}
+        run: |
+          set -euo pipefail
+          python tools/jaytree_estate_inventory_v0_1.py \
+            --owner jsonwisdom \
+            --out build/jaytree/JSONWISDOM_ESTATE_INVENTORY.json
+
+      - name: Report estate coverage ceiling
+        run: |
+          python - <<'PY'
+          import json
+          p='build/jaytree/JSONWISDOM_ESTATE_INVENTORY.json'
+          d=json.load(open(p, encoding='utf-8'))
+          print('coverage=', d['coverage'])
+          print('repo_count_observed=', d['repo_count_observed'])
+          print('private_coverage_claim=', d['private_coverage_claim'])
+          assert d['authority_created'] is False
+          if d['coverage']=='PUBLIC_ONLY':
+              print('PRIVATE_REPO_SCAN=GAP_AUTH_SCOPE')
+          PY
+
+      - name: Upload JayTree receipts
+        uses: actions/upload-artifact@v4
+        with:
+          name: jaytree-backward-sync-${{ github.run_id }}
+          path: build/jaytree/*.json
+          if-no-files-found: error
+          retention-days: 30
