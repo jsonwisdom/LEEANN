@@ -1,0 +1,47 @@
+{
+  "packet": "ALABAMA_COLONEL_KM_FROZEN_PACKET_V0_2",
+  "classification": "PUBLIC_EDUCATIONAL_FIXTURE",
+  "note": "This packet contains JSONWisdom paraphrases and source metadata, not copied Air Force articles. It is frozen so byte mechanics are deterministic while live public-source access is tested separately.",
+  "items": [
+    {
+      "id": "AFDPO_PUBLICATIONS_REPOSITORY",
+      "source_url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/1407777/air-force-departmental-publishing-office/",
+      "source_class": "OFFICIAL_AIR_FORCE_PUBLIC_FACT_SHEET",
+      "temporal_class": "CURRENT_SURFACE_RECHECK_REQUIRED",
+      "knowledge_claim": "Air Force e-Publishing is a public surface for official unclassified publications and forms.",
+      "claim_status": "PUBLIC_SOURCE_SUPPORTED_CONTEXT"
+    },
+    {
+      "id": "AF_WEB_POLICY",
+      "source_url": "https://www.af.mil/Web-Policy/",
+      "source_class": "OFFICIAL_AIR_FORCE_PUBLIC_POLICY_INDEX",
+      "temporal_class": "CURRENT_SURFACE_RECHECK_REQUIRED",
+      "knowledge_claim": "Official public web release is governed by publication and public-affairs responsibilities, including review concerns such as OPSEC.",
+      "claim_status": "PUBLIC_SOURCE_SUPPORTED_CONTEXT"
+    },
+    {
+      "id": "KM_OFFICE_PROFILE_2024",
+      "source_url": "https://www.warren.af.mil/News/Article-Display/Article/3740415/knowledge-management-office-profile/",
+      "source_class": "OFFICIAL_AIR_FORCE_PUBLIC_NEWS_ARTICLE",
+      "temporal_class": "HISTORICAL_CONTEXT",
+      "knowledge_claim": "A public Air Force KM office profile describes responsibilities involving information, documentation, records, and policy awareness.",
+      "claim_status": "HISTORICAL_PUBLIC_CONTEXT"
+    },
+    {
+      "id": "KNOWLEDGE_NOW_2007",
+      "source_url": "https://www.af.mil/News/Article-Display/Article/125872/air-forces-knowledge-now-streamlines-flow-of-information/",
+      "source_class": "OFFICIAL_AIR_FORCE_PUBLIC_NEWS_ARTICLE",
+      "temporal_class": "HISTORICAL_CONTEXT",
+      "knowledge_claim": "Knowledge Now is a historical Air Force example of collaborative knowledge sharing through communities of practice.",
+      "claim_status": "HISTORICAL_PUBLIC_CONTEXT"
+    }
+  ],
+  "boundaries": {
+    "public_source_context_equals_current_policy": false,
+    "official_source_equals_infallible": false,
+    "http_access_equals_truth": false,
+    "hash_match_equals_truth": false,
+    "transport_denial_equals_false_claim": false,
+    "authority_created": false
+  }
+}
