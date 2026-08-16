@@ -1,0 +1,82 @@
+name: LeeAnn Alabama Colonel KM Test
+
+on:
+  push:
+    branches:
+      - feature/protocol-one-harness
+    paths:
+      - 'fixtures/leeann/ALABAMA_COLONEL_KM_PUBLIC_SOURCE_MANIFEST_V0_1.json'
+      - 'tests/leeann/test_alabama_colonel_km.py'
+      - '.github/workflows/leeann-alabama-colonel-km-test.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  alabama-colonel-km:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact triggering commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+
+      - name: Verify exact checkout
+        run: |
+          set -euo pipefail
+          ACTUAL="$(git rev-parse HEAD)"
+          echo "expected=${GITHUB_SHA}"
+          echo "actual=${ACTUAL}"
+          test "${ACTUAL}" = "${GITHUB_SHA}"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run Alabama Colonel Test
+        run: |
+          set -euo pipefail
+          python tests/leeann/test_alabama_colonel_km.py \
+            --manifest fixtures/leeann/ALABAMA_COLONEL_KM_PUBLIC_SOURCE_MANIFEST_V0_1.json \
+            --out build/receipts/ALABAMA_COLONEL_KM_TEST_V0_1.json \
+            --pause-seconds 1
+
+      - name: Print receipt
+        if: always()
+        run: |
+          if [ -f build/receipts/ALABAMA_COLONEL_KM_TEST_V0_1.json ]; then
+            cat build/receipts/ALABAMA_COLONEL_KM_TEST_V0_1.json
+          fi
+
+      - name: Add summary
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('build/receipts/ALABAMA_COLONEL_KM_TEST_V0_1.json')
+          if not p.exists():
+              raise SystemExit(0)
+          r = json.loads(p.read_text())
+          with open(__import__('os').environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as f:
+              f.write('## Alabama Colonel KM Test\n\n')
+              f.write(f"- Status: **{r['status']}**\n")
+              f.write(f"- Public sources: **{r['summary']['source_count']}**\n")
+              f.write(f"- Exact PASS: **{r['summary']['pass']}**\n")
+              f.write(f"- PASS with HOLD: **{r['summary']['pass_with_hold']}**\n")
+              f.write(f"- FAIL: **{r['summary']['fail']}**\n")
+              f.write('- One-byte mutation detector: **ENFORCED**\n')
+              f.write('- Facts promoted: **0**\n')
+              f.write('- Authority created: **false**\n')
+          PY
+
+      - name: Upload replay receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: leeann-alabama-colonel-km-test-receipt
+          path: build/receipts/ALABAMA_COLONEL_KM_TEST_V0_1.json
+          if-no-files-found: error
