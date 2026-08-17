@@ -1,6 +1,6 @@
 {
   "schema": "WISDOM_FAMILY_CONSOLE_DAILY_V0_2",
-  "generated_at": "2026-08-16T13:46:17Z",
+  "generated_at": "2026-08-17T13:54:54Z",
   "workflow_state": "DAILY_CONSOLE_OK",
   "github": {
     "repository": "jsonwisdom/LEEANN",
@@ -13,38 +13,44 @@
     "actor": "jsonwisdom",
     "event": "schedule",
     "workflow": "Wisdom Family Console Daily Update",
-    "run_number": "14",
-    "run_id": "31950765561",
+    "run_number": "15",
+    "run_id": "32037147759",
     "stars": 0,
     "forks": 0,
     "watchers": 0,
-    "open_issues": 3,
-    "pushed_at": "2026-08-16T07:45:27Z",
-    "updated_at": "2026-08-16T07:11:59Z",
+    "open_issues": 6,
+    "pushed_at": "2026-08-17T07:35:38Z",
+    "updated_at": "2026-08-17T07:36:06Z",
     "pages_enabled": false
   },
   "head": {
-    "sha": "0eeb6ce6c662e650953226ca8c83df52c0bc7cc0",
-    "short_sha": "0eeb6ce6c6",
+    "sha": "85bf9aee0cd9f9ff2f46f31ffebc267267bdb1be",
+    "short_sha": "85bf9aee0c",
     "author": "JayTree Sync",
     "author_email": "actions@users.noreply.github.com",
     "subject": "chore: refresh JayTree backward sync receipt",
-    "committed_at": "2026-08-16T07:10:52Z"
+    "committed_at": "2026-08-17T07:35:37Z"
   },
   "latest_human_commit": {
-    "sha": "0eeb6ce6c662e650953226ca8c83df52c0bc7cc0",
+    "sha": "85bf9aee0cd9f9ff2f46f31ffebc267267bdb1be",
     "subject": "chore: refresh JayTree backward sync receipt",
     "author": "JayTree Sync",
-    "committed_at": "2026-08-16T07:10:52Z"
+    "committed_at": "2026-08-17T07:35:37Z"
   },
-  "commit_count": 84,
-  "commits_24h": 16,
-  "files_changed_24h": 10,
+  "commit_count": 86,
+  "commits_24h": 1,
+  "files_changed_24h": 1,
   "docs_file_count": 25,
   "receipt_file_count": 13,
   "index_sha256": "02cca6aa6a1c08f49e9665c66f38c34ca2b334c19ae5525fa25df1bca13d286f",
-  "headline": "16 human-authored commits crossed in the last 24 hours and touched 10 files.",
+  "headline": "One human-authored commit crossed in the last 24 hours and touched 1 file(s).",
   "recent_commits": [
+    {
+      "sha": "85bf9aee0cd9f9ff2f46f31ffebc267267bdb1be",
+      "subject": "chore: refresh JayTree backward sync receipt",
+      "author": "JayTree Sync",
+      "committed_at": "2026-08-17T07:35:37Z"
+    },
     {
       "sha": "0eeb6ce6c662e650953226ca8c83df52c0bc7cc0",
       "subject": "chore: refresh JayTree backward sync receipt",
@@ -74,35 +80,20 @@
       "subject": "Add JayTree estate rollout tracker receipt",
       "author": "Jay Wisdom \u2699\ufe0f",
       "committed_at": "2026-08-16T00:36:16-05:00"
-    },
-    {
-      "sha": "d2c9d132c42309f0d154c37caf7b4eca08f8057c",
-      "subject": "chore: refresh JayTree backward sync receipt",
-      "author": "JayTree Sync",
-      "committed_at": "2026-08-16T05:36:03Z"
     }
   ],
   "changed_files_24h": [
-    ".github/workflows/jaytree-backward-sync.yml",
-    "docs/jaytree-status.json",
-    "docs/jaytree/JAYTREE_BACKWARD_SYNC_LADDER_V0_1.md",
-    "docs/jaytree/JAYTREE_REPO_CALLER_TEMPLATE_V0_1.yml",
-    "docs/jaytree/JSONWISDOM_STRUCTURE_CORRECTION_REPORT_V0_1.md",
-    "docs/public_record/LEEANN_H_CHAVERS_SOURCE_BOUND_PUBLIC_PROFILE_V0_1.md",
-    "receipts/jaytree/JAYTREE_ROLLOUT_TRACKER_V0_1.json",
-    "receipts/jaytree/JAYTREE_TODAY_SYNC_BRIDGE_2026_08_16_V0_1.json",
-    "tools/jaytree_backward_sync_v0_1.py",
-    "tools/jaytree_estate_inventory_v0_1.py"
+    "docs/jaytree-status.json"
   ],
   "gauges": {
     "commits_24h": {
-      "value": 16,
-      "pct": 100,
+      "value": 1,
+      "pct": 10,
       "label": "24H COMMITS"
     },
     "files_24h": {
-      "value": 10,
-      "pct": 42,
+      "value": 1,
+      "pct": 4,
       "label": "FILES TOUCHED"
     },
     "receipts": {
