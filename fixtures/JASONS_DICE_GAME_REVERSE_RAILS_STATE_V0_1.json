@@ -1,0 +1,131 @@
+{
+  "artifact_id": "JASONS_DICE_GAME_REVERSE_RAILS_STATE_V0_1",
+  "game_mode": "REVERSE_RAILS",
+  "edition": "FAFO",
+  "fafo_definition": [
+    "FIND_THE_ARTIFACT",
+    "FIND_THE_SOURCE",
+    "FIND_THE_BOUNDARY"
+  ],
+  "die": "D6",
+  "authority_created": false,
+  "silent_inference": "BLOCKED",
+  "verdicts": [
+    "PASS_REPLAYABLE",
+    "HOLD",
+    "GRAY_BABY_ALERT",
+    "REJECT",
+    "HOLD_NO_EDGE",
+    "REPLAYABLE_CORRECTION"
+  ],
+  "rails": {
+    "1": {
+      "name": "ROOT_CHECK",
+      "demand": "PROVE_PLACE_CLAIM_WITH_GEOGRAPHY",
+      "failure": "HOLD",
+      "badge": "ROOTED"
+    },
+    "2": {
+      "name": "CLASSROOM_AUDIT",
+      "demand": "SHOW_LEARNING_SOURCE",
+      "failure": "GRAY_BABY_ALERT",
+      "badge": "SOURCEBOUND"
+    },
+    "3": {
+      "name": "FORGE_TEST",
+      "demand": "NAME_WHAT_ALABAMA_ACTUALLY_BUILDS",
+      "failure": "REJECT_IF_INVENTED",
+      "badge": "FORGEPROOF"
+    },
+    "4": {
+      "name": "CIVIC_CUFF",
+      "demand": "BIND_PRESENT_AUTHORITY_CLAIM_TO_EXACT_CURRENT_SOURCE",
+      "failure": "HOLD_OR_REJECT_IF_HISTORY_CURRENT_AUTHORITY_COLLAPSED",
+      "badge": "CIVIC_CLEAR"
+    },
+    "5": {
+      "name": "SONG_LINE",
+      "demand": "KEEP_STORY_PERSONA_INSIDE_STORY_LANE",
+      "failure": "REJECT_REAL_FICTION_BLEED",
+      "badge": "PERSONA_CLEAN"
+    },
+    "6": {
+      "name": "EVIDENCE_CUFFS",
+      "demand": "PRODUCE_RECEIPT_OR_DO_NOT_PROMOTE_EDGE",
+      "failure": "HOLD_NO_EDGE",
+      "badge": "RECEIPT_LOCKED"
+    }
+  },
+  "scoring": {
+    "artifact_identified": 1,
+    "source_retrievable": 1,
+    "boundary_explicit": 1,
+    "replay_reproducible": 1,
+    "max_per_rail": 4
+  },
+  "membranes": [
+    "HISTORY_NE_CURRENT_LAW",
+    "MILITARY_COMMAND_NE_CIVIL_GOVERNMENT",
+    "STATE_AUTHORITY_NE_FEDERAL_AUTHORITY",
+    "STORY_GENERAL_NE_REAL_OFFICER",
+    "UNIFORM_NE_JURISDICTION",
+    "GITHUB_ARTIFACT_NE_LEGAL_INSTRUMENT",
+    "PUBLIC_RECORD_NE_COMMAND_AUTHORITY",
+    "LEAHPRIME187_NE_LEEANN_H_CHAVERS"
+  ],
+  "turn_history": [
+    {
+      "turn_id": "TURN_0001",
+      "roll": 4,
+      "rail": "CIVIC_CUFF",
+      "question": "What present legal authority — statute, constitution, court order, or office — is being claimed, and what exact source creates it today?",
+      "claim_state": "AWAITING_SOURCE",
+      "authority_applied": false,
+      "fafo_status": "ARMED",
+      "facts_promoted": 0,
+      "edges_inferred": 0,
+      "silent_inference": "BLOCKED",
+      "authority_created": false
+    },
+    {
+      "turn_id": "TURN_0002",
+      "input_dice": [3, 4],
+      "combined_vector": 7,
+      "canonical_selector": "D6_1_TO_6",
+      "roll_valid_as_rail_selector": false,
+      "requested_rail": "TOP_BAMA_SECRET_RAIL",
+      "rail_creation": "REJECTED_PROTOCOL_DRIFT",
+      "active_rail": "CIVIC_CUFF",
+      "research_target": "ABI_TECHNOLOGY_DEPT",
+      "research_finding": {
+        "exact_current_unit_label": "NOT_ESTABLISHED",
+        "legacy_abi": "CONSOLIDATED_INTO_ALEA",
+        "current_investigative_lane": "ALEA_STATE_BUREAU_OF_INVESTIGATION",
+        "alea_it_lane": "ADMINISTRATIVE_BUREAU_INFORMATION_AND_TECHNOLOGY_UNIT",
+        "statewide_it_lane": "ALABAMA_OFFICE_OF_INFORMATION_TECHNOLOGY"
+      },
+      "evidence_points": 4,
+      "facts_promoted": 4,
+      "edges_inferred": 0,
+      "silent_inference": "BLOCKED",
+      "authority_created": false,
+      "verdict": "REPLAYABLE_CORRECTION",
+      "badge_acquired": null,
+      "source_artifact": "docs/research/ABI_TECHNOLOGY_DEPT_REPLAY_V0_1.md"
+    }
+  ],
+  "current_turn": {
+    "turn_id": "TURN_0002",
+    "active_rail": "CIVIC_CUFF",
+    "claim_state": "SOURCE_BOUND_CORRECTION",
+    "fafo_status": "ARMED",
+    "rail_mutation": "REJECTED",
+    "evidence_points": 4,
+    "facts_promoted": 4,
+    "edges_inferred": 0,
+    "silent_inference": "BLOCKED",
+    "authority_created": false
+  },
+  "win_state": "EVIDENCE_UNITED",
+  "win_state_effect": "EDUCATIONAL_ONLY"
+}
