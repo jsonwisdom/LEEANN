@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "artifact": "AUNT_RANN_PHYSICS_TEST_V0_1",
+  "version": "0.1.0",
+  "lesson": "FLOWER_DOOR_RECEIPT",
+  "classification": "FAMILY_EDUCATIONAL_SIMULATION",
+  "lane": "EXPERIMENTATION_LANE_B",
+  "repository": "jsonwisdom/LEEANN",
+  "subject_role": "AUNT_RANN_SYNTHETIC_FAMILY_CREATIVE_ROLE",
+  "real_person_binding": false,
+  "military_affiliation_claimed": false,
+  "girl_physics": {
+    "enabled": true,
+    "transition_model": "(CONTENT_STATE, CONSENT_STATE, ROUTING_STATE) + INTERACTION -> NEXT_STATE",
+    "core_law": "DIFFERENT_INTERACTIONS_CAN_CHANGE_DIFFERENT_PARTS_OF_THE_SAME_SYSTEM"
+  },
+  "enablements": {
+    "s3": {
+      "name": "SUPER_SECRET_SISTER_SYNTAX",
+      "enabled": true,
+      "scope": "EXPRESSION_ONLY",
+      "may_change": [
+        "CONTENT_STATE"
+      ],
+      "may_not_change": [
+        "CONSENT_STATE",
+        "ROUTING_STATE",
+        "IDENTITY_BINDING",
+        "AUTHORITY"
+      ],
+      "same_name_join_is_identity": false
+    },
+    "s4": {
+      "name": "SPECTACULAR_SISTER_SHARE",
+      "enabled": true,
+      "scope": "BOUNDARY_LOCAL_CONSENT",
+      "may_change": [
+        "CONSENT_STATE"
+      ],
+      "may_not_infer_yes": true,
+      "consent_yes_means": "HANDOFF_ELIGIBLE",
+      "consent_yes_does_not_mean": "HANDOFF_OCCURRED"
+    }
+  },
+  "exact_text_encoding": "UTF-8_WITHOUT_BOM_OR_TRAILING_NEWLINE",
+  "initial_state": {
+    "state_id": "S0",
+    "content": {
+      "text": "Meet me by the pink tree.",
+      "sha256": "06c6748b8124457e57e1368b676aced90d9df80f186df82dd0877579f23dd9cc"
+    },
+    "consent": "HOLD",
+    "delivered": false
+  },
+  "controlled_states": {
+    "edited_content": {
+      "state_id": "S1",
+      "text": "Meet me by the pine tree.",
+      "sha256": "ffd7d4f2f51d1dcea28afcbc5dbace4926f7e7f8c2a556c75dc2a2ffc10dfa4a"
+    },
+    "share_eligible": {
+      "state_id": "S2",
+      "consent": "YES",
+      "delivered": false
+    }
+  },
+  "experiments": [
+    {
+      "experiment_id": "A",
+      "interaction": "S3_EXPRESSION_EDIT",
+      "input_state": "S0",
+      "output_state": "S1",
+      "controlled_edit": {
+        "from": "pink",
+        "to": "pine"
+      },
+      "expected_delta": {
+        "content_changed": true,
+        "consent_changed": false,
+        "delivery_changed": false
+      },
+      "expected_assertion": "CONTENT_ONLY_DELTA"
+    },
+    {
+      "experiment_id": "B",
+      "interaction": "S4_CONSENT_TRANSITION",
+      "input_state": "S0",
+      "output_state": "S2",
+      "controlled_edit": {
+        "from": "HOLD",
+        "to": "YES"
+      },
+      "expected_delta": {
+        "content_changed": false,
+        "consent_changed": true,
+        "delivery_changed": false
+      },
+      "expected_assertion": "CONSENT_ONLY_DELTA"
+    },
+    {
+      "experiment_id": "C",
+      "interaction": "ROUTE_TO_SISTER",
+      "input_state": "S0",
+      "precondition": "CONSENT_STATE_EQUALS_HOLD",
+      "expected_delta": {
+        "route_requested": true,
+        "route_executed": false,
+        "content_changed": false,
+        "consent_changed": false,
+        "delivery_changed": false
+      },
+      "domain_result": "NO_SHARE",
+      "expected_assertion": "PASS",
+      "classification": "EXPECTED_BLOCK"
+    }
+  ],
+  "history_ambiguity_fixture": {
+    "observed_endpoint": "DELIVERED_FALSE",
+    "endpoint_alone_does_not_prove": "NO_INTERACTION",
+    "compatible_histories": [
+      "NO_ROUTE_REQUESTED",
+      "ROUTE_REQUESTED_AND_CONSENT_HOLD",
+      "ROUTE_PERMITTED_AND_TRANSPORT_FAILED",
+      "ROUTE_OCCURRED_AND_RECEIPT_MISSING"
+    ],
+    "law": "SAME_STATE_DOES_NOT_IMPLY_SAME_PATH"
+  },
+  "laws": {
+    "content_ne_consent": true,
+    "consent_ne_delivery": true,
+    "permission_to_move_ne_movement": true,
+    "no_delivery_ne_no_interaction": true,
+    "same_state_ne_same_history": true,
+    "no_transition_is_measurable": true,
+    "classification_ne_authority": true
+  },
+  "machine_capabilities": {
+    "measure": true,
+    "replay": true,
+    "log": true,
+    "infer_consent_yes": false,
+    "share_while_hold": false,
+    "decide_share": false,
+    "create_authority": false
+  },
+  "aunt_rann_questions": [
+    "WHAT_WAS_THERE_BEFORE",
+    "WHAT_TOUCHED_IT",
+    "WHICH_PART_WAS_ALLOWED_TO_CHANGE",
+    "WHICH_PART_ACTUALLY_CHANGED",
+    "WHAT_STAYED_THE_SAME",
+    "DID_ANYTHING_CROSS_THE_DOOR",
+    "SHOW_ME_THE_RECEIPT"
+  ],
+  "wisdom_twist": "TELL_ME_WHAT_CHANGED_THEN_TELL_ME_WHAT_TRIED_TO_CHANGE",
+  "harness": {
+    "readiness": "READY_FOR_CONTROLLED_RUN",
+    "execution_status": "NOT_RUN",
+    "actual_results": [],
+    "promotion_status": "HOLD_UNTIL_REPLAY_PASS"
+  },
+  "fiction_to_fact": "BLOCKED",
+  "machine_decides_share": false,
+  "authority_created": false
+}
