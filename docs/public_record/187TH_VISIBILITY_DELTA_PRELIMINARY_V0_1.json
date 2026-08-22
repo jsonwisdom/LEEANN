@@ -1,0 +1,81 @@
+{
+  "artifact_id": "187TH_VISIBILITY_DELTA_PRELIMINARY_V0_1",
+  "status": "SOURCE_BOUND_PRELIMINARY",
+  "replay_date": "2026-08-16",
+  "target": "LEEANN_H_CHAVERS_PUBLIC_CAREER_SURFACE",
+  "cohorts": {
+    "current_msg_peers": {
+      "source": "https://www.187fw.ang.af.mil/Units/Mission-Support-Group/",
+      "state": "SOURCE_BOUND",
+      "commanders": [
+        {"rank": "Lt Col", "name": "Leeann Chavers", "unit": "Force Support Squadron", "published_fields": ["rank", "name", "commander_position"]},
+        {"rank": "Lt Col", "name": "Paul Griggs", "unit": "Logistics Readiness Squadron", "published_fields": ["rank", "name", "commander_position"]},
+        {"rank": "Lt Col", "name": "Joseph Roberson", "unit": "Communications Squadron", "published_fields": ["rank", "name", "commander_position"]},
+        {"rank": "Maj", "name": "Nathan Bridges", "unit": "Security Forces Squadron", "published_fields": ["rank", "name", "commander_position"]},
+        {"rank": "Maj", "name": "Adam Sanders", "unit": "Civil Engineering", "published_fields": ["rank", "name", "commander_position"]}
+      ],
+      "peer_group_anomaly": "NOT_DEMONSTRATED",
+      "squadron_commander_norm": "THIN_DIRECTORY_ENTRY"
+    },
+    "historical_fss_commanders": {
+      "state": "PARTIAL",
+      "complete": false,
+      "controls": [
+        {
+          "name": "Paul Griggs",
+          "rank_published": "Lt. Col.",
+          "role_published": "187th Force Support Squadron commander",
+          "source_date": "2016-07-26",
+          "source_type": "OFFICIAL_187FW_NEWS_FEATURE",
+          "source": "https://www.187fw.ang.af.mil/News/Display/Article/869996/open-house-brings-community-to-alabama-ang-fosters-relationships/",
+          "discoverability": "RICHER_THAN_DIRECTORY_ENTRY",
+          "standardized_biography": "NOT_ESTABLISHED"
+        }
+      ],
+      "predecessor_richer_standard_treatment": "NOT_ESTABLISHED"
+    },
+    "wing_leadership_benchmark": {
+      "leadership_index": "https://www.187fw.ang.af.mil/About/Leadership/",
+      "state": "SOURCE_BOUND",
+      "current_dedicated_leadership_class": [
+        "Col John D. Caldwell — 187th Fighter Wing Commander",
+        "Col James C. Hall — 187th Fighter Wing Deputy Commander",
+        "CMSgt Mataya C. Williams — 187th Fighter Wing Command Chief"
+      ],
+      "hall_biography": {
+        "source": "https://www.187fw.ang.af.mil/About/Leadership/Display/Article/4313013/james-c-hall/",
+        "published_categories": ["education", "assignments_career_chronology", "flight_information", "major_awards_decorations", "effective_promotion_dates"]
+      },
+      "publication_tier_difference": "DEMONSTRATED",
+      "direct_equivalent_role_disparity": "NOT_DEMONSTRATED"
+    }
+  },
+  "classification": {
+    "leeann_official_role": "SOURCE_BOUND",
+    "leeann_public_metadata": "THIN",
+    "peer_commanders_equally_thin": true,
+    "wing_leadership_bios_richer": true,
+    "public_discoverability_of_career_history": "LIMITED",
+    "gender_disparity_demonstrated": false,
+    "deliberate_suppression": "NOT_PROVEN",
+    "lost_opportunity": "NOT_PROVEN"
+  },
+  "maximum_supported_claim": "The official 187th Fighter Wing site identifies Leeann Chavers as a squadron commander but provides substantially less career metadata than its wing-level leadership biographies; this appears consistent with the current treatment of equivalent Mission Support Group squadron commanders.",
+  "identity_guard": {
+    "same_name_ne_same_person": true,
+    "required_binding_inputs": ["rank", "unit", "date", "source"],
+    "name_variant_ne_identity_proof": true
+  },
+  "allegation_membrane": {
+    "thin_metadata_ne_discrimination": true,
+    "publication_tier_difference_ne_gender_disparity": true,
+    "discoverability_gap_ne_deliberate_suppression": true,
+    "missing_biography_ne_lost_opportunity": true,
+    "news_feature_ne_standardized_biography": true
+  },
+  "next_audit_fields": ["CURRENT_DIRECTORY_ENTRY", "DEDICATED_BIOGRAPHY", "NEWS_FEATURES", "EDUCATION", "ASSIGNMENTS", "PME", "AWARDS", "PROMOTIONS", "PRIOR_SERVICE", "DATES", "NAME_VARIANTS"],
+  "authority_created": false,
+  "official_affiliation_claimed": false,
+  "discrimination_finding_created": false,
+  "allegation_promotion": "NONE"
+}
