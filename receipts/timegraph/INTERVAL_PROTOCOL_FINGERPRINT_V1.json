@@ -6,6 +6,7 @@
   "protocol_family": "MESSAGE_LAG",
   "measurement_instrument_id": "sha256:5bde981f112815094f6b545282c345c2589578802d595ce024726214e0562712",
   "canonicalization": {
+    "hash_preimage_scope": "fingerprint_basis",
     "encoding": "UTF-8",
     "object_key_order": "RECURSIVE_LEXICOGRAPHIC",
     "json_serialization": "COMPACT_NO_WHITESPACE",
