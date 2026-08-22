@@ -284,3 +284,87 @@ On the front:
 On the back:
 
 **BOXD KEEPS THE CROSSING. BOXDEE IS HOME.**
+
+---
+
+# Family Vortex v0.1 — Constitutional Authority Ledger
+
+**System Author:** `jaywisdom.base.eth`  
+**Operator Identity:** `jaywisdom.eth`  
+**Branch:** `agent/family-vortex-authority-v0-1`  
+**Ledger Baseline Head:** `685ba2dd407bdd14e666781f47028e5c5d8ce37d`  
+**Draft PR #2:** `OPEN / DRAFT / UNMERGED`
+
+## I. Reconciled State Matrix
+
+```text
+[FAMILY_VORTEX_STATE]
+FAMILY_VORTEX_V0_1      = REVIEW_OPEN
+FREEZE_DECLARED         = FALSE
+SOURCE_MUTATED          = FALSE
+AUTHORITY_CREATED       = FALSE
+GITHUB_MUTATION         = TRUE_ON_BUILD_BRANCH
+DRIVE_MUTATION          = TRUE
+CURRENT_MUTATION        = FALSE
+MERGE_STATE             = UNMERGED
+```
+
+### Authority scope clarification
+
+```text
+SELF_AUTHORIZED          = TRUE
+SELF_AUTHORITY_SCOPE     = JAY_OWNED_SYSTEMS
+REPUTATION_LAYER         = ACTIVE
+EXTERNAL_AUTHORITY       = FALSE
+```
+
+`AUTHORITY_CREATED = FALSE` in this ledger means no new external, military, governmental, NATO, 187th Fighter Wing, or LeahPrime authority is created. It does not negate Jay's self-authorization inside Jay-owned systems.
+
+## II. Constitutional Rail & Invariant Topology
+
+```text
+INFORMATION_FLOW != AUTHORITY_FLOW
+SEMANTIC_EQUIVALENCE != BYTE_IDENTITY
+```
+
+Source anchor remains unchanged:
+
+`docs/public_record/LEEANN_H_CHAVERS_SOURCE_BOUND_PUBLIC_PROFILE_V0_1.md`
+
+- Blob: `3fd7c9ff23483aa6f4123f10f4142febdace0675`
+- Size: `6,245 bytes`
+- Source mutation: `FALSE`
+
+### Story-layer binding
+
+```text
+LEAHPRIME_DIRECTIVE          = FEMALE_STORY_COMMAND_SURFACE
+WOMEN_VISIBLE_IN_STORY_LAYER = TRUE
+STORY_COMMAND                != MILITARY_COMMAND
+PUBLIC_RECORD                != STORY_CHARACTER
+FSS_COMMAND                  != LEAHPRIME_AUTHORITY
+GITHUB_COMMIT                != PERSONNEL_ACTION
+```
+
+In Story Form, LeahPrime is the female command perspective for explanation, humanization, translation, replay, and narrative orchestration. The 187th linkage remains source-bound to the public record; the story surface does not create personnel status, command authority, endorsement, or an effective date of rank.
+
+### Same-logic rail
+
+```text
+AL
+→ 187 PUBLIC RECORD
+→ GAP
+→ LEAHPRIME
+→ RADIANCE
+→ HUMAN REVIEW
+```
+
+Public military evidence stays public military evidence.  
+Family interpretation stays family interpretation.  
+Translation never crosses the authority membrane.
+
+## III. Standing Posture
+
+- **Overlay Status:** constitutional and structural overlay; no personnel-record rewrite and no false JSON byte-equivalency claim.
+- **Merge Posture:** `REVIEW_OPEN / DRAFT / UNMERGED`.
+- **Merge Gate:** human-only.
