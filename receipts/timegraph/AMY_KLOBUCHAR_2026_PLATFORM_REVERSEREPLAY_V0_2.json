@@ -11,7 +11,8 @@
     "document_id": "17zhhbrliey1ExrAcOHEhBc-Uhd_44D9HKn-v2l7qPRc",
     "layers_added": [
       "LAYER 9 — AMY 2026 PLATFORM RECEIPT LOCK",
-      "LAYER 10 — AMY CONTEMPORANEOUS PUBLIC-STATEMENT GAP"
+      "LAYER 10 — AMY CONTEMPORANEOUS PUBLIC-STATEMENT GAP",
+      "LAYER 11 — MESSAGE LAG SCALAR"
     ]
   },
   "platform_receipts": [
@@ -67,6 +68,20 @@
     "publication_gap": "SUPPORTED_SEARCH_BOUNDED",
     "absolute_silence": "NOT_PROVEN"
   },
+  "message_lag_scalar": {
+    "start_event": "2022-09-20_FEDERAL_CHARGES",
+    "end_event": "2026-05-03_EARLIEST_ATTRIBUTABLE_PUBLIC_FRAUD_UTTERANCE_LOCATED_THIS_PASS",
+    "days": 1321,
+    "approx_years": 3.62,
+    "supersedes_approximation": "~1340_DAYS",
+    "scalar_only": true,
+    "proves_motive": false,
+    "proves_culpability": false,
+    "proves_absolute_silence": false,
+    "constitutes_darvo": false,
+    "recompute_if_earlier_utterance_discovered": true,
+    "preserve_prior_receipt_as_historical_audit_state": true
+  },
   "guardrails": {
     "amy_personal_control_of_mde": false,
     "amy_personal_causation_of_mde_failures": "NOT_ESTABLISHED",
@@ -86,6 +101,7 @@
     "MAY_AUG_2026_DAY_1_FRAUD_PROMISES_PLATFORM_AND_ANNOUNCEMENTS"
   ],
   "measurement": ["DATES", "AUTHORITY_SURFACE", "SPEECH", "MONEY", "DOCUMENTS"],
+  "canon_rule": ["FENCE_THE_GAP", "MEASURE_THE_LAG", "HOLD_THE_MOTIVE"],
   "platform_statement_is_executed_policy": false,
   "promise_is_proof_of_future_performance": false
 }
