@@ -1,0 +1,64 @@
+{
+  "ruleset_id": "SCALAR_COMPATIBILITY_RULES_V1",
+  "class": "FAIL_CLOSED_COMPARATOR_GATE_NON_INTERPRETIVE",
+  "authority_created": false,
+  "interpretation_created": false,
+  "default_state": "HOLD",
+  "comparator_requires_n_compatible": 2,
+  "n_ge_2_alone_is_not_sufficient": true,
+  "required_compatibility_fields": [
+    "scalar_kind",
+    "start_event_class",
+    "end_event_class",
+    "endpoint_evidence_policy",
+    "measurement_unit",
+    "date_arithmetic_convention",
+    "audit_search_protocol",
+    "scope_manifest",
+    "provenance_bindings"
+  ],
+  "rules": [
+    {"id":"RULE_01_SCALAR_KIND","requirement":"EXACT_MATCH_REQUIRED"},
+    {"id":"RULE_02_START_EVENT_CLASS","requirement":"EXACT_MATCH_OR_EXPLICIT_NORMALIZATION_RECEIPT_REQUIRED"},
+    {"id":"RULE_03_END_EVENT_CLASS","requirement":"EXACT_MATCH_OR_EXPLICIT_NORMALIZATION_RECEIPT_REQUIRED"},
+    {"id":"RULE_04_ENDPOINT_EVIDENCE","requirement":"NO_HOLD_ENDPOINT_MAY_ENTER_ACTIVE_COMPARATOR"},
+    {"id":"RULE_05_UNIT","requirement":"EXACT_MATCH_REQUIRED"},
+    {"id":"RULE_06_DATE_ARITHMETIC","requirement":"EXACT_MATCH_REQUIRED"},
+    {"id":"RULE_07_SEARCH_PROTOCOL","requirement":"MATERIAL_SEARCH_SCOPE_DIFFERENCE_CAUSES_HOLD_UNLESS_NORMALIZED"},
+    {"id":"RULE_08_SCOPE","requirement":"CROSS_SUBJECT_COMPARISON_REQUIRES_EXPLICIT_SCOPE_MANIFEST"},
+    {"id":"RULE_09_PROVENANCE","requirement":"EACH_ENDPOINT_REQUIRES_SOURCE_OR_RECEIPT_BINDING"},
+    {"id":"RULE_10_NEGATIVE_EVIDENCE","requirement":"SEARCH_BOUNDED_ABSENCE_MUST_NOT_BE_TREATED_AS_ABSOLUTE_SILENCE"}
+  ],
+  "date_arithmetic_convention_v1": {
+    "formula": "END_DATE_MINUS_START_DATE_IN_CALENDAR_DAYS",
+    "inclusive_start_count": false,
+    "measurement_unit": "calendar_days"
+  },
+  "compatibility_states": {
+    "PASS": "ALL_REQUIRED_FIELDS_COMPATIBLE_AND_SOURCE_BOUND",
+    "HOLD": "ONE_OR_MORE_REQUIRED_FIELDS_UNRESOLVED_OR_NOT_NORMALIZED",
+    "CONFLICT": "VALID_RECEIPTS_DISAGREE_ON_A_REQUIRED_FIELD",
+    "REJECT": "SCALAR_CLASSES_OR_MEASUREMENT_SEMANTICS_ARE_INCOMMENSURATE"
+  },
+  "active_comparator_gate": "PASS_ONLY_IF_N_GE_2_AND_PAIRWISE_COMPATIBILITY_PASS",
+  "current_registry_state": {
+    "scalar_count": 1,
+    "active_comparator_state": "HOLD"
+  },
+  "permitted_outputs_after_gate_pass": [
+    "raw_deltas",
+    "difference_days",
+    "min",
+    "max",
+    "count"
+  ],
+  "prohibited_outputs": [
+    "motive",
+    "culpability",
+    "moral_ranking",
+    "silence_accusation",
+    "darvo_mapping",
+    "authority_escalation"
+  ],
+  "canon_rule": "COMPATIBILITY_BEFORE_COMPARISON"
+}
