@@ -13,6 +13,13 @@
     "fingerprint_mismatch": "RUN_FIELD_LEVEL_COMPATIBILITY_DIAGNOSIS",
     "normalization_receipt_can_be_considered": true
   },
+  "normalization_receipt_gate": {
+    "schema_id": "NORMALIZATION_RECEIPT_SCHEMA_V1",
+    "receipt_pass_may_satisfy_only_explicitly_mapped_fields": true,
+    "receipt_pass_is_blanket_compatibility_waiver": false,
+    "unmapped_required_fields_still_require_native_pass": true,
+    "hold_endpoints_remain_ineligible": true
+  },
   "required_compatibility_fields": [
     "scalar_kind",
     "start_event_class",
@@ -34,7 +41,8 @@
     {"id":"RULE_07_SEARCH_PROTOCOL","requirement":"MATERIAL_SEARCH_SCOPE_DIFFERENCE_CAUSES_HOLD_UNLESS_NORMALIZED"},
     {"id":"RULE_08_SCOPE","requirement":"CROSS_SUBJECT_COMPARISON_REQUIRES_EXPLICIT_SCOPE_MANIFEST"},
     {"id":"RULE_09_PROVENANCE","requirement":"EACH_ENDPOINT_REQUIRES_SOURCE_OR_RECEIPT_BINDING"},
-    {"id":"RULE_10_NEGATIVE_EVIDENCE","requirement":"SEARCH_BOUNDED_ABSENCE_MUST_NOT_BE_TREATED_AS_ABSOLUTE_SILENCE"}
+    {"id":"RULE_10_NEGATIVE_EVIDENCE","requirement":"SEARCH_BOUNDED_ABSENCE_MUST_NOT_BE_TREATED_AS_ABSOLUTE_SILENCE"},
+    {"id":"RULE_11_NORMALIZATION","requirement":"NORMALIZATION_RECEIPT_MAY_RESOLVE_ONLY_EXPLICITLY_MAPPED_FIELDS_AND_MUST_CONFORM_TO_NORMALIZATION_RECEIPT_SCHEMA_V1"}
   ],
   "date_arithmetic_convention_v1": {
     "formula": "END_DATE_MINUS_START_DATE_IN_CALENDAR_DAYS",
