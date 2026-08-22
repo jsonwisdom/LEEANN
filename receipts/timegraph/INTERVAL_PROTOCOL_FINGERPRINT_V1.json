@@ -1,0 +1,56 @@
+{
+  "protocol_id": "INTERVAL_PROTOCOL_FINGERPRINT_V1",
+  "class": "CONTENT_ADDRESSED_MEASUREMENT_INSTRUMENT_NON_INTERPRETIVE",
+  "authority_created": false,
+  "interpretation_created": false,
+  "protocol_family": "MESSAGE_LAG",
+  "measurement_instrument_id": "sha256:5bde981f112815094f6b545282c345c2589578802d595ce024726214e0562712",
+  "canonicalization": {
+    "hash_preimage_scope": "fingerprint_basis",
+    "encoding": "UTF-8",
+    "object_key_order": "RECURSIVE_LEXICOGRAPHIC",
+    "json_serialization": "COMPACT_NO_WHITESPACE",
+    "array_order": "STABLE_AS_DECLARED",
+    "hash_algorithm": "SHA-256",
+    "hash_prefix": "sha256:",
+    "self_hash_field_excluded_from_preimage": true
+  },
+  "fingerprint_basis": {
+    "scalar_kind": "MESSAGE_LAG",
+    "start_event_class": "SOURCE_BOUND_TRIGGER_EVENT_DATE",
+    "end_event_class": "EARLIEST_ATTRIBUTABLE_PUBLIC_UTTERANCE_LOCATED_IN_CURRENT_AUDIT_STATE",
+    "endpoint_evidence_policy": "START_SOURCE_BOUND__END_SEARCH_BOUNDED_LOCATED_ATTRIBUTABLE_PUBLIC_UTTERANCE",
+    "measurement_unit": "calendar_days",
+    "date_arithmetic_convention": {
+      "formula": "END_DATE_MINUS_START_DATE_IN_CALENDAR_DAYS",
+      "inclusive_start_count": false
+    },
+    "audit_search_protocol": {
+      "protocol_id": "PUBLIC_UTTERANCE_SEARCH_BOUNDED_V1",
+      "required_surface_classes": [
+        "official_subject_site",
+        "general_web_search",
+        "key_date_search",
+        "later_official_site_search"
+      ],
+      "negative_evidence_rule": "ABSENCE_LOCATED_IS_SEARCH_BOUNDED_NOT_ABSOLUTE_SILENCE"
+    },
+    "scope_manifest": "EXPLICIT_SUBJECT_TOPIC_JURISDICTION_INTERVAL_SCOPE_REQUIRED",
+    "provenance_bindings": "EACH_ENDPOINT_REQUIRES_SOURCE_OR_RECEIPT_BINDING"
+  },
+  "fingerprint_semantics": {
+    "fingerprint_match": "SAME_PROTOCOL_FAMILY_MEASUREMENT_INSTRUMENT",
+    "fingerprint_match_is_comparator_pass": false,
+    "fingerprint_mismatch": "REQUIRE_FIELD_LEVEL_COMPATIBILITY_DIAGNOSIS",
+    "normalization_receipt_may_resolve_allowed_class_difference": true
+  },
+  "member_bindings": [
+    {
+      "member_id": "MESSAGE_LAG_OBJECT_V1",
+      "start_specialization": "SOURCE_BOUND_FEDERAL_CHARGES_DATE",
+      "start_specialization_parent": "SOURCE_BOUND_TRIGGER_EVENT_DATE",
+      "instrument_binding_state": "BOUND"
+    }
+  ],
+  "canon_rule": "FINGERPRINT_THE_INSTRUMENT_BEFORE_COMPARING_THE_MEASUREMENT"
+}

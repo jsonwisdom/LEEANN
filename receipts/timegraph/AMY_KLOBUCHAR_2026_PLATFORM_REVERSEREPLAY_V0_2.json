@@ -1,0 +1,107 @@
+{
+  "artifact": "AMY_KLOBUCHAR_2026_PLATFORM_REVERSEREPLAY_V0_2",
+  "class": "PUBLIC_READABLE_AUDIT_RECEIPT",
+  "authority_created": false,
+  "political_endorsement_created": false,
+  "misconduct_finding_created": false,
+  "cross_rail_collapse": "FORBIDDEN",
+  "motive_inference": "FORBIDDEN",
+  "drive_master": {
+    "title": "Amy Retail ReverseReplay — Minnesota ↔ DC Public-Record Audit v0.1",
+    "document_id": "17zhhbrliey1ExrAcOHEhBc-Uhd_44D9HKn-v2l7qPRc",
+    "layers_added": [
+      "LAYER 9 — AMY 2026 PLATFORM RECEIPT LOCK",
+      "LAYER 10 — AMY CONTEMPORANEOUS PUBLIC-STATEMENT GAP",
+      "LAYER 11 — MESSAGE LAG SCALAR"
+    ]
+  },
+  "platform_receipts": [
+    {"claim": "top_to_bottom_state_government_audit", "state": "PASS", "source_class": "OFFICIAL_POLICY_PAGE"},
+    {"claim": "day_1_timing", "state": "PASS", "source_class": "PUBLIC_ANNOUNCEMENT_AND_LATER_QUESTIONNAIRE", "not_current_policy_body": true},
+    {"claim": "regular_in_person_and_unannounced_inspections", "state": "PASS", "source_class": "PUBLISHED"},
+    {"claim": "explicit_rejection_of_zoom_only_oversight", "state": "REJECT_OVERCLAIM"},
+    {"claim": "approximately_10000_additional_apprenticeship_skills_slots", "state": "PASS", "source_class": "PUBLISHED"},
+    {"claim": "evidence_based_reading_math_tutoring_classroom_device_ban", "state": "PASS", "source_class": "PUBLISHED"},
+    {"claim": "path_to_at_least_100000_housing_units", "state": "PASS", "source_class": "JUNE_HOUSING_ROLLOUT"}
+  ],
+  "platform_context_membrane": {
+    "official_policy_page_names_feeding_our_future": false,
+    "official_policy_page_names_andrew_luger": false,
+    "official_policy_page_names_joe_thompson": false,
+    "rule": "KEEP_NAMES_ON_CONTEXT_OR_SELF_CREDIT_RAIL"
+  },
+  "minnesota_oversight_rail": {
+    "ola_june_2024_mde_inadequate_oversight_created_opportunities_for_fraud": "SOURCE_BOUND",
+    "mde_failed_to_act_on_pre_pandemic_warning_signs": "SOURCE_BOUND",
+    "mde_2018_required_followup_missed": "SOURCE_BOUND",
+    "mde_complaints_june_2018_through_december_2021_at_least_30": "SOURCE_BOUND"
+  },
+  "public_statement_gap": {
+    "search_scope": [
+      "CURRENT_OFFICIAL_KLOBUCHAR_SENATE_SITE_AND_NEWS_RELEASE_INDEX",
+      "WEB_SEARCH_AMY_KLOBUCHAR_FEEDING_OUR_FUTURE_2022",
+      "KEY_DATE_2022_01_20",
+      "KEY_DATE_2022_09_20",
+      "OFFICIAL_SITE_SEARCH_2023_2025_FEEDING_OUR_FUTURE"
+    ],
+    "2022_feeding_our_future_public_statement": "NONE_LOCATED_IN_CURRENT_PASS",
+    "verified_silence_everywhere": "HOLD",
+    "absence_of_located_statement_proves_no_statement_existed": false,
+    "2022_01_20_fbi_raids_attributable_statement_located": false,
+    "2022_09_20_federal_charges_attributable_statement_located": false,
+    "press_release_count_2022_2025_1085": "THIRD_PARTY_AUDIT_CLAIM",
+    "press_release_count_independently_reproduced": false,
+    "no_fof_releases_among_1085": "THIRD_PARTY_CLAIM_NOT_PRIMARY_ARCHIVE_PROOF",
+    "luger_resource_call": {
+      "reported": true,
+      "source_character": "2026_PUBLIC_ATTRIBUTION_BY_FORMER_US_ATTORNEY_ANDY_LUGER",
+      "sequence": "AFTER_FOF_INDICTMENTS_KLOBUCHAR_CALLED_AND_ASKED_IF_OFFICE_HAD_ENOUGH_RESOURCES",
+      "exact_call_date": "HOLD",
+      "private_action_not_contemporaneous_public_statement": true
+    },
+    "earliest_attributable_public_fraud_statement_located_this_pass": "2026-05-03",
+    "may_3_2026_public_message": "YOU_ARE_RIGHT_TO_BE_ANGRY_ABOUT_THE_FRAUD__IT_IS_UNACCEPTABLE_AND_IT_MUST_END",
+    "may_3_2026_day_1_top_to_bottom_audit": "SOURCE_BOUND_CONTEMPORANEOUS_REPORTING",
+    "current_senate_pages_now_mention_feeding_our_future_and_retrospective_self_credit": true,
+    "date_current_senate_page_lines_first_published": "NOT_ESTABLISHED_BY_THIS_PASS",
+    "current_page_existence_proves_2022_publication": false,
+    "publication_gap": "SUPPORTED_SEARCH_BOUNDED",
+    "absolute_silence": "NOT_PROVEN"
+  },
+  "message_lag_scalar": {
+    "start_event": "2022-09-20_FEDERAL_CHARGES",
+    "end_event": "2026-05-03_EARLIEST_ATTRIBUTABLE_PUBLIC_FRAUD_UTTERANCE_LOCATED_THIS_PASS",
+    "days": 1321,
+    "approx_years": 3.62,
+    "supersedes_approximation": "~1340_DAYS",
+    "scalar_only": true,
+    "proves_motive": false,
+    "proves_culpability": false,
+    "proves_absolute_silence": false,
+    "constitutes_darvo": false,
+    "recompute_if_earlier_utterance_discovered": true,
+    "preserve_prior_receipt_as_historical_audit_state": true
+  },
+  "guardrails": {
+    "amy_personal_control_of_mde": false,
+    "amy_personal_causation_of_mde_failures": "NOT_ESTABLISHED",
+    "darvo_pattern_amy": "HOLD_UNLESS_SPECIFIC_STATEMENT_SEQUENCE_BINDS",
+    "amy_retrospective_self_credit": "SOURCE_BOUND",
+    "message_lag": "TESTABLE",
+    "silence_is_darvo": false,
+    "motive_from_message_lag": "FORBIDDEN"
+  },
+  "reverse_replay_sequence": [
+    "2018_WARNING_AND_OLA_RELEVANT_FINDINGS",
+    "2021_ESCALATION_COMPLAINT_PERIOD",
+    "SEPT_2022_FEDERAL_CHARGES_AND_SUBSEQUENT_PROSECUTIONS",
+    "2022_PUBLIC_FOF_STATEMENT_NONE_LOCATED_SEARCH_BOUNDED",
+    "2022_PRIVATE_RESOURCE_ACTION_REPORTED_DATE_HOLD",
+    "LATER_PROSECUTOR_RESOURCE_SELF_CREDIT_STATEMENTS",
+    "MAY_AUG_2026_DAY_1_FRAUD_PROMISES_PLATFORM_AND_ANNOUNCEMENTS"
+  ],
+  "measurement": ["DATES", "AUTHORITY_SURFACE", "SPEECH", "MONEY", "DOCUMENTS"],
+  "canon_rule": ["FENCE_THE_GAP", "MEASURE_THE_LAG", "HOLD_THE_MOTIVE"],
+  "platform_statement_is_executed_policy": false,
+  "promise_is_proof_of_future_performance": false
+}

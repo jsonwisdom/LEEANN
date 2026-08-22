@@ -1,0 +1,95 @@
+{
+  "schema_id": "NORMALIZATION_RECEIPT_SCHEMA_V1",
+  "class": "CROSS_INSTRUMENT_BRIDGE_SCHEMA_FAIL_CLOSED_NON_INTERPRETIVE",
+  "authority_created": false,
+  "interpretation_created": false,
+  "purpose": "EXPLICITLY_MAP_ALLOWED_PROTOCOL_DIFFERENCES_WITHOUT_REWRITING_EITHER_INSTRUMENT",
+  "default_state": "HOLD",
+  "normalization_semantics": {
+    "directional": true,
+    "is_identity": false,
+    "mutates_source_instrument": false,
+    "mutates_target_instrument": false,
+    "may_promote_hold_endpoint": false
+  },
+  "required_fields": [
+    "receipt_id",
+    "source_protocol_id",
+    "source_instrument_fingerprint",
+    "target_protocol_id",
+    "target_instrument_fingerprint",
+    "mismatch_fields",
+    "field_mappings",
+    "mapping_justification_receipts",
+    "directionality",
+    "lossiness",
+    "reversibility",
+    "allowed_comparator_fields",
+    "prohibited_inferences",
+    "provenance_bindings",
+    "created_at",
+    "schema_version"
+  ],
+  "mismatch_field_disposition": {
+    "EXACT_EQUIVALENT": "DIRECT_MAPPING_ALLOWED",
+    "SPECIALIZATION_PARENT_CHILD": "HOLD_UNTIL_EXPLICIT_MAPPING_JUSTIFIED",
+    "UNIT_CONVERSION": "PASS_ONLY_IF_DETERMINISTIC_REVERSIBLE_FORMULA_BOUND",
+    "SEARCH_PROTOCOL_DIFFERENCE": "HOLD_UNLESS_SCOPE_EFFECT_EXPLICITLY_ACCOUNTED_FOR",
+    "ENDPOINT_EVIDENCE_POLICY_DIFFERENCE": "HOLD_OR_REJECT_IF_EVIDENCE_STRENGTH_CANNOT_BE_NORMALIZED",
+    "SEMANTIC_CLASS_DIFFERENCE": "REJECT_IF_INCOMMENSURATE",
+    "HOLD_ENDPOINT": "NEVER_NORMALIZABLE_INTO_ACTIVE_COMPARATOR"
+  },
+  "field_mapping_schema": {
+    "required": [
+      "field_name",
+      "from_value",
+      "to_value",
+      "transform",
+      "justification",
+      "status"
+    ],
+    "unmapped_required_field": "HOLD",
+    "conflicting_valid_mapping_receipts": "CONFLICT",
+    "lossy_mapping_default": "HOLD",
+    "lossy_mapping_requires_information_loss_declaration": true,
+    "reversible_mapping_requires_inverse_transform": true,
+    "may_create_facts_not_present_in_source_receipts": false
+  },
+  "receipt_states": {
+    "PASS": "ALL_REQUIRED_MAPPINGS_SOURCE_BOUND_AND_COMPARATOR_SAFE",
+    "HOLD": "ONE_OR_MORE_REQUIRED_MAPPINGS_UNRESOLVED_OR_LOSSY_WITHOUT_ACCEPTED_BOUND",
+    "CONFLICT": "VALID_NORMALIZATION_RECEIPTS_DISAGREE",
+    "REJECT": "INSTRUMENTS_OR_FIELDS_ARE_SEMANTICALLY_INCOMMENSURATE"
+  },
+  "content_addressing": {
+    "hash_preimage_scope": "normalization_payload",
+    "encoding": "UTF-8",
+    "object_key_order": "RECURSIVE_LEXICOGRAPHIC",
+    "json_serialization": "COMPACT_NO_WHITESPACE",
+    "array_order": "STABLE_AS_DECLARED",
+    "hash_algorithm": "SHA-256",
+    "hash_prefix": "sha256:",
+    "self_hash_field_excluded_from_preimage": true
+  },
+  "comparator_effect": {
+    "pass_may_satisfy_only_explicitly_mapped_compatibility_fields": true,
+    "unmapped_compatibility_fields_require_native_pass": true,
+    "normalization_pass_is_comparator_pass": false,
+    "final_gate_ruleset": "SCALAR_COMPATIBILITY_RULES_V1"
+  },
+  "prohibited": [
+    "motive_inference",
+    "culpability_projection",
+    "moral_ranking",
+    "silence_accusation",
+    "darvo_mapping",
+    "authority_escalation",
+    "retroactive_rewrite_of_source_instrument",
+    "retroactive_rewrite_of_target_instrument"
+  ],
+  "current_state": {
+    "normalization_receipt_count": 0,
+    "cross_instrument_comparator_state": "HOLD"
+  },
+  "canon_rule": "BRIDGE_BY_RECEIPT_NOT_BY_ASSUMPTION"
+}

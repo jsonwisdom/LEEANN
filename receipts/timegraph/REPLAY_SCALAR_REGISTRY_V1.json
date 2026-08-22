@@ -1,0 +1,54 @@
+{
+  "registry_id": "REPLAY_SCALAR_REGISTRY_V1",
+  "class": "SCALAR_REGISTRY_NON_INTERPRETIVE_APPEND_ONLY",
+  "authority_created": false,
+  "interpretation_created": false,
+  "optimization_created": false,
+  "registry_rule": "SCALARS_MEASURE_INTERVALS_NOT_PEOPLE",
+  "mutation_model": "APPEND_NEW_STATE_PRESERVE_PRIOR_STATE",
+  "members": [
+    {
+      "id": "MESSAGE_LAG_OBJECT_V1",
+      "lineage_anchor": {
+        "pull_request": 8,
+        "commit": "949a428ece3eb2f52c0541d99eec86b4074389c9"
+      },
+      "measurement_instrument": {
+        "protocol_id": "INTERVAL_PROTOCOL_FINGERPRINT_V1",
+        "measurement_instrument_id": "sha256:5bde981f112815094f6b545282c345c2589578802d595ce024726214e0562712",
+        "binding_state": "BOUND",
+        "start_specialization": "SOURCE_BOUND_FEDERAL_CHARGES_DATE",
+        "start_specialization_parent": "SOURCE_BOUND_TRIGGER_EVENT_DATE"
+      },
+      "lag_start": "2022-09-20",
+      "lag_end": "2026-05-03",
+      "lag_days": 1321,
+      "lag_approx_years": 3.62,
+      "start_class": "SOURCE_BOUND_FEDERAL_CHARGES_DATE",
+      "end_class": "EARLIEST_ATTRIBUTABLE_PUBLIC_FRAUD_UTTERANCE_LOCATED_IN_CURRENT_AUDIT_STATE",
+      "scalar_only": true,
+      "prohibited": [
+        "motive_inference",
+        "culpability_projection",
+        "silence_accusation",
+        "darvo_mapping",
+        "authority_escalation"
+      ],
+      "update_rule": "EARLIER_UTTERANCE_DISCOVERED -> APPEND_NEW_REGISTRY_STATE + RECOMPUTE_DELTA + PRESERVE_PRIOR_RECEIPT",
+      "supersession_rule": "NEWER_SCALAR_CAN_SUPERSEDE_CURRENT_VALUE_WITHOUT_DELETING_HISTORICAL_VALUE"
+    }
+  ],
+  "comparator_eligibility": {
+    "enabled": true,
+    "minimum_compatible_source_bound_scalars": 2,
+    "current_compatible_scalar_count": 1,
+    "protocol_fingerprint_match_is_sufficient": false,
+    "pairwise_compatibility_ruleset": "SCALAR_COMPATIBILITY_RULES_V1",
+    "multi_source_delta_comparator_state": "HOLD_UNTIL_SECOND_COMPATIBLE_SCALAR"
+  },
+  "canon_rule": [
+    "FENCE_THE_GAP",
+    "MEASURE_THE_LAG",
+    "HOLD_THE_MOTIVE"
+  ]
+}
