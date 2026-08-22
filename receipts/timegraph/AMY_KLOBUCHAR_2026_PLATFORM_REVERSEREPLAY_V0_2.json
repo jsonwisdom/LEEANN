@@ -1,0 +1,53 @@
+{
+  "artifact": "AMY_KLOBUCHAR_2026_PLATFORM_REVERSEREPLAY_V0_2",
+  "class": "PUBLIC_READABLE_AUDIT_RECEIPT",
+  "authority_created": false,
+  "political_endorsement_created": false,
+  "misconduct_finding_created": false,
+  "cross_rail_collapse": "FORBIDDEN",
+  "motive_inference": "FORBIDDEN",
+  "drive_master": {
+    "title": "Amy Retail ReverseReplay — Minnesota ↔ DC Public-Record Audit v0.1",
+    "document_id": "17zhhbrliey1ExrAcOHEhBc-Uhd_44D9HKn-v2l7qPRc",
+    "layer_added": "LAYER 9 — AMY 2026 PLATFORM RECEIPT LOCK"
+  },
+  "platform_receipts": [
+    {"claim": "top_to_bottom_state_government_audit", "state": "PASS", "source_class": "OFFICIAL_POLICY_PAGE"},
+    {"claim": "day_1_timing", "state": "PASS", "source_class": "PUBLIC_ANNOUNCEMENT_AND_LATER_QUESTIONNAIRE", "not_current_policy_body": true},
+    {"claim": "regular_in_person_and_unannounced_inspections", "state": "PASS", "source_class": "PUBLISHED"},
+    {"claim": "explicit_rejection_of_zoom_only_oversight", "state": "REJECT_OVERCLAIM"},
+    {"claim": "approximately_10000_additional_apprenticeship_skills_slots", "state": "PASS", "source_class": "PUBLISHED"},
+    {"claim": "evidence_based_reading_math_tutoring_classroom_device_ban", "state": "PASS", "source_class": "PUBLISHED"},
+    {"claim": "path_to_at_least_100000_housing_units", "state": "PASS", "source_class": "JUNE_HOUSING_ROLLOUT"}
+  ],
+  "platform_context_membrane": {
+    "official_policy_page_names_feeding_our_future": false,
+    "official_policy_page_names_andrew_luger": false,
+    "official_policy_page_names_joe_thompson": false,
+    "rule": "KEEP_NAMES_ON_CONTEXT_OR_SELF_CREDIT_RAIL"
+  },
+  "minnesota_oversight_rail": {
+    "ola_june_2024_mde_inadequate_oversight_created_opportunities_for_fraud": "SOURCE_BOUND",
+    "mde_failed_to_act_on_pre_pandemic_warning_signs": "SOURCE_BOUND",
+    "mde_2018_required_followup_missed": "SOURCE_BOUND",
+    "mde_complaints_june_2018_through_december_2021_at_least_30": "SOURCE_BOUND"
+  },
+  "guardrails": {
+    "amy_personal_control_of_mde": false,
+    "amy_personal_causation_of_mde_failures": "NOT_ESTABLISHED",
+    "darvo_pattern_amy": "HOLD_UNLESS_SPECIFIC_STATEMENT_SEQUENCE_BINDS",
+    "amy_retrospective_self_credit": "SOURCE_BOUND",
+    "message_lag": "TESTABLE"
+  },
+  "reverse_replay_sequence": [
+    "2018_WARNING_AND_OLA_RELEVANT_FINDINGS",
+    "2021_ESCALATION_COMPLAINT_PERIOD",
+    "SEPT_2022_FEDERAL_CHARGES_AND_SUBSEQUENT_PROSECUTIONS",
+    "AMY_CONTEMPORANEOUS_PUBLIC_STATEMENTS_BY_DATE",
+    "LATER_PROSECUTOR_RESOURCE_SELF_CREDIT_STATEMENTS",
+    "MAY_AUG_2026_DAY_1_FRAUD_PROMISES_PLATFORM_AND_ANNOUNCEMENTS"
+  ],
+  "measurement": ["DATES", "AUTHORITY_SURFACE", "SPEECH", "MONEY", "DOCUMENTS"],
+  "platform_statement_is_executed_policy": false,
+  "promise_is_proof_of_future_performance": false
+}
