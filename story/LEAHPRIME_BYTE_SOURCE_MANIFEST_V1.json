@@ -1,0 +1,460 @@
+{
+    "schema":  "jsonwisdom.leahprime-byte-source-manifest.v1",
+    "hash_identity":  "SHA-256 over exact Git blob bytes; lowercase hexadecimal",
+    "source_refs":  {
+                        "LEEANN":  {
+                                       "commit":  "0167d337ffa4fccdef12bf7212703f2be5331599",
+                                       "ref":  "master",
+                                       "repository":  "jsonwisdom/LEEANN"
+                                   },
+                        "JOY":  {
+                                    "commit":  "6c0c348e675eaccdf3f19eb253d4b34ee9bb1bfe",
+                                    "ref":  "main",
+                                    "repository":  "jsonwisdom/JOY"
+                                },
+                        "COMPUTERWISDOM":  {
+                                               "commit":  "8768c618e6027c625d5691d84bec098ac54915a9",
+                                               "ref":  "origin/master",
+                                               "repository":  "jsonwisdom/COMPUTERWISDOM"
+                                           }
+                    },
+    "record_count":  54,
+    "records":  [
+                    {
+                        "lane":  "COMPUTERWISDOM",
+                        "ref":  "origin/master",
+                        "path":  "docs/family_continuity_protection_map_v1.md",
+                        "git_blob_sha":  "0105056b2b5f9993b7e58312a54ce28daf681967",
+                        "byte_length":  2477,
+                        "sha256":  "a72e1d6a308c5e8323ccd4378d6f2b402d4228453542e444411b4eebdeb90fff"
+                    },
+                    {
+                        "lane":  "COMPUTERWISDOM",
+                        "ref":  "origin/master",
+                        "path":  "docs/gray-baby/LEAHPRIMA_STORY_FORM_V0_1.md",
+                        "git_blob_sha":  "361987201219228137f9a877a7d8bbf337294f39",
+                        "byte_length":  2022,
+                        "sha256":  "5eb6f84431b3ed4ef5aa7d36334e32f2df31447953693299d0398d3ffc9d7383"
+                    },
+                    {
+                        "lane":  "COMPUTERWISDOM",
+                        "ref":  "origin/master",
+                        "path":  "docs/gray-baby/LEEANN_WITNESS_LAYER_V0_1.md",
+                        "git_blob_sha":  "80067a3569ab4e0c0cbd894e903b64e45a90d810",
+                        "byte_length":  9186,
+                        "sha256":  "713970b0303e01b858cf40a26a412f1708a702ab51908b22c7f12b19f84f2aa7"
+                    },
+                    {
+                        "lane":  "COMPUTERWISDOM",
+                        "ref":  "origin/master",
+                        "path":  "docs/master_jsonwisdom_repo_graph_v1.md",
+                        "git_blob_sha":  "3fcadf642ffe4f789f2dcc2b6cdfaaa3e7c49843",
+                        "byte_length":  4067,
+                        "sha256":  "9363c6254cec7069354774088795c1f788b86e3c9da8b69a4dc8cc0fb0756f70"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "docs/continuity/JAY_LIVING_LEDGER_DUAL_GEMINI_LEAF_V1.md",
+                        "git_blob_sha":  "e3791bc2b1e4992235435ed19768a5a5a271278b",
+                        "byte_length":  1293,
+                        "sha256":  "21d9f7bf1d40194585b4db51230cd36b4ba3704276e533baf1351f2ee7731233"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "docs/continuity/LEAHPRIME_NATO2_WAY_BACK_V1.md",
+                        "git_blob_sha":  "2b2dd2c8b438983288c8dde330066983d3bd192c",
+                        "byte_length":  861,
+                        "sha256":  "3b2baab8a408ec02332af26bdd969b9e5300519b2f619997a589715fad2bc625"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "docs/joyspace/boss-birthday.json",
+                        "git_blob_sha":  "564a36dedc7f6672f65ab3ca7791b1879cd314f1",
+                        "byte_length":  3195,
+                        "sha256":  "2d53391b847515c943ce94d490aff28b73239a00daaa42927480550e97d79d1a"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "docs/joyspace/joyspace-depth-map.json",
+                        "git_blob_sha":  "ef69e35c7a98cfd554c4a5e47622fe183ecddb0b",
+                        "byte_length":  2120,
+                        "sha256":  "82dd440e7e58aae9b7b6786e36d570875be80c9a48c7c0a80a8bba3a34148e80"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "docs/joyspace/wisdom-girls-boss-birthday-menu.json",
+                        "git_blob_sha":  "310b355a410733395168cfe6e4e6021a27cb17b6",
+                        "byte_length":  1744,
+                        "sha256":  "7c14b4f89f98c396be990bae8b26e183db9192e05b06b7318b6ba69441dee895"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "docs/school-of-wisdom/lessons/FAMILY_ONCHAIN_MIND_JAYWISDOM_ETH_LESSON_20260614.md",
+                        "git_blob_sha":  "39c2a2a10026b8bb91f52a883b2d71fcc34fb7b6",
+                        "byte_length":  2141,
+                        "sha256":  "6d9010cdc776ccde0bd2af18a66dc7fb0561925c49ef451f2d3203a69285de88"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "FAMILY/GRAY_BABY/README.md",
+                        "git_blob_sha":  "c5b8fc1f23e9e47a84919496852892efcf1f5ac9",
+                        "byte_length":  3044,
+                        "sha256":  "20fae85fe0f3dcd670623bbc76f4d40e889cbdc33aa67c40bc30bb9aa37c9ac2"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "FAMILY/receipts/backups/FAMILY_REPLAY_PRE_ONCHAIN_PATCH_BACKUP_20260614.md",
+                        "git_blob_sha":  "204bb23744a706ecd34c93ac92d8e643fce9e8a6",
+                        "byte_length":  2026,
+                        "sha256":  "6f54e13c5517a7d87df5b8907de849a27d3a3b5fca5b4777e9a6065e0475d91c"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "FAMILY/receipts/FAMILY_REPLAY_BRIANNA_BREALEE_BEANNE_LEEANNE_MARYDEE_JAYCEE_20260614.md",
+                        "git_blob_sha":  "fa66733f3abd04e00c0a4b8796ca85edd4a46524",
+                        "byte_length":  8142,
+                        "sha256":  "013138e159bddbfcda2b972e260debcbf980ad389f2fb0cd2d64cfb75c64623a"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "FAMILY/receipts/GRAY_BABY_FAMILY_JOY_UPDATE_JAYWISDOM_BASE_ETH_20260815.md",
+                        "git_blob_sha":  "7d6a43ba684ec538be069be43edeb87185087167",
+                        "byte_length":  3812,
+                        "sha256":  "e89cfe48511d669a04a198de9ad0399d92b247f6364d6f0e2eeacbd9ad30b2b0"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "FAMILY/receipts/replay_wisdom_family_purpose_map_v0_1.sh",
+                        "git_blob_sha":  "4f88b1096fb1fff872e4edc8ca574f122e3f2468",
+                        "byte_length":  2239,
+                        "sha256":  "34aec77451458839d02a358c6f42069af79aadcee9d50e4748e620bee72d402c"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "FAMILY/receipts/WISDOM_FAMILY_PURPOSE_MAP_INDEX_V0_1.json",
+                        "git_blob_sha":  "a5d65bf4f7c25514bdf7537efc85ccc980a30e59",
+                        "byte_length":  3924,
+                        "sha256":  "fdcf21fcf87926055d24c4d4be66eb74bcd84ad8025774c93ddbc492f716dc2f"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "FAMILY/receipts/WISDOM_FAMILY_PURPOSE_MAP_V0_1.md",
+                        "git_blob_sha":  "ed7fbf1c933d900c2eddea8c68166e3dd9ef572e",
+                        "byte_length":  8057,
+                        "sha256":  "ebaf5bdb2d6cdd96063b00ff7438487660cbe46bc7da3203993df982cc59589a"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "FAMILY/WISDOM_GIRLS/BIRTHDAY_BOSS_BYTE_BATCHES/BIRTHDAY_BOSS_BYTE_BATCHES_V0_1.json",
+                        "git_blob_sha":  "0e069e3448aa0180a52f4259fc88ae17ea3f8e16",
+                        "byte_length":  1350,
+                        "sha256":  "5e31e287862329e74a572af10f16d92ebb29a2c82fbe12b84188c567f28db8b8"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "FAMILY/WISDOM_GIRLS/BIRTHDAY_BOSS_BYTE_BATCHES/README.md",
+                        "git_blob_sha":  "63dd0a38ea1470e7716cb81047d3ad102788b88d",
+                        "byte_length":  1327,
+                        "sha256":  "ba232766d89583ed0dbdbf2467dba16e4808c9ed1b43ac8299bba311382e4d1b"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "FAMILY/WISDOM_GIRLS/BYTE_FOR_BYTE_SELF_WISDOM_TRAINING_ACADEMY_FOR_GIRLS_V0_1.md",
+                        "git_blob_sha":  "90e0a150c86f886d5f47c70c32ca488ba0ec7637",
+                        "byte_length":  1276,
+                        "sha256":  "403cfe6ab12a0d81ba97440d134185e7eb7324e3887f253a30dc3f34287d3878"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "FAMILY/WISDOM_GIRLS/README.md",
+                        "git_blob_sha":  "99982e4615d57bcf45dcf4e17dfae11836c145e9",
+                        "byte_length":  2159,
+                        "sha256":  "47cf79db79bd20f7145aa95181aa9629082ba04be603a651657a3c97aaa92a8b"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "joyspace/boss-birthday.json",
+                        "git_blob_sha":  "af28b48ed2c41cbc91deac72fda3cfa2fbc8239c",
+                        "byte_length":  2727,
+                        "sha256":  "a497716d6cf2169d8605f8db45fded999aeb34aafb88fcd856f8968baa47318f"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "joyspace/joyspace-depth-map.json",
+                        "git_blob_sha":  "625f7fa974b592ca2ffa4bfabcc3bc50a1718b0e",
+                        "byte_length":  1845,
+                        "sha256":  "3dc629ccafa9873ab03ad66248a22c9b581906c6f4ffe1e975cd38597e845c32"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "receipts/continuity/JAY_ATTRIBUTION_RESTORATION_V1.json",
+                        "git_blob_sha":  "c79e81867b29acda368ebb7cfae85099db6966ef",
+                        "byte_length":  1231,
+                        "sha256":  "d8c2ac5b952157bbb509c891fb85fcfe49712e6f47cb4f99d143df0c94090012"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "WISDOM/onchain_research_prompt_jaywisdom_base_eth_v0_1.md",
+                        "git_blob_sha":  "59cce35da574c95c8ff3ca3eb379015d0063dc70",
+                        "byte_length":  3565,
+                        "sha256":  "ed527c3cf204cd4aa3d6e19c3ed4be554db02d6717ce8e9a47bf823dbfd8de22"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "WISDOM/porch_triad_recall_v0_1.md",
+                        "git_blob_sha":  "f7b465ef21ce760f099ffd0cc849d9812cff1d81",
+                        "byte_length":  2136,
+                        "sha256":  "e6bf79cbd53ac765b76f40b25950503fd991c4384d57d2b616e6098d0ae9d938"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "ref":  "main",
+                        "path":  "WISDOM/wisdom_family_game_night_v0_1.md",
+                        "git_blob_sha":  "ddef92d03a014f08f8528c55dac7a1911dd40c7f",
+                        "byte_length":  8344,
+                        "sha256":  "9da33df6bae1890fc4780d7b2d5f2aa981432d55d83bbbd32a4d69b1c39f90ac"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  ".github/workflows/jaytree-backward-sync.yml",
+                        "git_blob_sha":  "6eb7552fa9d3be9049d3b386aa3191232b1752c9",
+                        "byte_length":  3825,
+                        "sha256":  "c64b3da04fb646f7dbafcc2da7090029fea090f40d144386b798b1728d78d291"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  ".github/workflows/publish-jasonspace-pages.yml",
+                        "git_blob_sha":  "a8ad2a0f3de34733aa8cf39068e58211a0f83ca2",
+                        "byte_length":  16074,
+                        "sha256":  "edfc8690d399bc4bb3ec5c38132d77994f86f760524b104776b4e76a00b64592"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "ALABAMA_TRUST_ME_BRO_PINCER_STORY_GAME_V0_1.json",
+                        "git_blob_sha":  "7263d693d7d54a7b775526773498f5e72c5cff5e",
+                        "byte_length":  9702,
+                        "sha256":  "a9b0c641f709ade21fe8d51d8bf78784f113d5b334d3ee5de9cc3c91794f978e"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "docs/alabama_porches/INDEX.md",
+                        "git_blob_sha":  "8a474a6a5f69bfc8af65e4dd06c836f9e4c28c9a",
+                        "byte_length":  1063,
+                        "sha256":  "b427a55992d83181f5b78028f4a3d9f3fd1762952657c450fc8cec43d27a16b1"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "docs/alabama_porches/LEEANN.md",
+                        "git_blob_sha":  "dd5672f36f63a1bd897de9b3c549383b5bda4e87",
+                        "byte_length":  493,
+                        "sha256":  "34fc1ae0e098034be1d31de05614fdd69b6aa41e470d5d37deab16f719f4b1eb"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "docs/alabama_porches/MATH_CLASS_BY_JAY.md",
+                        "git_blob_sha":  "5b629f37595bb1a8f61f55eba406731935718f89",
+                        "byte_length":  1258,
+                        "sha256":  "609791a9de14218718b114b006c06992a48627b3a7299e29519ca630675cf1c5"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "docs/AUNT_RANN_JAY_GPK_REVERSEPLAY_STORY_ENGINE_V0_1.md",
+                        "git_blob_sha":  "f93486efeb3865a56a9b1fb5e4e12b8f3c1620ae",
+                        "byte_length":  9441,
+                        "sha256":  "df81de85b4c428d755b8f8c6a739d4a5af84ed871143b8ac69bfc41a29afc146"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "docs/AUNT_RANN_REAL_SYNTHETIC_BOUNDARY_V0.1.md",
+                        "git_blob_sha":  "6f66ffd5ded678a08fc797f65bc8a64847d24ab6",
+                        "byte_length":  10717,
+                        "sha256":  "c7cee7e2622b441029e357a325d9407d3ec40066b44f1be6fbc15094af78d72f"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "docs/daily-machine.html",
+                        "git_blob_sha":  "482e505d44773d69f84273a80677e74363c8d47e",
+                        "byte_length":  6452,
+                        "sha256":  "2f05a173dbc18f88481a06cce9f01d231f4e73f2035193a15e597615be32ed08"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "docs/GENLEEANNPRIME_3_0_ALABAMA_REVERSE_REPLAY_3D.md",
+                        "git_blob_sha":  "072209774d7c4460c0bd55d7524524cf0083aaff",
+                        "byte_length":  5935,
+                        "sha256":  "b27140c9723a691a2a32c0d450680664d557144b2cd17802ae1ce021fa9e117d"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "docs/index.html",
+                        "git_blob_sha":  "483e87829e609cc014211b85d7bb358f21887cd4",
+                        "byte_length":  13027,
+                        "sha256":  "02cca6aa6a1c08f49e9665c66f38c34ca2b334c19ae5525fa25df1bca13d286f"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "docs/JAYS_FUNCTIONAL_VA_RESUME_FAMILY_WISDOM.md",
+                        "git_blob_sha":  "7bfd18f4920e33aba18afeb191047f9a5f538fe4",
+                        "byte_length":  4526,
+                        "sha256":  "fce18e8f0c2d7e7bccca0a870fa6b5ea5b428fd4c32e198c694d8342d164f3f5"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "docs/jaytree/JAYTREE_BACKWARD_SYNC_LADDER_V0_1.md",
+                        "git_blob_sha":  "39a4974123c62d2968e39fbfddf94d8be2e8ad31",
+                        "byte_length":  3198,
+                        "sha256":  "6be4d88edad50d9404ef0c2d99df1741de4a09f62efb5145014a546996c06bd6"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "docs/jaytree/JSONWISDOM_STRUCTURE_CORRECTION_REPORT_V0_1.md",
+                        "git_blob_sha":  "98787982aab7888177168443cc3fadac69bee084",
+                        "byte_length":  5054,
+                        "sha256":  "5f9a181a88f06261c35c235f15b7c4970cb007e6141fb200eac4d520b453cd7a"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "docs/jaytree-status.json",
+                        "git_blob_sha":  "c36125c4fe4b9c31fc0edd5a6f9363ad44e09c28",
+                        "byte_length":  7298,
+                        "sha256":  "0dd2b4a3947905a58cf80958c164ec7f831c945483aa67cb8dfbccb9369bc94f"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "docs/LINKEDIN_FACTRAIL_V0_1.md",
+                        "git_blob_sha":  "3f49381a611f537dde61296436677d774bb08853",
+                        "byte_length":  3316,
+                        "sha256":  "57f488d739005fdae65e2071f4187f3e5700a4170590e59912efea50f46bcead"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "docs/machine-status.json",
+                        "git_blob_sha":  "7f14b53ca19842c4dd61c6b557a2a207c0df366b",
+                        "byte_length":  3281,
+                        "sha256":  "e9bb811dacf22bac1555e1af62e90c83e93d23549692492e3213966ffe1f5949"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "docs/public_record/LEEANN_H_CHAVERS_SOURCE_BOUND_PUBLIC_PROFILE_V0_1.md",
+                        "git_blob_sha":  "3fd7c9ff23483aa6f4123f10f4142febdace0675",
+                        "byte_length":  6245,
+                        "sha256":  "fe1e3d20e74883dbea53c74be369b1f1cfd91e4d000ac0c1a8594f62062e8a6d"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "FAMILY_MOVIE_CREATOR_V0_1.json",
+                        "git_blob_sha":  "41c0aead3ae27c3ef321a23c9866745b263d090a",
+                        "byte_length":  8145,
+                        "sha256":  "723c3dacafe310134c9a6767cb769307461e6ab31de88fe46e026bf2606d8c54"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "FAMILY_MOVIE_CREATOR_V0_2.json",
+                        "git_blob_sha":  "64f73ca6b4f12a139e7fa2f8a7574b21708e7cca",
+                        "byte_length":  11579,
+                        "sha256":  "158b987e05b9934bca774dd328c91c69b297bfe6925258ef94099099b5b2deec"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "fixtures/timegraph/DANNELLY_MIXED_PACKET_GENESIS_FIXTURE_V0_1.json",
+                        "git_blob_sha":  "dc24975f857e17b7122a1fb58f24ec7298307fb1",
+                        "byte_length":  2703,
+                        "sha256":  "5ac3260b6b90c0f221e9fc4302a85f163dd088b9f27f5911daa384c22c85ea99"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "JAYS_PARENTAL_PINCER_GAME_PISSED_OFF_MOMS_V0_1.json",
+                        "git_blob_sha":  "701e9146f7877946caed34480c5e61d0f0751695",
+                        "byte_length":  8910,
+                        "sha256":  "48b3493180794fbcb2e0b1ef5a51dae8b4669c9af04b1bcd8ff33be3568da64b"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "LEEANN_TRUST_ME_SIS_QUADRATIC_VOTING_ALABAMA_V0_1.jsonl",
+                        "git_blob_sha":  "7664d343691335d16b3931523d202f6cb58260f3",
+                        "byte_length":  7708,
+                        "sha256":  "e5cb5dc16324263d397e4eb488104ae15205af04e0bdd85432584e1c0228dfa0"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "MOM_EMERGENCY_MANAGEMENT_FAMILY_EDITION_V0_1.json",
+                        "git_blob_sha":  "7ae903cabccf6e67f24354527ca135bd49f55f0e",
+                        "byte_length":  8648,
+                        "sha256":  "7d21ed7b166d692a40714dbc925da01382600fe40811225d0204715f46472573"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "README.md",
+                        "git_blob_sha":  "b05d46920066ed2fed4a743cf84d85f5ab33ad42",
+                        "byte_length":  2956,
+                        "sha256":  "64ddcaaf0b3181c94d23b041853de1cb976a88d1f33cbbfd68baa9244d2b8c17"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "receipts/jaytree/JAYTREE_ROLLOUT_TRACKER_V0_1.json",
+                        "git_blob_sha":  "1003ea6086afcac111aa7442db7fb75225746ef9",
+                        "byte_length":  860,
+                        "sha256":  "abd3eacfb38d953d01fca8b1cf4bf9732dabc9c104504464fc15f6fa9168c3d5"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "ref":  "master",
+                        "path":  "receipts/jaytree/JAYTREE_TODAY_SYNC_BRIDGE_2026_08_16_V0_1.json",
+                        "git_blob_sha":  "a084ab54903406175103fe6dc0d052ac07884bb3",
+                        "byte_length":  1772,
+                        "sha256":  "d499daa9f2f14fe9bbf9c8ad2bd6a5cf6eabf48251ed58f6b6e61e5fe7758090"
+                    }
+                ],
+    "missing_objects":  [
+                            "IDENTITY_PATCH_V0.5_REPLAY.2026-09-04.json"
+                        ],
+    "authority_created":  false
+}

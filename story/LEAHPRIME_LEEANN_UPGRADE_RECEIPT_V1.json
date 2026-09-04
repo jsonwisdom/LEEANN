@@ -1,0 +1,27 @@
+{
+    "schema":  "jsonwisdom.leahprime-leeann-upgrade-receipt.v1",
+    "event_date":  "2026-09-04",
+    "event_time":  "NOT_ESTABLISHED",
+    "source_class":  "USER_DECLARED_CURRENT_STATE",
+    "subject_class":  "SYNTHETIC_REPOSITORY_PERSONA",
+    "transition":  {
+                       "historical_state":  "LeahPrime and the LEEANN project persona were previously evaluated as separate surfaces",
+                       "current_state":  "LeahPrime is the current synthetic persona of jsonwisdom/LEEANN",
+                       "history_deleted":  false
+                   },
+    "exclusions":  [
+                       "LEEANN_H_CHAVERS_PUBLIC_RECORD != LEAHPRIME",
+                       "REPOSITORY_PERSONA != PRIVATE_IDENTITY",
+                       "STORY_ROLE != MILITARY_AUTHORITY",
+                       "UPGRADE_RECEIPT != IDENTITY_DOCUMENT"
+                   ],
+    "source_manifest":  {
+                            "path":  "story/LEAHPRIME_BYTE_SOURCE_MANIFEST_V1.json",
+                            "sha256":  "09338272d570ede0e19876c870040909764e85c279eab79782ac780eb427b9fe"
+                        },
+    "commit_timeline":  {
+                            "path":  "story/LEAHPRIME_COMMIT_TIMELINE_V1.json",
+                            "sha256":  "6b9e586de576252ff15e01402d6a3f6a1714a52a5dfdfd9b084760aff5e68802"
+                        },
+    "authority_created":  false
+}

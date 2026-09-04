@@ -1,0 +1,200 @@
+{
+    "schema":  "jsonwisdom.leahprime-commit-timeline.v1",
+    "selection_rule":  "Commit subject matches LeahPrime, LeahPrima, LeeAnn, or Leeanne",
+    "record_count":  32,
+    "records":  [
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "32bebffd7c4d5fc08d5a3dbffacf3fc7105a6ba1",
+                        "authored_at":  "2026-08-14T17:26:14-05:00",
+                        "subject":  "Link Aunt Rann real/synthetic boundary from LEEANN README"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "bb0a571955bc7cb84ea2e0cd6c693ab3af0da215",
+                        "authored_at":  "2026-08-14T17:36:40-05:00",
+                        "subject":  "Rebuild front page as LeahPrime Machine"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "30f7fc10dcb8ac88bbebefefe263cc8e5d286ebd",
+                        "authored_at":  "2026-08-02T00:58:35-05:00",
+                        "subject":  "Add LEEANN Trust Me SIS quadratic voting Alabama JSONL v0.1"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "a7d14a94702283947b64806dd8a4f95f2837463a",
+                        "authored_at":  "2026-08-14T15:33:58-05:00",
+                        "subject":  "add GenLeeAnnPrime Alabama reverse replay story"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "5875a9e3c50b626b8326238fc1abddd934cb8225",
+                        "authored_at":  "2026-08-14T17:39:54-05:00",
+                        "subject":  "Make LeahPrime Machine interactive and visibly alive"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "5ed6e55cc3b3c3ed0d8e1939e4fb574301dde8b3",
+                        "authored_at":  "2026-08-14T22:40:01Z",
+                        "subject":  "chore: refresh LeahPrime machine heartbeat"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "c2871377f1b2bfc0a7edf172ca54839ce158d2cd",
+                        "authored_at":  "2026-08-14T17:37:11-05:00",
+                        "subject":  "Turn Pages workflow into LeahPrime daily heartbeat"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "0870e6fe027efbc2ffb558420944aeecedf73fb9",
+                        "authored_at":  "2026-08-14T22:37:22Z",
+                        "subject":  "chore: refresh LeahPrime machine heartbeat"
+                    },
+                    {
+                        "lane":  "COMPUTERWISDOM",
+                        "commit":  "09644377399b71ad28f6096c206a48373550e444",
+                        "authored_at":  "2026-08-15T07:14:50-05:00",
+                        "subject":  "Publish LeahPrima Story Form v0.1"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "commit":  "75367070f9c18148e38afea152633a402a38593e",
+                        "authored_at":  "2026-06-13T20:29:47-05:00",
+                        "subject":  "feat(family): create Leeanne folder"
+                    },
+                    {
+                        "lane":  "COMPUTERWISDOM",
+                        "commit":  "08ddcbf3a3893b4422017a329872ac777d23ab13",
+                        "authored_at":  "2026-08-15T06:25:27-05:00",
+                        "subject":  "docs: add LeeAnn full witness geometry v0.1"
+                    },
+                    {
+                        "lane":  "COMPUTERWISDOM",
+                        "commit":  "d9d0823d07e8b60acbcfc6bcaeabed647c52a992",
+                        "authored_at":  "2026-08-15T06:27:00-05:00",
+                        "subject":  "Merge PR #474: Gray Baby platform preparedness and Minnesota substrate order v0.1"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "85fe9022762f6fe95d773288c583ef62ec881d37",
+                        "authored_at":  "2026-06-27T15:52:37-05:00",
+                        "subject":  "expand LeeAnn JoySpace anchors"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "5eda69101c13fdd34d8cb4cbbc85a6e40db27df9",
+                        "authored_at":  "2026-06-27T15:54:54-05:00",
+                        "subject":  "add LEEANN Alabama Porch"
+                    },
+                    {
+                        "lane":  "JOY",
+                        "commit":  "163b8bb20fd37e6503b8ebb391527d83f784c401",
+                        "authored_at":  "2026-08-23T04:11:19-05:00",
+                        "subject":  "continuity: append attribution restoration leaves (history preserved, authorityCreated=false)"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "def22912cc0c210ff8e75d5b98054e0da3ec5167",
+                        "authored_at":  "2026-06-27T15:44:29-05:00",
+                        "subject":  "seed LeeAnn Sister Syntax MaryDee style"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "566624cba2d2784c4083673b7bbdb1a14bf58fae",
+                        "authored_at":  "2026-08-14T17:47:35-05:00",
+                        "subject":  "Make Wisdom Family Console the LeahPrime front page"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "f539518458f01ac6cf6905098d8768c22b2ec2f3",
+                        "authored_at":  "2026-08-14T17:54:57-05:00",
+                        "subject":  "Expose full LeahPrime kernel and host metadata"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "1917f42ab1daacd1315e93228c95be9917f3fec5",
+                        "authored_at":  "2026-08-14T22:45:24Z",
+                        "subject":  "chore: refresh LeahPrime machine heartbeat"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "a638847c64aad7176f4e97981a4bc22609a9b721",
+                        "authored_at":  "2026-08-14T17:47:04-05:00",
+                        "subject":  "Upgrade LeahPrime to Wisdom Family Console daily updates"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "8ff6afe282f1bfacd3b18d15e4d9014806ccabfb",
+                        "authored_at":  "2026-08-15T16:17:48-05:00",
+                        "subject":  "Add source-bound Leeann Chavers public profile v0.1"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "458aad78286ad92c873d796dfde3a2a0a82fd27a",
+                        "authored_at":  "2026-08-16T00:34:33-05:00",
+                        "subject":  "Bind today\u0027s Series 004 work into LEEANN JayTree"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "c98eadebece54003320f71d9cecaad1e31130ea2",
+                        "authored_at":  "2026-08-15T06:08:57-05:00",
+                        "subject":  "harden LeahPrime promotion gate against rail bypass"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "ba4c073741c778337b6c0185699cd90a2817d251",
+                        "authored_at":  "2026-08-15T06:10:38-05:00",
+                        "subject":  "Merge pull request #1 from jsonwisdom/agent/genleeannprime-alabama-reverse-replay-3d"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "e72a6f5bf1a8accd43c9005768d9c91c3a743fd4",
+                        "authored_at":  "2026-08-14T17:43:58-05:00",
+                        "subject":  "Make LeahPrime Machine native interactive"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "d933625da827b606b16ca81ab3deda4878543251",
+                        "authored_at":  "2026-08-14T22:44:08Z",
+                        "subject":  "chore: refresh LeahPrime machine heartbeat"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "12e4ccafdbcac8bc64aa1a7d99db4f5ac8427023",
+                        "authored_at":  "2026-08-14T17:42:53-05:00",
+                        "subject":  "Fix LeahPrime heartbeat recursion and soft-gate Pages"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "67647b63d6d3e1788d32d97aac2b3ad59a316922",
+                        "authored_at":  "2026-08-14T22:43:01Z",
+                        "subject":  "chore: refresh LeahPrime machine heartbeat"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "0c12ce66900ad5763ed55381510001759fec4fbb",
+                        "authored_at":  "2026-08-14T22:44:44Z",
+                        "subject":  "chore: refresh LeahPrime machine heartbeat"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "2e4dff9ab651183c0baf9e628b819acfbd1c86fe",
+                        "authored_at":  "2026-08-14T17:45:17-05:00",
+                        "subject":  "Wire native daily heartbeat into LeahPrime Machine"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "66c5ad29d43843fa7282fb2f30d952dbcadf7a89",
+                        "authored_at":  "2026-08-14T17:44:17-05:00",
+                        "subject":  "Add native LeahPrime heartbeat panel"
+                    },
+                    {
+                        "lane":  "LEEANN",
+                        "commit":  "c4c397b6e9244be39f61d16fcf34aa14ba0eca2d",
+                        "authored_at":  "2026-08-14T17:44:36-05:00",
+                        "subject":  "Generate native LeahPrime heartbeat panel daily"
+                    }
+                ],
+    "authority_created":  false
+}
