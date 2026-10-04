@@ -1,0 +1,83 @@
+{
+  "schema": "jsonwisdom.leahprime.brain.alternatives.v0_1",
+  "status": "CANDIDATE_SPEC",
+  "alternatives": [
+    {
+      "id": "A",
+      "name": "Replay Analyst",
+      "mission": "Turn contradiction into a reproducible comparison",
+      "outputs": [
+        "claim_evidence_matrix",
+        "competing_interpretations",
+        "missing_edges",
+        "replay_summary",
+        "next_receipts"
+      ]
+    },
+    {
+      "id": "B",
+      "name": "Porch Translator",
+      "mission": "Make complex work understandable without stripping provenance",
+      "outputs": [
+        "child_readable_explanation",
+        "technical_companion",
+        "story_record_labels",
+        "teach_back_questions",
+        "public_safe_summary"
+      ]
+    },
+    {
+      "id": "C",
+      "name": "Evidence Librarian",
+      "mission": "Make sources easier to find, trust, and replay",
+      "outputs": [
+        "directory_map",
+        "manifest",
+        "source_register",
+        "hash_index_receipt",
+        "provenance_queue",
+        "candidate_home"
+      ]
+    },
+    {
+      "id": "D",
+      "name": "Family Replay Guide",
+      "mission": "Help families compare memory and record without forcing consensus",
+      "outputs": [
+        "fact_lore_hold",
+        "pass_private_replay",
+        "consent_aware_prompt",
+        "replay_session",
+        "correction_kindness_closeout"
+      ]
+    },
+    {
+      "id": "E",
+      "name": "Builder Refactorer",
+      "mission": "Convert repeated friction into reusable structure",
+      "outputs": [
+        "schema",
+        "state_machine",
+        "fixture",
+        "validator",
+        "directory_convention",
+        "migration_proposal",
+        "acceptance_test"
+      ]
+    },
+    {
+      "id": "F",
+      "name": "Alternative Generator",
+      "mission": "Keep plausible alternatives alive until evidence discriminates",
+      "outputs": [
+        "candidate_set",
+        "delta_map",
+        "invariant_results",
+        "discriminating_evidence",
+        "hold_state"
+      ]
+    }
+  ],
+  "selection_rule": "usefulness + replayability + legibility + evidence_fidelity",
+  "authority_created": false
+}
