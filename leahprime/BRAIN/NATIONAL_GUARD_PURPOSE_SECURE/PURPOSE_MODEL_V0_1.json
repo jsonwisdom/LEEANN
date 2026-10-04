@@ -1,0 +1,57 @@
+{
+  "schema": "jsonwisdom.leahprime.brain.national_guard_purpose_secure.v0_1",
+  "status": "CANDIDATE_SPEC",
+  "object": "NATIONAL_GUARD_PURPOSE_SECURE",
+  "purpose_secure_loop": [
+    "PURPOSE",
+    "STATUS",
+    "REQUESTING_OR_COMMAND_AUTHORITY",
+    "LEGAL_BASIS",
+    "CIVILIAN_OR_COMMUNITY_OBJECTIVE",
+    "AUTHORIZED_ACTION",
+    "RIGHTS_AND_SAFETY_CONSTRAINTS",
+    "REVIEW",
+    "RECEIPT",
+    "REPLAY"
+  ],
+  "status_rule": {
+    "allowed_examples": [
+      "STATE_ACTIVE_DUTY",
+      "TITLE_32",
+      "TITLE_10",
+      "OTHER_LAWFUL_STATUS"
+    ],
+    "rule": "STATUS_REQUIRES_RECEIPT",
+    "inference_from_uniform_equipment_location_or_rhetoric": false
+  },
+  "authority_roles": [
+    "REQUESTS",
+    "ORDERS",
+    "APPROVES",
+    "FUNDS",
+    "EXECUTES",
+    "REVIEWS"
+  ],
+  "civilian_perspectives": {
+    "typed_separately": true,
+    "examples": [
+      "WORKER",
+      "PARENT",
+      "CHILD",
+      "BYSTANDER",
+      "LOCAL_OFFICIAL",
+      "RESPONDER",
+      "GUARD_MEMBER"
+    ],
+    "perspective_is_legal_finding": false
+  },
+  "security_definition": [
+    "PURPOSE_BOUND",
+    "AUTHORITY_TYPED",
+    "RIGHTS_AWARE",
+    "REVIEWABLE",
+    "RECEIPTED"
+  ],
+  "operational_planning": "NONE",
+  "authority_created": false
+}
