@@ -1,0 +1,29 @@
+{
+  "schema": "jsonwisdom.leahprime.brain.national_guard_purpose_secure.invariants.v0_1",
+  "status": "CANDIDATE_SPEC",
+  "positive_invariants": [
+    "PURPOSE_BEFORE_CAPABILITY",
+    "STATUS_MUST_BE_EXPLICIT",
+    "AUTHORITY_ROLES_REMAIN_TYPED",
+    "PROTECTION_OBJECTIVE_REMAINS_VISIBLE",
+    "CIVIL_SUPPORT_PRESERVES_SUPPORT_RELATIONSHIP",
+    "RIGHTS_AND_SAFETY_REMAIN_IN_REPLAY",
+    "CIVILIAN_IMPACT_IS_TYPED_EVIDENCE",
+    "CORRECTION_IS_PART_OF_DEFENSE",
+    "POWER_REMAINS_REVIEWABLE",
+    "COMMUNITY_TRUST_IS_AN_OPERATIONAL_ASSET"
+  ],
+  "teaching_bridges": {
+    "child_report_is_child_diagnosis": false,
+    "child_perspective_is_valid_input": true,
+    "family_model_is_military_chain_of_command": false,
+    "family_model_can_teach_purpose_authority_impact_review": true
+  },
+  "background_locks": {
+    "operational_planning": "NONE",
+    "authority_created": false,
+    "title_is_not_truth": true,
+    "capability_is_not_authority": true,
+    "security_is_not_maximum_coercion": true
+  }
+}
