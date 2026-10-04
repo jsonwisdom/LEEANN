@@ -1,0 +1,35 @@
+{
+  "schema": "jsonwisdom.leahprime.brain.national_guard.full_math.v0_1",
+  "status": "CANDIDATE_SPEC",
+  "equations": [
+    {
+      "label": "REQUESTED_CORE",
+      "expression": "50 + 1",
+      "value": 51,
+      "meaning": "50 states plus District of Columbia"
+    },
+    {
+      "label": "TERRITORIAL_EXTENSION",
+      "expression": "1 + 1 + 1",
+      "value": 3,
+      "meaning": "Puerto Rico plus Guam plus U.S. Virgin Islands"
+    },
+    {
+      "label": "FULL_GEOGRAPHIC_DENOMINATOR",
+      "expression": "51 + 3",
+      "value": 54,
+      "meaning": "National Guard geographic jurisdictions"
+    }
+  ],
+  "state_counts": {
+    "PASS": 0,
+    "HOLD": 0,
+    "CONFLICT": 0,
+    "UNKNOWN": 0,
+    "UNRUN": 54
+  },
+  "invariant": "PASS + HOLD + CONFLICT + UNKNOWN + UNRUN = 54",
+  "current_check": "0 + 0 + 0 + 0 + 54 = 54",
+  "national_result": "HOLD",
+  "authority_created": false
+}
