@@ -1,0 +1,38 @@
+{
+  "schema": "jsonwisdom.leahprime.brain.national_guard_purpose_secure.sources.v0_1",
+  "retrieved_date": "2026-10-03",
+  "sources": [
+    {
+      "id": "NGPS-S001",
+      "authority": "U.S. House Office of the Law Revision Counsel",
+      "object": "32 U.S.C. Chapter 1 / Section 102 General policy",
+      "url": "https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title32-chapter1",
+      "supports": [
+        "NATIONAL_GUARD_FIRST_LINE_DEFENSE_POLICY"
+      ]
+    },
+    {
+      "id": "NGPS-S002",
+      "authority": "National Guard Bureau",
+      "object": "About the Guard",
+      "url": "https://www.nationalguard.mil/About-the-Guard/Active-Duty/",
+      "supports": [
+        "PRIMARY_COMBAT_RESERVE",
+        "DEFEND_HOMELAND",
+        "ASSIST_COMMUNITIES"
+      ]
+    },
+    {
+      "id": "NGPS-S003",
+      "authority": "National Guard Bureau J-3",
+      "object": "Civil Support Division",
+      "url": "https://www.nationalguard.mil/Leadership/Joint-Staff/J-3/Civil-Support/",
+      "supports": [
+        "CIVIL_SUPPORT_PLANNING_COORDINATION_INFORMATION_SHARING_INTEGRATION"
+      ]
+    }
+  ],
+  "claim_ceiling": "PURPOSE_AND_PUBLIC_MISSION_MODEL_ONLY",
+  "operational_planning": "NONE",
+  "authority_created": false
+}
