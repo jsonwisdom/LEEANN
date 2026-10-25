@@ -1,0 +1,67 @@
+{
+  "artifact_id": "ALABAMA_MATH_STATE_MACHINE_V0_1",
+  "mode": "EDUCATION_EVIDENCE_EXECUTION_AUDIT",
+  "authority_created": false,
+  "silent_inference": "BLOCKED",
+  "facts_promoted": 0,
+  "edges_inferred": 0,
+  "policy_state": "SOURCE_BOUND_PRIOR_RESEARCH",
+  "standards_state": "SOURCE_BOUND_PRIOR_RESEARCH",
+  "assessment_state": "USER_REPORTED_MEASUREMENT_SNAPSHOT",
+  "execution_state": "BARRIERS_DOCUMENTED_NOT_FULLY_QUANTIFIED",
+  "causal_ledger_state": "INCOMPLETE",
+  "documented_barriers": [
+    "DATA_SYSTEMS_INFRASTRUCTURE",
+    "STAFFING_RESOURCES",
+    "TEACHER_CONTENT_KNOWLEDGE",
+    "COMMUNICATION_CONSISTENCY",
+    "SCREENING_INTERVENTION_TRACEABILITY"
+  ],
+  "pipeline": [
+    "LAW",
+    "STANDARD",
+    "BUDGET",
+    "TECHNOLOGY",
+    "STAFFING",
+    "TEACHER",
+    "INSTRUCTION",
+    "INTERVENTION",
+    "STUDENT_RESULT"
+  ],
+  "forbidden_inference": [
+    "LOW_SCORE_IMPLIES_BAD_TEACHER",
+    "COACH_PRESENT_IMPLIES_COACH_EFFECTIVE",
+    "STANDARD_EXISTS_IMPLIES_IMPLEMENTATION_COMPLETE",
+    "ASSESSMENT_EXISTS_IMPLIES_CAUSAL_EXPLANATION",
+    "TECHNOLOGY_PRESENT_IMPLIES_TECHNOLOGY_USABLE",
+    "STATEWIDE_AVERAGE_IMPLIES_LOCAL_SCHOOL_EXPERIENCE"
+  ],
+  "measurement_snapshot": {
+    "provenance_state": "USER_REPORTED_2026_PENDING_EXACT_SOURCE_BINDING",
+    "act_math_proficiency_2025_pct": 23.93,
+    "act_math_proficiency_2026_pct": 27.51,
+    "act_composite_2023_24": 17.36,
+    "act_composite_2024_25": 17.31,
+    "act_composite_2025_26": 17.65,
+    "acap_math_2026_pct": {
+      "grade_2": 49.21,
+      "grade_5": 39.36,
+      "grade_7": 24.60,
+      "grade_8": 26.55
+    }
+  },
+  "audit_question": "Does the data + technology + staffing infrastructure actually let local people execute the law?",
+  "developer_contract": {
+    "output_type": "CONSTRAINED_EVIDENCE_STATE",
+    "model_output_is_education_policy": false,
+    "model_output_is_legal_authority": false,
+    "model_output_is_causal_proof": false,
+    "allowed_model_roles": [
+      "SOURCE_CLASSIFICATION",
+      "GAP_DETECTION",
+      "REPLAY_ASSISTANCE"
+    ]
+  },
+  "claim_state": "EXECUTION_BARRIERS_DOCUMENTED",
+  "execution_gap": "SUPPORTED_NOT_FULLY_QUANTIFIED"
+}
